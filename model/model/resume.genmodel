@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.models.resume/src/main/java" creationIcons="false"
+    editorDirectory="" modelPluginID="org.nasdanika.models.resume" modelName="Resume"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    bundleManifest="false" featureDelegation="Dynamic" complianceLevel="17.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>resume.ecore</foreignModel>
+  <genPackages prefix="Resume" basePackage="org.nasdanika.models" disposableProviderFactory="true"
+      ecorePackage="resume.ecore#/">
+    <genClasses image="false" ecoreClass="resume.ecore#//Named">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Named/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="resume.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Resource/url"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Resume">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/basics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/work"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/volunteer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/education"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/awards"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/certificates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/publications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/skills"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/languages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/interests"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/references"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/projects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/meta"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Basics">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Basics/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Basics/profiles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Basics/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Basics/image"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Basics/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Basics/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Basics/summary"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Location/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Location/postalCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Location/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Location/countryCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Location/region"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Profile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Profile/network"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Profile/username"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Work"/>
+    <genClasses ecoreClass="resume.ecore#//Volunteer"/>
+    <genClasses ecoreClass="resume.ecore#//Education"/>
+    <genClasses ecoreClass="resume.ecore#//Award"/>
+    <genClasses ecoreClass="resume.ecore#//Certificate"/>
+    <genClasses ecoreClass="resume.ecore#//Publication"/>
+    <genClasses ecoreClass="resume.ecore#//Skill"/>
+    <genClasses ecoreClass="resume.ecore#//Language"/>
+    <genClasses ecoreClass="resume.ecore#//Interest"/>
+    <genClasses ecoreClass="resume.ecore#//Reference"/>
+    <genClasses ecoreClass="resume.ecore#//Project"/>
+    <genClasses ecoreClass="resume.ecore#//Meta"/>
+  </genPackages>
+</genmodel:GenModel>

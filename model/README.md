@@ -1,0 +1,1 @@
+Schema downloaded from https://github.com/jsonresume/resume-schema/blob/v1.2.1/schema.json
