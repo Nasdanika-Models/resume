@@ -3,10 +3,7 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.nasdanika.models.resume.Resource;
+import org.nasdanika.models.resume.Named;
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Work;
 
@@ -19,12 +16,13 @@ import org.nasdanika.models.resume.Work;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.resume.impl.WorkImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.models.resume.impl.WorkImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.WorkImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.WorkImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
+public class WorkImpl extends EngagementImpl implements Work {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,15 +33,23 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	 */
 	protected static final String NAME_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getLocation()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
-
+	protected static final String LOCATION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,16 +67,6 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.WORK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
@@ -99,8 +95,8 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	 * @generated
 	 */
 	@Override
-	public String getUrl() {
-		return (String)eDynamicGet(ResumePackage.WORK__URL, ResumePackage.Literals.RESOURCE__URL, true, true);
+	public String getLocation() {
+		return (String)eDynamicGet(ResumePackage.WORK__LOCATION, ResumePackage.Literals.WORK__LOCATION, true, true);
 	}
 
 	/**
@@ -109,8 +105,28 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	 * @generated
 	 */
 	@Override
-	public void setUrl(String newUrl) {
-		eDynamicSet(ResumePackage.WORK__URL, ResumePackage.Literals.RESOURCE__URL, newUrl);
+	public void setLocation(String newLocation) {
+		eDynamicSet(ResumePackage.WORK__LOCATION, ResumePackage.Literals.WORK__LOCATION, newLocation);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDescription() {
+		return (String)eDynamicGet(ResumePackage.WORK__DESCRIPTION, ResumePackage.Literals.WORK__DESCRIPTION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDescription(String newDescription) {
+		eDynamicSet(ResumePackage.WORK__DESCRIPTION, ResumePackage.Literals.WORK__DESCRIPTION, newDescription);
 	}
 
 	/**
@@ -123,8 +139,10 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 		switch (featureID) {
 			case ResumePackage.WORK__NAME:
 				return getName();
-			case ResumePackage.WORK__URL:
-				return getUrl();
+			case ResumePackage.WORK__LOCATION:
+				return getLocation();
+			case ResumePackage.WORK__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -140,8 +158,11 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 			case ResumePackage.WORK__NAME:
 				setName((String)newValue);
 				return;
-			case ResumePackage.WORK__URL:
-				setUrl((String)newValue);
+			case ResumePackage.WORK__LOCATION:
+				setLocation((String)newValue);
+				return;
+			case ResumePackage.WORK__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,8 +179,11 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 			case ResumePackage.WORK__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ResumePackage.WORK__URL:
-				setUrl(URL_EDEFAULT);
+			case ResumePackage.WORK__LOCATION:
+				setLocation(LOCATION_EDEFAULT);
+				return;
+			case ResumePackage.WORK__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -175,8 +199,10 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 		switch (featureID) {
 			case ResumePackage.WORK__NAME:
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case ResumePackage.WORK__URL:
-				return URL_EDEFAULT == null ? getUrl() != null : !URL_EDEFAULT.equals(getUrl());
+			case ResumePackage.WORK__LOCATION:
+				return LOCATION_EDEFAULT == null ? getLocation() != null : !LOCATION_EDEFAULT.equals(getLocation());
+			case ResumePackage.WORK__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -188,9 +214,9 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Resource.class) {
+		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case ResumePackage.WORK__URL: return ResumePackage.RESOURCE__URL;
+				case ResumePackage.WORK__NAME: return ResumePackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -204,9 +230,9 @@ public class WorkImpl extends MinimalEObjectImpl.Container implements Work {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Resource.class) {
+		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case ResumePackage.RESOURCE__URL: return ResumePackage.WORK__URL;
+				case ResumePackage.NAMED__NAME: return ResumePackage.WORK__NAME;
 				default: return -1;
 			}
 		}

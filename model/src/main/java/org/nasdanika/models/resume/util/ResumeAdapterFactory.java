@@ -92,6 +92,10 @@ public class ResumeAdapterFactory extends AdapterFactoryImpl {
 				return createProfileAdapter();
 			}
 			@Override
+			public Adapter caseEngagement(Engagement object) {
+				return createEngagementAdapter();
+			}
+			@Override
 			public Adapter caseWork(Work object) {
 				return createWorkAdapter();
 			}
@@ -240,6 +244,20 @@ public class ResumeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProfileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.resume.Engagement <em>Engagement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.resume.Engagement
+	 * @generated
+	 */
+	public Adapter createEngagementAdapter() {
 		return null;
 	}
 

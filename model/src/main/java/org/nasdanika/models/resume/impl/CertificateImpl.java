@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -20,6 +21,8 @@ import org.nasdanika.models.resume.ResumePackage;
  * <ul>
  *   <li>{@link org.nasdanika.models.resume.impl.CertificateImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.nasdanika.models.resume.impl.CertificateImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.CertificateImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.CertificateImpl#getIssuer <em>Issuer</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,25 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 	 * @ordered
 	 */
 	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getIssuer() <em>Issuer</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIssuer()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ISSUER_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,12 +141,56 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 	 * @generated
 	 */
 	@Override
+	public Date getDate() {
+		return (Date)eDynamicGet(ResumePackage.CERTIFICATE__DATE, ResumePackage.Literals.CERTIFICATE__DATE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDate(Date newDate) {
+		eDynamicSet(ResumePackage.CERTIFICATE__DATE, ResumePackage.Literals.CERTIFICATE__DATE, newDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getIssuer() {
+		return (String)eDynamicGet(ResumePackage.CERTIFICATE__ISSUER, ResumePackage.Literals.CERTIFICATE__ISSUER, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIssuer(String newIssuer) {
+		eDynamicSet(ResumePackage.CERTIFICATE__ISSUER, ResumePackage.Literals.CERTIFICATE__ISSUER, newIssuer);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ResumePackage.CERTIFICATE__NAME:
 				return getName();
 			case ResumePackage.CERTIFICATE__URL:
 				return getUrl();
+			case ResumePackage.CERTIFICATE__DATE:
+				return getDate();
+			case ResumePackage.CERTIFICATE__ISSUER:
+				return getIssuer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,6 +208,12 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 				return;
 			case ResumePackage.CERTIFICATE__URL:
 				setUrl((String)newValue);
+				return;
+			case ResumePackage.CERTIFICATE__DATE:
+				setDate((Date)newValue);
+				return;
+			case ResumePackage.CERTIFICATE__ISSUER:
+				setIssuer((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -161,6 +233,12 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 			case ResumePackage.CERTIFICATE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
+			case ResumePackage.CERTIFICATE__DATE:
+				setDate(DATE_EDEFAULT);
+				return;
+			case ResumePackage.CERTIFICATE__ISSUER:
+				setIssuer(ISSUER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -177,6 +255,10 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case ResumePackage.CERTIFICATE__URL:
 				return URL_EDEFAULT == null ? getUrl() != null : !URL_EDEFAULT.equals(getUrl());
+			case ResumePackage.CERTIFICATE__DATE:
+				return DATE_EDEFAULT == null ? getDate() != null : !DATE_EDEFAULT.equals(getDate());
+			case ResumePackage.CERTIFICATE__ISSUER:
+				return ISSUER_EDEFAULT == null ? getIssuer() != null : !ISSUER_EDEFAULT.equals(getIssuer());
 		}
 		return super.eIsSet(featureID);
 	}

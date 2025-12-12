@@ -98,6 +98,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Award}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specify any awards you have received throughout your professional career
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Awards</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Awards()
 	 * @model containment="true"
@@ -110,6 +113,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Certificate}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specify any certificates you have received throughout your professional career
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Certificates</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Certificates()
 	 * @model containment="true"
@@ -122,6 +128,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Publication}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specify your publications through your career
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Publications</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Publications()
 	 * @model containment="true"
@@ -134,6 +143,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Skill}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * List out your professional skill-set
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Skills</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Skills()
 	 * @model containment="true"
@@ -146,6 +158,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Language}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * List any other languages you speak
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Languages</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Languages()
 	 * @model containment="true"
@@ -170,6 +185,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Reference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * List references you have received
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>References</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_References()
 	 * @model containment="true"
@@ -182,6 +200,9 @@ public interface Resume extends EObject {
 	 * The list contents are of type {@link org.nasdanika.models.resume.Project}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Specify career projects
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Projects</em>' containment reference list.
 	 * @see org.nasdanika.models.resume.ResumePackage#getResume_Projects()
 	 * @model containment="true"

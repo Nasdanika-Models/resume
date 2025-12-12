@@ -49,17 +49,72 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Profile/network"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Profile/username"/>
     </genClasses>
-    <genClasses ecoreClass="resume.ecore#//Work"/>
-    <genClasses ecoreClass="resume.ecore#//Volunteer"/>
-    <genClasses ecoreClass="resume.ecore#//Education"/>
-    <genClasses ecoreClass="resume.ecore#//Award"/>
-    <genClasses ecoreClass="resume.ecore#//Certificate"/>
-    <genClasses ecoreClass="resume.ecore#//Publication"/>
-    <genClasses ecoreClass="resume.ecore#//Skill"/>
-    <genClasses ecoreClass="resume.ecore#//Language"/>
-    <genClasses ecoreClass="resume.ecore#//Interest"/>
-    <genClasses ecoreClass="resume.ecore#//Reference"/>
-    <genClasses ecoreClass="resume.ecore#//Project"/>
-    <genClasses ecoreClass="resume.ecore#//Meta"/>
+    <genClasses image="false" ecoreClass="resume.ecore#//Engagement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Engagement/highlights"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Engagement/summary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Engagement/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Engagement/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Engagement/position"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Work">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Work/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Work/description"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Volunteer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Volunteer/organization"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Education">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/institution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/area"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/studyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/score"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Education/courses"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Award">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Award/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Award/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Award/awarder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Award/summary"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Certificate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Certificate/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Certificate/issuer"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Publication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Publication/publisher"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Publication/releaseDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Publication/summary"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Skill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Skill/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Skill/keywords"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Language">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Language/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Language/fluency"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Interest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Interest/keywords"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Reference/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/highlights"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/keywords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/roles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Project/type"/>
+    </genClasses>
+    <genClasses ecoreClass="resume.ecore#//Meta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Meta/canonical"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Meta/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Meta/lastModified"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Volunteer;
 
@@ -17,22 +14,21 @@ import org.nasdanika.models.resume.Volunteer;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.models.resume.impl.VolunteerImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.VolunteerImpl#getOrganization <em>Organization</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volunteer {
+public class VolunteerImpl extends EngagementImpl implements Volunteer {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The default value of the '{@link #getOrganization() <em>Organization</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getOrganization()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
-
+	protected static final String ORGANIZATION_EDEFAULT = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,8 +54,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	 * @generated
 	 */
 	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
+	public String getOrganization() {
+		return (String)eDynamicGet(ResumePackage.VOLUNTEER__ORGANIZATION, ResumePackage.Literals.VOLUNTEER__ORGANIZATION, true, true);
 	}
 
 	/**
@@ -68,18 +64,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	 * @generated
 	 */
 	@Override
-	public String getUrl() {
-		return (String)eDynamicGet(ResumePackage.VOLUNTEER__URL, ResumePackage.Literals.RESOURCE__URL, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setUrl(String newUrl) {
-		eDynamicSet(ResumePackage.VOLUNTEER__URL, ResumePackage.Literals.RESOURCE__URL, newUrl);
+	public void setOrganization(String newOrganization) {
+		eDynamicSet(ResumePackage.VOLUNTEER__ORGANIZATION, ResumePackage.Literals.VOLUNTEER__ORGANIZATION, newOrganization);
 	}
 
 	/**
@@ -90,8 +76,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ResumePackage.VOLUNTEER__URL:
-				return getUrl();
+			case ResumePackage.VOLUNTEER__ORGANIZATION:
+				return getOrganization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,8 +90,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ResumePackage.VOLUNTEER__URL:
-				setUrl((String)newValue);
+			case ResumePackage.VOLUNTEER__ORGANIZATION:
+				setOrganization((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -119,8 +105,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ResumePackage.VOLUNTEER__URL:
-				setUrl(URL_EDEFAULT);
+			case ResumePackage.VOLUNTEER__ORGANIZATION:
+				setOrganization(ORGANIZATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -134,8 +120,8 @@ public class VolunteerImpl extends MinimalEObjectImpl.Container implements Volun
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ResumePackage.VOLUNTEER__URL:
-				return URL_EDEFAULT == null ? getUrl() != null : !URL_EDEFAULT.equals(getUrl());
+			case ResumePackage.VOLUNTEER__ORGANIZATION:
+				return ORGANIZATION_EDEFAULT == null ? getOrganization() != null : !ORGANIZATION_EDEFAULT.equals(getOrganization());
 		}
 		return super.eIsSet(featureID);
 	}

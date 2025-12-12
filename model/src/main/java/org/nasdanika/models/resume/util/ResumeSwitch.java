@@ -105,9 +105,17 @@ public class ResumeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ResumePackage.ENGAGEMENT: {
+				Engagement engagement = (Engagement)theEObject;
+				T result = caseEngagement(engagement);
+				if (result == null) result = caseResource(engagement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ResumePackage.WORK: {
 				Work work = (Work)theEObject;
 				T result = caseWork(work);
+				if (result == null) result = caseEngagement(work);
 				if (result == null) result = caseNamed(work);
 				if (result == null) result = caseResource(work);
 				if (result == null) result = defaultCase(theEObject);
@@ -116,6 +124,7 @@ public class ResumeSwitch<T> extends Switch<T> {
 			case ResumePackage.VOLUNTEER: {
 				Volunteer volunteer = (Volunteer)theEObject;
 				T result = caseVolunteer(volunteer);
+				if (result == null) result = caseEngagement(volunteer);
 				if (result == null) result = caseResource(volunteer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -281,6 +290,21 @@ public class ResumeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProfile(Profile object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Engagement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Engagement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEngagement(Engagement object) {
 		return null;
 	}
 

@@ -18,6 +18,7 @@ import org.nasdanika.models.resume.ResumePackage;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.models.resume.impl.ReferenceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ReferenceImpl#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @generated
@@ -32,6 +33,16 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getReference() <em>Reference</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReference()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REFERENCE_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,10 +99,32 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 	 * @generated
 	 */
 	@Override
+	public String getReference() {
+		return (String)eDynamicGet(ResumePackage.REFERENCE__REFERENCE, ResumePackage.Literals.REFERENCE__REFERENCE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setReference(String newReference) {
+		eDynamicSet(ResumePackage.REFERENCE__REFERENCE, ResumePackage.Literals.REFERENCE__REFERENCE, newReference);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ResumePackage.REFERENCE__NAME:
 				return getName();
+			case ResumePackage.REFERENCE__REFERENCE:
+				return getReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -106,6 +139,9 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 		switch (featureID) {
 			case ResumePackage.REFERENCE__NAME:
 				setName((String)newValue);
+				return;
+			case ResumePackage.REFERENCE__REFERENCE:
+				setReference((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,6 +158,9 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 			case ResumePackage.REFERENCE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case ResumePackage.REFERENCE__REFERENCE:
+				setReference(REFERENCE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -136,6 +175,8 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 		switch (featureID) {
 			case ResumePackage.REFERENCE__NAME:
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+			case ResumePackage.REFERENCE__REFERENCE:
+				return REFERENCE_EDEFAULT == null ? getReference() != null : !REFERENCE_EDEFAULT.equals(getReference());
 		}
 		return super.eIsSet(featureID);
 	}

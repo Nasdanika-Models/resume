@@ -514,23 +514,14 @@ public interface ResumePackage extends EPackage {
 	int PROFILE_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.WorkImpl <em>Work</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.EngagementImpl <em>Engagement</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.resume.impl.WorkImpl
-	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getWork()
+	 * @see org.nasdanika.models.resume.impl.EngagementImpl
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getEngagement()
 	 * @generated
 	 */
-	int WORK = 6;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK__NAME = NAMED__NAME;
+	int ENGAGEMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -539,7 +530,161 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK__URL = NAMED_FEATURE_COUNT + 0;
+	int ENGAGEMENT__URL = RESOURCE__URL;
+
+	/**
+	 * The feature id for the '<em><b>Highlights</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__HIGHLIGHTS = RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__SUMMARY = RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__START_DATE = RESOURCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__END_DATE = RESOURCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__POSITION = RESOURCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Engagement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Engagement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.WorkImpl <em>Work</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.resume.impl.WorkImpl
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getWork()
+	 * @generated
+	 */
+	int WORK = 7;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__URL = ENGAGEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Highlights</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__HIGHLIGHTS = ENGAGEMENT__HIGHLIGHTS;
+
+	/**
+	 * The feature id for the '<em><b>Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__SUMMARY = ENGAGEMENT__SUMMARY;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__START_DATE = ENGAGEMENT__START_DATE;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__END_DATE = ENGAGEMENT__END_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__POSITION = ENGAGEMENT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__NAME = ENGAGEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__LOCATION = ENGAGEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__DESCRIPTION = ENGAGEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Work</em>' class.
@@ -548,7 +693,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
+	int WORK_FEATURE_COUNT = ENGAGEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Work</em>' class.
@@ -557,7 +702,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_OPERATION_COUNT = NAMED_OPERATION_COUNT + 0;
+	int WORK_OPERATION_COUNT = ENGAGEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.VolunteerImpl <em>Volunteer</em>}' class.
@@ -567,7 +712,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getVolunteer()
 	 * @generated
 	 */
-	int VOLUNTEER = 7;
+	int VOLUNTEER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -576,7 +721,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__URL = RESOURCE__URL;
+	int VOLUNTEER__URL = ENGAGEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Highlights</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__HIGHLIGHTS = ENGAGEMENT__HIGHLIGHTS;
+
+	/**
+	 * The feature id for the '<em><b>Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__SUMMARY = ENGAGEMENT__SUMMARY;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__START_DATE = ENGAGEMENT__START_DATE;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__END_DATE = ENGAGEMENT__END_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__POSITION = ENGAGEMENT__POSITION;
+
+	/**
+	 * The feature id for the '<em><b>Organization</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__ORGANIZATION = ENGAGEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Volunteer</em>' class.
@@ -585,7 +784,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 0;
+	int VOLUNTEER_FEATURE_COUNT = ENGAGEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Volunteer</em>' class.
@@ -594,7 +793,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
+	int VOLUNTEER_OPERATION_COUNT = ENGAGEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.EducationImpl <em>Education</em>}' class.
@@ -604,7 +803,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getEducation()
 	 * @generated
 	 */
-	int EDUCATION = 8;
+	int EDUCATION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -616,13 +815,76 @@ public interface ResumePackage extends EPackage {
 	int EDUCATION__URL = RESOURCE__URL;
 
 	/**
+	 * The feature id for the '<em><b>Institution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__INSTITUTION = RESOURCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Area</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__AREA = RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Study Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__STUDY_TYPE = RESOURCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__START_DATE = RESOURCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__END_DATE = RESOURCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Score</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__SCORE = RESOURCE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Courses</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__COURSES = RESOURCE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Education</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDUCATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 0;
+	int EDUCATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Education</em>' class.
@@ -641,7 +903,43 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getAward()
 	 * @generated
 	 */
-	int AWARD = 9;
+	int AWARD = 10;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__TITLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__DATE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Awarder</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__AWARDER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__SUMMARY = 3;
 
 	/**
 	 * The number of structural features of the '<em>Award</em>' class.
@@ -650,7 +948,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD_FEATURE_COUNT = 0;
+	int AWARD_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Award</em>' class.
@@ -669,7 +967,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getCertificate()
 	 * @generated
 	 */
-	int CERTIFICATE = 10;
+	int CERTIFICATE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -690,13 +988,31 @@ public interface ResumePackage extends EPackage {
 	int CERTIFICATE__URL = NAMED_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE__DATE = NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Issuer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE__ISSUER = NAMED_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Certificate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CERTIFICATE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
+	int CERTIFICATE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Certificate</em>' class.
@@ -715,7 +1031,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getPublication()
 	 * @generated
 	 */
-	int PUBLICATION = 11;
+	int PUBLICATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -736,13 +1052,40 @@ public interface ResumePackage extends EPackage {
 	int PUBLICATION__URL = NAMED_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Publisher</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION__PUBLISHER = NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Release Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION__RELEASE_DATE = NAMED_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Summary</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION__SUMMARY = NAMED_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Publication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUBLICATION_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
+	int PUBLICATION_FEATURE_COUNT = NAMED_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Publication</em>' class.
@@ -761,7 +1104,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getSkill()
 	 * @generated
 	 */
-	int SKILL = 12;
+	int SKILL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -773,13 +1116,31 @@ public interface ResumePackage extends EPackage {
 	int SKILL__NAME = NAMED__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL__LEVEL = NAMED_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Keywords</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL__KEYWORDS = NAMED_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Skill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SKILL_FEATURE_COUNT = NAMED_FEATURE_COUNT + 0;
+	int SKILL_FEATURE_COUNT = NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Skill</em>' class.
@@ -798,7 +1159,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getLanguage()
 	 * @generated
 	 */
-	int LANGUAGE = 13;
+	int LANGUAGE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Language</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__LANGUAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Fluency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__FLUENCY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Language</em>' class.
@@ -807,7 +1186,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_FEATURE_COUNT = 0;
+	int LANGUAGE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Language</em>' class.
@@ -826,7 +1205,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getInterest()
 	 * @generated
 	 */
-	int INTEREST = 14;
+	int INTEREST = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -838,13 +1217,22 @@ public interface ResumePackage extends EPackage {
 	int INTEREST__NAME = NAMED__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Keywords</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST__KEYWORDS = NAMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Interest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEREST_FEATURE_COUNT = NAMED_FEATURE_COUNT + 0;
+	int INTEREST_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Interest</em>' class.
@@ -863,7 +1251,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getReference()
 	 * @generated
 	 */
-	int REFERENCE = 15;
+	int REFERENCE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -875,13 +1263,22 @@ public interface ResumePackage extends EPackage {
 	int REFERENCE__NAME = NAMED__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Reference</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE__REFERENCE = NAMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 0;
+	int REFERENCE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Reference</em>' class.
@@ -900,7 +1297,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getProject()
 	 * @generated
 	 */
-	int PROJECT = 16;
+	int PROJECT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -921,13 +1318,85 @@ public interface ResumePackage extends EPackage {
 	int PROJECT__URL = NAMED_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__DESCRIPTION = NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Highlights</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__HIGHLIGHTS = NAMED_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Keywords</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__KEYWORDS = NAMED_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__START_DATE = NAMED_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__END_DATE = NAMED_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__ROLES = NAMED_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__ENTITY = NAMED_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__TYPE = NAMED_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
+	int PROJECT_FEATURE_COUNT = NAMED_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Project</em>' class.
@@ -946,7 +1415,34 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getMeta()
 	 * @generated
 	 */
-	int META = 17;
+	int META = 18;
+
+	/**
+	 * The feature id for the '<em><b>Canonical</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META__CANONICAL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META__VERSION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Last Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META__LAST_MODIFIED = 2;
 
 	/**
 	 * The number of structural features of the '<em>Meta</em>' class.
@@ -955,7 +1451,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int META_FEATURE_COUNT = 0;
+	int META_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Meta</em>' class.
@@ -1347,6 +1843,71 @@ public interface ResumePackage extends EPackage {
 	EAttribute getProfile_Username();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Engagement <em>Engagement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Engagement</em>'.
+	 * @see org.nasdanika.models.resume.Engagement
+	 * @generated
+	 */
+	EClass getEngagement();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Engagement#getHighlights <em>Highlights</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Highlights</em>'.
+	 * @see org.nasdanika.models.resume.Engagement#getHighlights()
+	 * @see #getEngagement()
+	 * @generated
+	 */
+	EAttribute getEngagement_Highlights();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Engagement#getSummary <em>Summary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Summary</em>'.
+	 * @see org.nasdanika.models.resume.Engagement#getSummary()
+	 * @see #getEngagement()
+	 * @generated
+	 */
+	EAttribute getEngagement_Summary();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Engagement#getStartDate <em>Start Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Date</em>'.
+	 * @see org.nasdanika.models.resume.Engagement#getStartDate()
+	 * @see #getEngagement()
+	 * @generated
+	 */
+	EAttribute getEngagement_StartDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Engagement#getEndDate <em>End Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Date</em>'.
+	 * @see org.nasdanika.models.resume.Engagement#getEndDate()
+	 * @see #getEngagement()
+	 * @generated
+	 */
+	EAttribute getEngagement_EndDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Engagement#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see org.nasdanika.models.resume.Engagement#getPosition()
+	 * @see #getEngagement()
+	 * @generated
+	 */
+	EAttribute getEngagement_Position();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Work <em>Work</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1355,6 +1916,28 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getWork();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Work#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location</em>'.
+	 * @see org.nasdanika.models.resume.Work#getLocation()
+	 * @see #getWork()
+	 * @generated
+	 */
+	EAttribute getWork_Location();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Work#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.nasdanika.models.resume.Work#getDescription()
+	 * @see #getWork()
+	 * @generated
+	 */
+	EAttribute getWork_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Volunteer <em>Volunteer</em>}'.
@@ -1367,6 +1950,17 @@ public interface ResumePackage extends EPackage {
 	EClass getVolunteer();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Volunteer#getOrganization <em>Organization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Organization</em>'.
+	 * @see org.nasdanika.models.resume.Volunteer#getOrganization()
+	 * @see #getVolunteer()
+	 * @generated
+	 */
+	EAttribute getVolunteer_Organization();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Education <em>Education</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1375,6 +1969,83 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEducation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getInstitution <em>Institution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Institution</em>'.
+	 * @see org.nasdanika.models.resume.Education#getInstitution()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_Institution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getArea <em>Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Area</em>'.
+	 * @see org.nasdanika.models.resume.Education#getArea()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_Area();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getStudyType <em>Study Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Study Type</em>'.
+	 * @see org.nasdanika.models.resume.Education#getStudyType()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_StudyType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getStartDate <em>Start Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Date</em>'.
+	 * @see org.nasdanika.models.resume.Education#getStartDate()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_StartDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getEndDate <em>End Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Date</em>'.
+	 * @see org.nasdanika.models.resume.Education#getEndDate()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_EndDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Education#getScore <em>Score</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Score</em>'.
+	 * @see org.nasdanika.models.resume.Education#getScore()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_Score();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Education#getCourses <em>Courses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Courses</em>'.
+	 * @see org.nasdanika.models.resume.Education#getCourses()
+	 * @see #getEducation()
+	 * @generated
+	 */
+	EAttribute getEducation_Courses();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Award <em>Award</em>}'.
@@ -1387,6 +2058,50 @@ public interface ResumePackage extends EPackage {
 	EClass getAward();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Award#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see org.nasdanika.models.resume.Award#getTitle()
+	 * @see #getAward()
+	 * @generated
+	 */
+	EAttribute getAward_Title();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Award#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see org.nasdanika.models.resume.Award#getDate()
+	 * @see #getAward()
+	 * @generated
+	 */
+	EAttribute getAward_Date();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Award#getAwarder <em>Awarder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Awarder</em>'.
+	 * @see org.nasdanika.models.resume.Award#getAwarder()
+	 * @see #getAward()
+	 * @generated
+	 */
+	EAttribute getAward_Awarder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Award#getSummary <em>Summary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Summary</em>'.
+	 * @see org.nasdanika.models.resume.Award#getSummary()
+	 * @see #getAward()
+	 * @generated
+	 */
+	EAttribute getAward_Summary();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Certificate <em>Certificate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1395,6 +2110,28 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCertificate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Certificate#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see org.nasdanika.models.resume.Certificate#getDate()
+	 * @see #getCertificate()
+	 * @generated
+	 */
+	EAttribute getCertificate_Date();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Certificate#getIssuer <em>Issuer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Issuer</em>'.
+	 * @see org.nasdanika.models.resume.Certificate#getIssuer()
+	 * @see #getCertificate()
+	 * @generated
+	 */
+	EAttribute getCertificate_Issuer();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Publication <em>Publication</em>}'.
@@ -1407,6 +2144,39 @@ public interface ResumePackage extends EPackage {
 	EClass getPublication();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Publication#getPublisher <em>Publisher</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Publisher</em>'.
+	 * @see org.nasdanika.models.resume.Publication#getPublisher()
+	 * @see #getPublication()
+	 * @generated
+	 */
+	EAttribute getPublication_Publisher();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Publication#getReleaseDate <em>Release Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Release Date</em>'.
+	 * @see org.nasdanika.models.resume.Publication#getReleaseDate()
+	 * @see #getPublication()
+	 * @generated
+	 */
+	EAttribute getPublication_ReleaseDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Publication#getSummary <em>Summary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Summary</em>'.
+	 * @see org.nasdanika.models.resume.Publication#getSummary()
+	 * @see #getPublication()
+	 * @generated
+	 */
+	EAttribute getPublication_Summary();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Skill <em>Skill</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1415,6 +2185,28 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSkill();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Skill#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Level</em>'.
+	 * @see org.nasdanika.models.resume.Skill#getLevel()
+	 * @see #getSkill()
+	 * @generated
+	 */
+	EAttribute getSkill_Level();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Skill#getKeywords <em>Keywords</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Keywords</em>'.
+	 * @see org.nasdanika.models.resume.Skill#getKeywords()
+	 * @see #getSkill()
+	 * @generated
+	 */
+	EAttribute getSkill_Keywords();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Language <em>Language</em>}'.
@@ -1427,6 +2219,28 @@ public interface ResumePackage extends EPackage {
 	EClass getLanguage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Language#getLanguage <em>Language</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Language</em>'.
+	 * @see org.nasdanika.models.resume.Language#getLanguage()
+	 * @see #getLanguage()
+	 * @generated
+	 */
+	EAttribute getLanguage_Language();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Language#getFluency <em>Fluency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fluency</em>'.
+	 * @see org.nasdanika.models.resume.Language#getFluency()
+	 * @see #getLanguage()
+	 * @generated
+	 */
+	EAttribute getLanguage_Fluency();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Interest <em>Interest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1435,6 +2249,17 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInterest();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Interest#getKeywords <em>Keywords</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Keywords</em>'.
+	 * @see org.nasdanika.models.resume.Interest#getKeywords()
+	 * @see #getInterest()
+	 * @generated
+	 */
+	EAttribute getInterest_Keywords();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Reference <em>Reference</em>}'.
@@ -1447,6 +2272,17 @@ public interface ResumePackage extends EPackage {
 	EClass getReference();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Reference#getReference <em>Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reference</em>'.
+	 * @see org.nasdanika.models.resume.Reference#getReference()
+	 * @see #getReference()
+	 * @generated
+	 */
+	EAttribute getReference_Reference();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Project <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1457,6 +2293,94 @@ public interface ResumePackage extends EPackage {
 	EClass getProject();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Project#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.nasdanika.models.resume.Project#getDescription()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Description();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Project#getHighlights <em>Highlights</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Highlights</em>'.
+	 * @see org.nasdanika.models.resume.Project#getHighlights()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Highlights();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Project#getKeywords <em>Keywords</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Keywords</em>'.
+	 * @see org.nasdanika.models.resume.Project#getKeywords()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Keywords();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Project#getStartDate <em>Start Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Date</em>'.
+	 * @see org.nasdanika.models.resume.Project#getStartDate()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_StartDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Project#getEndDate <em>End Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Date</em>'.
+	 * @see org.nasdanika.models.resume.Project#getEndDate()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_EndDate();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.nasdanika.models.resume.Project#getRoles <em>Roles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Roles</em>'.
+	 * @see org.nasdanika.models.resume.Project#getRoles()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Roles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Project#getEntity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Entity</em>'.
+	 * @see org.nasdanika.models.resume.Project#getEntity()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Entity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Project#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.nasdanika.models.resume.Project#getType()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EAttribute getProject_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Meta <em>Meta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1465,6 +2389,39 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMeta();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Meta#getCanonical <em>Canonical</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Canonical</em>'.
+	 * @see org.nasdanika.models.resume.Meta#getCanonical()
+	 * @see #getMeta()
+	 * @generated
+	 */
+	EAttribute getMeta_Canonical();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Meta#getVersion <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version</em>'.
+	 * @see org.nasdanika.models.resume.Meta#getVersion()
+	 * @see #getMeta()
+	 * @generated
+	 */
+	EAttribute getMeta_Version();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.models.resume.Meta#getLastModified <em>Last Modified</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Modified</em>'.
+	 * @see org.nasdanika.models.resume.Meta#getLastModified()
+	 * @see #getMeta()
+	 * @generated
+	 */
+	EAttribute getMeta_LastModified();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1747,6 +2704,50 @@ public interface ResumePackage extends EPackage {
 		 */
 		EAttribute PROFILE__USERNAME = eINSTANCE.getProfile_Username();
 		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.EngagementImpl <em>Engagement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.resume.impl.EngagementImpl
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getEngagement()
+		 * @generated
+		 */
+		EClass ENGAGEMENT = eINSTANCE.getEngagement();
+		/**
+		 * The meta object literal for the '<em><b>Highlights</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGAGEMENT__HIGHLIGHTS = eINSTANCE.getEngagement_Highlights();
+		/**
+		 * The meta object literal for the '<em><b>Summary</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGAGEMENT__SUMMARY = eINSTANCE.getEngagement_Summary();
+		/**
+		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGAGEMENT__START_DATE = eINSTANCE.getEngagement_StartDate();
+		/**
+		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGAGEMENT__END_DATE = eINSTANCE.getEngagement_EndDate();
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENGAGEMENT__POSITION = eINSTANCE.getEngagement_Position();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.WorkImpl <em>Work</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1755,6 +2756,20 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass WORK = eINSTANCE.getWork();
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORK__LOCATION = eINSTANCE.getWork_Location();
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORK__DESCRIPTION = eINSTANCE.getWork_Description();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.VolunteerImpl <em>Volunteer</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1765,6 +2780,13 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass VOLUNTEER = eINSTANCE.getVolunteer();
 		/**
+		 * The meta object literal for the '<em><b>Organization</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VOLUNTEER__ORGANIZATION = eINSTANCE.getVolunteer_Organization();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.EducationImpl <em>Education</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1773,6 +2795,55 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass EDUCATION = eINSTANCE.getEducation();
+		/**
+		 * The meta object literal for the '<em><b>Institution</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__INSTITUTION = eINSTANCE.getEducation_Institution();
+		/**
+		 * The meta object literal for the '<em><b>Area</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__AREA = eINSTANCE.getEducation_Area();
+		/**
+		 * The meta object literal for the '<em><b>Study Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__STUDY_TYPE = eINSTANCE.getEducation_StudyType();
+		/**
+		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__START_DATE = eINSTANCE.getEducation_StartDate();
+		/**
+		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__END_DATE = eINSTANCE.getEducation_EndDate();
+		/**
+		 * The meta object literal for the '<em><b>Score</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__SCORE = eINSTANCE.getEducation_Score();
+		/**
+		 * The meta object literal for the '<em><b>Courses</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDUCATION__COURSES = eINSTANCE.getEducation_Courses();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.AwardImpl <em>Award</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1783,6 +2854,34 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass AWARD = eINSTANCE.getAward();
 		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AWARD__TITLE = eINSTANCE.getAward_Title();
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AWARD__DATE = eINSTANCE.getAward_Date();
+		/**
+		 * The meta object literal for the '<em><b>Awarder</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AWARD__AWARDER = eINSTANCE.getAward_Awarder();
+		/**
+		 * The meta object literal for the '<em><b>Summary</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AWARD__SUMMARY = eINSTANCE.getAward_Summary();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.CertificateImpl <em>Certificate</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1791,6 +2890,20 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass CERTIFICATE = eINSTANCE.getCertificate();
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CERTIFICATE__DATE = eINSTANCE.getCertificate_Date();
+		/**
+		 * The meta object literal for the '<em><b>Issuer</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CERTIFICATE__ISSUER = eINSTANCE.getCertificate_Issuer();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.PublicationImpl <em>Publication</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1801,6 +2914,27 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass PUBLICATION = eINSTANCE.getPublication();
 		/**
+		 * The meta object literal for the '<em><b>Publisher</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PUBLICATION__PUBLISHER = eINSTANCE.getPublication_Publisher();
+		/**
+		 * The meta object literal for the '<em><b>Release Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PUBLICATION__RELEASE_DATE = eINSTANCE.getPublication_ReleaseDate();
+		/**
+		 * The meta object literal for the '<em><b>Summary</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PUBLICATION__SUMMARY = eINSTANCE.getPublication_Summary();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.SkillImpl <em>Skill</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1809,6 +2943,20 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SKILL = eINSTANCE.getSkill();
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SKILL__LEVEL = eINSTANCE.getSkill_Level();
+		/**
+		 * The meta object literal for the '<em><b>Keywords</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SKILL__KEYWORDS = eINSTANCE.getSkill_Keywords();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.LanguageImpl <em>Language</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1819,6 +2967,20 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass LANGUAGE = eINSTANCE.getLanguage();
 		/**
+		 * The meta object literal for the '<em><b>Language</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LANGUAGE__LANGUAGE = eINSTANCE.getLanguage_Language();
+		/**
+		 * The meta object literal for the '<em><b>Fluency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LANGUAGE__FLUENCY = eINSTANCE.getLanguage_Fluency();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.InterestImpl <em>Interest</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1827,6 +2989,13 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTEREST = eINSTANCE.getInterest();
+		/**
+		 * The meta object literal for the '<em><b>Keywords</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEREST__KEYWORDS = eINSTANCE.getInterest_Keywords();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.ReferenceImpl <em>Reference</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1837,6 +3006,13 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass REFERENCE = eINSTANCE.getReference();
 		/**
+		 * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REFERENCE__REFERENCE = eINSTANCE.getReference_Reference();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.ProjectImpl <em>Project</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1846,6 +3022,62 @@ public interface ResumePackage extends EPackage {
 		 */
 		EClass PROJECT = eINSTANCE.getProject();
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__DESCRIPTION = eINSTANCE.getProject_Description();
+		/**
+		 * The meta object literal for the '<em><b>Highlights</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__HIGHLIGHTS = eINSTANCE.getProject_Highlights();
+		/**
+		 * The meta object literal for the '<em><b>Keywords</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__KEYWORDS = eINSTANCE.getProject_Keywords();
+		/**
+		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__START_DATE = eINSTANCE.getProject_StartDate();
+		/**
+		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__END_DATE = eINSTANCE.getProject_EndDate();
+		/**
+		 * The meta object literal for the '<em><b>Roles</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__ROLES = eINSTANCE.getProject_Roles();
+		/**
+		 * The meta object literal for the '<em><b>Entity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__ENTITY = eINSTANCE.getProject_Entity();
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROJECT__TYPE = eINSTANCE.getProject_Type();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.MetaImpl <em>Meta</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1854,6 +3086,27 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EClass META = eINSTANCE.getMeta();
+		/**
+		 * The meta object literal for the '<em><b>Canonical</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute META__CANONICAL = eINSTANCE.getMeta_Canonical();
+		/**
+		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute META__VERSION = eINSTANCE.getMeta_Version();
+		/**
+		 * The meta object literal for the '<em><b>Last Modified</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute META__LAST_MODIFIED = eINSTANCE.getMeta_LastModified();
 
 	}
 

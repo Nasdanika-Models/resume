@@ -13,6 +13,7 @@ import org.nasdanika.models.resume.Award;
 import org.nasdanika.models.resume.Basics;
 import org.nasdanika.models.resume.Certificate;
 import org.nasdanika.models.resume.Education;
+import org.nasdanika.models.resume.Engagement;
 import org.nasdanika.models.resume.Interest;
 import org.nasdanika.models.resume.Language;
 import org.nasdanika.models.resume.Location;
@@ -74,6 +75,12 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	private EClass profileEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass engagementEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -563,8 +570,88 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getEngagement() {
+		return engagementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEngagement_Highlights() {
+		return (EAttribute)engagementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEngagement_Summary() {
+		return (EAttribute)engagementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEngagement_StartDate() {
+		return (EAttribute)engagementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEngagement_EndDate() {
+		return (EAttribute)engagementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEngagement_Position() {
+		return (EAttribute)engagementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getWork() {
 		return workEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWork_Location() {
+		return (EAttribute)workEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWork_Description() {
+		return (EAttribute)workEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -583,8 +670,88 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVolunteer_Organization() {
+		return (EAttribute)volunteerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEducation() {
 		return educationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_Institution() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_Area() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_StudyType() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_StartDate() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_EndDate() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_Score() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEducation_Courses() {
+		return (EAttribute)educationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -603,8 +770,68 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAward_Title() {
+		return (EAttribute)awardEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAward_Date() {
+		return (EAttribute)awardEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAward_Awarder() {
+		return (EAttribute)awardEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAward_Summary() {
+		return (EAttribute)awardEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCertificate() {
 		return certificateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCertificate_Date() {
+		return (EAttribute)certificateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCertificate_Issuer() {
+		return (EAttribute)certificateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -623,8 +850,58 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getPublication_Publisher() {
+		return (EAttribute)publicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPublication_ReleaseDate() {
+		return (EAttribute)publicationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPublication_Summary() {
+		return (EAttribute)publicationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSkill() {
 		return skillEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSkill_Level() {
+		return (EAttribute)skillEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSkill_Keywords() {
+		return (EAttribute)skillEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -643,8 +920,38 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getLanguage_Language() {
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLanguage_Fluency() {
+		return (EAttribute)languageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getInterest() {
 		return interestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInterest_Keywords() {
+		return (EAttribute)interestEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -663,6 +970,16 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getReference_Reference() {
+		return (EAttribute)referenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProject() {
 		return projectEClass;
 	}
@@ -673,8 +990,118 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getProject_Description() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_Highlights() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_Keywords() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_StartDate() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_EndDate() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_Roles() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_Entity() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getProject_Type() {
+		return (EAttribute)projectEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getMeta() {
 		return metaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMeta_Canonical() {
+		return (EAttribute)metaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMeta_Version() {
+		return (EAttribute)metaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getMeta_LastModified() {
+		return (EAttribute)metaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -747,29 +1174,72 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEAttribute(profileEClass, PROFILE__NETWORK);
 		createEAttribute(profileEClass, PROFILE__USERNAME);
 
+		engagementEClass = createEClass(ENGAGEMENT);
+		createEAttribute(engagementEClass, ENGAGEMENT__HIGHLIGHTS);
+		createEAttribute(engagementEClass, ENGAGEMENT__SUMMARY);
+		createEAttribute(engagementEClass, ENGAGEMENT__START_DATE);
+		createEAttribute(engagementEClass, ENGAGEMENT__END_DATE);
+		createEAttribute(engagementEClass, ENGAGEMENT__POSITION);
+
 		workEClass = createEClass(WORK);
+		createEAttribute(workEClass, WORK__LOCATION);
+		createEAttribute(workEClass, WORK__DESCRIPTION);
 
 		volunteerEClass = createEClass(VOLUNTEER);
+		createEAttribute(volunteerEClass, VOLUNTEER__ORGANIZATION);
 
 		educationEClass = createEClass(EDUCATION);
+		createEAttribute(educationEClass, EDUCATION__INSTITUTION);
+		createEAttribute(educationEClass, EDUCATION__AREA);
+		createEAttribute(educationEClass, EDUCATION__STUDY_TYPE);
+		createEAttribute(educationEClass, EDUCATION__START_DATE);
+		createEAttribute(educationEClass, EDUCATION__END_DATE);
+		createEAttribute(educationEClass, EDUCATION__SCORE);
+		createEAttribute(educationEClass, EDUCATION__COURSES);
 
 		awardEClass = createEClass(AWARD);
+		createEAttribute(awardEClass, AWARD__TITLE);
+		createEAttribute(awardEClass, AWARD__DATE);
+		createEAttribute(awardEClass, AWARD__AWARDER);
+		createEAttribute(awardEClass, AWARD__SUMMARY);
 
 		certificateEClass = createEClass(CERTIFICATE);
+		createEAttribute(certificateEClass, CERTIFICATE__DATE);
+		createEAttribute(certificateEClass, CERTIFICATE__ISSUER);
 
 		publicationEClass = createEClass(PUBLICATION);
+		createEAttribute(publicationEClass, PUBLICATION__PUBLISHER);
+		createEAttribute(publicationEClass, PUBLICATION__RELEASE_DATE);
+		createEAttribute(publicationEClass, PUBLICATION__SUMMARY);
 
 		skillEClass = createEClass(SKILL);
+		createEAttribute(skillEClass, SKILL__LEVEL);
+		createEAttribute(skillEClass, SKILL__KEYWORDS);
 
 		languageEClass = createEClass(LANGUAGE);
+		createEAttribute(languageEClass, LANGUAGE__LANGUAGE);
+		createEAttribute(languageEClass, LANGUAGE__FLUENCY);
 
 		interestEClass = createEClass(INTEREST);
+		createEAttribute(interestEClass, INTEREST__KEYWORDS);
 
 		referenceEClass = createEClass(REFERENCE);
+		createEAttribute(referenceEClass, REFERENCE__REFERENCE);
 
 		projectEClass = createEClass(PROJECT);
+		createEAttribute(projectEClass, PROJECT__DESCRIPTION);
+		createEAttribute(projectEClass, PROJECT__HIGHLIGHTS);
+		createEAttribute(projectEClass, PROJECT__KEYWORDS);
+		createEAttribute(projectEClass, PROJECT__START_DATE);
+		createEAttribute(projectEClass, PROJECT__END_DATE);
+		createEAttribute(projectEClass, PROJECT__ROLES);
+		createEAttribute(projectEClass, PROJECT__ENTITY);
+		createEAttribute(projectEClass, PROJECT__TYPE);
 
 		metaEClass = createEClass(META);
+		createEAttribute(metaEClass, META__CANONICAL);
+		createEAttribute(metaEClass, META__VERSION);
+		createEAttribute(metaEClass, META__LAST_MODIFIED);
 	}
 
 	/**
@@ -803,9 +1273,10 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		basicsEClass.getESuperTypes().add(this.getNamed());
 		basicsEClass.getESuperTypes().add(this.getResource());
 		profileEClass.getESuperTypes().add(this.getResource());
+		engagementEClass.getESuperTypes().add(this.getResource());
+		workEClass.getESuperTypes().add(this.getEngagement());
 		workEClass.getESuperTypes().add(this.getNamed());
-		workEClass.getESuperTypes().add(this.getResource());
-		volunteerEClass.getESuperTypes().add(this.getResource());
+		volunteerEClass.getESuperTypes().add(this.getEngagement());
 		educationEClass.getESuperTypes().add(this.getResource());
 		certificateEClass.getESuperTypes().add(this.getNamed());
 		certificateEClass.getESuperTypes().add(this.getResource());
@@ -859,29 +1330,72 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		initEAttribute(getProfile_Network(), ecorePackage.getEString(), "network", null, 0, 1, Profile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProfile_Username(), ecorePackage.getEString(), "username", null, 0, 1, Profile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(engagementEClass, Engagement.class, "Engagement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEngagement_Highlights(), ecorePackage.getEString(), "highlights", null, 0, -1, Engagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEngagement_Summary(), ecorePackage.getEString(), "summary", null, 0, 1, Engagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEngagement_StartDate(), ecorePackage.getEDate(), "startDate", null, 0, 1, Engagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEngagement_EndDate(), ecorePackage.getEDate(), "endDate", null, 0, 1, Engagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEngagement_Position(), ecorePackage.getEString(), "position", null, 0, 1, Engagement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(workEClass, Work.class, "Work", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWork_Location(), ecorePackage.getEString(), "location", null, 0, 1, Work.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWork_Description(), ecorePackage.getEString(), "description", null, 0, 1, Work.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(volunteerEClass, Volunteer.class, "Volunteer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVolunteer_Organization(), ecorePackage.getEString(), "organization", null, 0, 1, Volunteer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(educationEClass, Education.class, "Education", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEducation_Institution(), ecorePackage.getEString(), "institution", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_Area(), ecorePackage.getEString(), "area", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_StudyType(), ecorePackage.getEString(), "studyType", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_StartDate(), ecorePackage.getEDate(), "startDate", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_EndDate(), ecorePackage.getEDate(), "endDate", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_Score(), ecorePackage.getEString(), "score", null, 0, 1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEducation_Courses(), ecorePackage.getEString(), "courses", null, 0, -1, Education.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(awardEClass, Award.class, "Award", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAward_Title(), ecorePackage.getEString(), "title", null, 0, 1, Award.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAward_Date(), ecorePackage.getEDate(), "date", null, 0, 1, Award.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAward_Awarder(), ecorePackage.getEString(), "awarder", null, 0, 1, Award.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAward_Summary(), ecorePackage.getEString(), "summary", null, 0, 1, Award.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(certificateEClass, Certificate.class, "Certificate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCertificate_Date(), ecorePackage.getEDate(), "date", null, 0, 1, Certificate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCertificate_Issuer(), ecorePackage.getEString(), "issuer", null, 0, 1, Certificate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(publicationEClass, Publication.class, "Publication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPublication_Publisher(), ecorePackage.getEString(), "publisher", null, 0, 1, Publication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPublication_ReleaseDate(), ecorePackage.getEDate(), "releaseDate", null, 0, 1, Publication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPublication_Summary(), ecorePackage.getEString(), "summary", null, 0, 1, Publication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(skillEClass, Skill.class, "Skill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSkill_Level(), ecorePackage.getEString(), "level", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Keywords(), ecorePackage.getEString(), "keywords", null, 0, -1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(languageEClass, Language.class, "Language", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLanguage_Language(), ecorePackage.getEString(), "language", null, 0, 1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLanguage_Fluency(), ecorePackage.getEString(), "fluency", null, 0, 1, Language.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interestEClass, Interest.class, "Interest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInterest_Keywords(), ecorePackage.getEString(), "keywords", null, 0, -1, Interest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReference_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProject_Description(), ecorePackage.getEString(), "description", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_Highlights(), ecorePackage.getEString(), "highlights", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_Keywords(), ecorePackage.getEString(), "keywords", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_StartDate(), ecorePackage.getEDate(), "startDate", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_EndDate(), ecorePackage.getEDate(), "endDate", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_Roles(), ecorePackage.getEString(), "roles", null, 0, -1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_Entity(), ecorePackage.getEString(), "entity", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_Type(), ecorePackage.getEString(), "type", null, 0, 1, Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metaEClass, Meta.class, "Meta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMeta_Canonical(), ecorePackage.getEString(), "canonical", null, 0, 1, Meta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMeta_Version(), ecorePackage.getEString(), "version", null, 0, 1, Meta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMeta_LastModified(), ecorePackage.getEString(), "lastModified", null, 0, 1, Meta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -922,6 +1436,48 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		   source,
 		   new String[] {
 			   "documentation", "Resource location"
+		   });
+		addAnnotation
+		  (getResume_Awards(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify any awards you have received throughout your professional career"
+		   });
+		addAnnotation
+		  (getResume_Certificates(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify any certificates you have received throughout your professional career"
+		   });
+		addAnnotation
+		  (getResume_Publications(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify your publications through your career"
+		   });
+		addAnnotation
+		  (getResume_Skills(),
+		   source,
+		   new String[] {
+			   "documentation", "List out your professional skill-set"
+		   });
+		addAnnotation
+		  (getResume_Languages(),
+		   source,
+		   new String[] {
+			   "documentation", "List any other languages you speak"
+		   });
+		addAnnotation
+		  (getResume_References(),
+		   source,
+		   new String[] {
+			   "documentation", "List references you have received"
+		   });
+		addAnnotation
+		  (getResume_Projects(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify career projects"
 		   });
 		addAnnotation
 		  (getBasics_Profiles(),
@@ -988,6 +1544,204 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		   source,
 		   new String[] {
 			   "documentation", "e.g. neutralthoughts"
+		   });
+		addAnnotation
+		  (engagementEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Base class for Work and Volunteer"
+		   });
+		addAnnotation
+		  (getEngagement_Highlights(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify multiple accomplishments.\ne.g. Increased profits by 20% from 2011-2012 through viral advertising\n"
+		   });
+		addAnnotation
+		  (getEngagement_Summary(),
+		   source,
+		   new String[] {
+			   "documentation", "Give an overview of your responsibilities at the company"
+		   });
+		addAnnotation
+		  (getEngagement_Position(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Software Engineer"
+		   });
+		addAnnotation
+		  (getWork_Location(),
+		   source,
+		   new String[] {
+			   "documentation", "To add multiple address lines, use \\n. For example, 1234 Gl\ufffdcklichkeit Stra\ufffde\\nHinterhaus 5. Etage li."
+		   });
+		addAnnotation
+		  (getWork_Description(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Menlo Park, CA"
+		   });
+		addAnnotation
+		  (getVolunteer_Organization(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Facebook"
+		   });
+		addAnnotation
+		  (getEducation_Institution(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Massachusetts Institute of Technology"
+		   });
+		addAnnotation
+		  (getEducation_Area(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Arts"
+		   });
+		addAnnotation
+		  (getEducation_StudyType(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Bachelor"
+		   });
+		addAnnotation
+		  (getEducation_Score(),
+		   source,
+		   new String[] {
+			   "documentation", "grade point average, e.g. 3.67/4.0"
+		   });
+		addAnnotation
+		  (getEducation_Courses(),
+		   source,
+		   new String[] {
+			   "documentation", "List notable courses/subjects\ne.g. H1302 - Introduction to American history"
+		   });
+		addAnnotation
+		  (getAward_Title(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. One of the 100 greatest minds of the century"
+		   });
+		addAnnotation
+		  (getAward_Awarder(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Time Magazine"
+		   });
+		addAnnotation
+		  (getAward_Summary(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Received for my work with Quantum Physics"
+		   });
+		addAnnotation
+		  (getCertificate_Issuer(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. CNCF"
+		   });
+		addAnnotation
+		  (getPublication_Publisher(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. IEEE, Computer Magazine"
+		   });
+		addAnnotation
+		  (getPublication_Summary(),
+		   source,
+		   new String[] {
+			   "documentation", "Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML."
+		   });
+		addAnnotation
+		  (getSkill_Level(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Master"
+		   });
+		addAnnotation
+		  (getSkill_Keywords(),
+		   source,
+		   new String[] {
+			   "documentation", "List some keywords pertaining to this skill, e.g. HTML"
+		   });
+		addAnnotation
+		  (getLanguage_Language(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. English, Spanish"
+		   });
+		addAnnotation
+		  (getLanguage_Fluency(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Fluent, Beginner"
+		   });
+		addAnnotation
+		  (getInterest_Keywords(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Friedrich Nietzsche"
+		   });
+		addAnnotation
+		  (getReference_Reference(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. Joe blogs was a great employee, who turned up to work at least once a week.\nHe exceeded my expectations when it came to doing nothing."
+		   });
+		addAnnotation
+		  (getProject_Description(),
+		   source,
+		   new String[] {
+			   "documentation", "Short summary of project. e.g. Collated works of 2017."
+		   });
+		addAnnotation
+		  (getProject_Highlights(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify multiple features\ne.g. Directs you close but not quite there"
+		   });
+		addAnnotation
+		  (getProject_Keywords(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify special elements involved,\ne.g. AngularJS"
+		   });
+		addAnnotation
+		  (getProject_Roles(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify your role on this project or in company\ne.g. Team Lead, Speaker, Writer"
+		   });
+		addAnnotation
+		  (getProject_Entity(),
+		   source,
+		   new String[] {
+			   "documentation", "Specify the relevant company/entity affiliations e.g. \'greenpeace\', \'corporationXYZ\'"
+		   });
+		addAnnotation
+		  (getProject_Type(),
+		   source,
+		   new String[] {
+			   "documentation", "e.g. \'volunteering\', \'presentation\', \'talk\', \'application\', \'conference\'"
+		   });
+		addAnnotation
+		  (getMeta_Canonical(),
+		   source,
+		   new String[] {
+			   "documentation", "URL (as per RFC 3986) to latest version of this document"
+		   });
+		addAnnotation
+		  (getMeta_Version(),
+		   source,
+		   new String[] {
+			   "documentation", "A version field which follows semver - e.g. v1.0.0"
+		   });
+		addAnnotation
+		  (getMeta_LastModified(),
+		   source,
+		   new String[] {
+			   "documentation", "Using ISO 8601 with YYYY-MM-DDThh:mm:ss"
 		   });
 	}
 
