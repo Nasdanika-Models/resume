@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.resume;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Language</b></em>'.
@@ -21,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Language extends EObject {
+public interface Language extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Language</b></em>' attribute.

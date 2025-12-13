@@ -22,6 +22,15 @@ public interface ResumeFactory extends EFactory {
 	ResumeFactory eINSTANCE = org.nasdanika.models.resume.impl.ResumeFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Model Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model Element</em>'.
+	 * @generated
+	 */
+	ModelElement createModelElement();
+
+	/**
 	 * Returns a new object of class '<em>Resume</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

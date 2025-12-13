@@ -62,13 +62,13 @@ public class EcoreGenResumeProcessorsFactory {
 	@EPackageNodeProcessorFactory(
 			label = "Resume",
 			description = "A model of the resume JSON schema",
-			documentation =  
-				"""				
-
-				```drawio-resource
-				resume.drawio
-				```
-
+			actionPrototype = """
+	            app-action:
+	              content:
+	                content-markdown:
+	                  source:
+	                    content-resource:
+	                      location: resume.md
 				"""
 	)
 	public EPackageNodeProcessor createEPackageProcessor(

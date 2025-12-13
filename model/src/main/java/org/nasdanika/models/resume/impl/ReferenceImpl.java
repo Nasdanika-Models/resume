@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Reference;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -23,7 +20,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class ReferenceImpl extends MinimalEObjectImpl.Container implements Reference {
+public class ReferenceImpl extends ModelElementImpl implements Reference {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,16 +58,6 @@ public class ReferenceImpl extends MinimalEObjectImpl.Container implements Refer
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.REFERENCE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

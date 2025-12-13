@@ -2,6 +2,9 @@ package org.nasdanika.models.resume.ecore.tests;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -21,12 +24,20 @@ import org.nasdanika.common.ExecutionException;
 import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.NullProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.models.resume.ResumePackage;
+import org.nasdanika.common.Util;
+import org.nasdanika.emf.persistence.MarkerFactory;
+import org.nasdanika.exec.content.ContentFactory;
+import org.nasdanika.exec.content.Interpolator;
+import org.nasdanika.exec.content.Markdown;
+import org.nasdanika.exec.content.Text;
 import org.nasdanika.models.app.Action;
+import org.nasdanika.models.app.AppFactory;
 import org.nasdanika.models.app.gen.AppSiteGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreHtmlAppGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
+import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.ecore.EcoreGenResumeProcessorsFactory;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * Tests Ecore -> Graph -> Processor -> actions generation
@@ -41,6 +52,7 @@ public class TestResumeModelDocGen {
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
 		List<Function<URI,Action>> actionProviders = new ArrayList<>();		
+		actionProviders.add(this::getAction);
 		EcoreGenResumeProcessorsFactory ecoreGenResumeProcessorFactory = new EcoreGenResumeProcessorsFactory(context);		
 		EcoreNodeProcessorFactory ecoreNodeProcessorFactory = new EcoreNodeProcessorFactory(
 				context, 
@@ -61,7 +73,8 @@ public class TestResumeModelDocGen {
 		File output = new File(actionModelsDir, "resume.xmi");
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
-				Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/"))	
+				Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),	
+				Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/"))	
 			);
 			
 		EcoreHtmlAppGenerator eCoreHtmlAppGenerator = new EcoreHtmlAppGenerator(
@@ -102,6 +115,49 @@ public class TestResumeModelDocGen {
 		if (errorCount != 124) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
+	}
+	
+	private static final URI BASE_URI = URI.createURI("ecore://nasdanika.org/models/");
+	private static final File docDir = new File("doc");
+	
+	protected Action getAction(URI uri) {
+		URI relative = uri.deresolve(BASE_URI);
+		if (relative.isRelative()) {
+			relative = relative.appendFileExtension("md");
+	        Path base = Paths.get(docDir.getPath());
+	        Path fullPath = base.resolve(relative.toString());
+
+	        try {
+				Files.createDirectories(fullPath.getParent());
+				File file = fullPath.toFile();
+				if (!file.isFile()) {
+					Files.writeString(fullPath, "");
+				} else {
+					String documentation = Files.readString(fullPath);
+					if (!Util.isBlank(documentation)) {
+						Action ret = AppFactory.eINSTANCE.createAction();
+						Markdown markdown = ContentFactory.eINSTANCE.createMarkdown();
+						Interpolator interpolator = ContentFactory.eINSTANCE.createInterpolator();
+						Text text = ContentFactory.eINSTANCE.createText();
+						text.setContent(documentation);
+						interpolator.setSource(text);
+						markdown.setSource(interpolator);
+						markdown.setStyle(true);
+						
+						org.nasdanika.ncore.Marker marker = MarkerFactory.INSTANCE.createMarker(fullPath.toString(), null);
+						markdown.getMarkers().add(marker); 
+						ret.getContent().add(markdown);
+						
+						return ret;
+					}
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return null;						
 	}
 	
 }

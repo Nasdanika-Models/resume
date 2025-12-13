@@ -4,9 +4,6 @@ package org.nasdanika.models.resume.impl;
 
 import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Publication;
 import org.nasdanika.models.resume.Resource;
 import org.nasdanika.models.resume.ResumePackage;
@@ -28,7 +25,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class PublicationImpl extends MinimalEObjectImpl.Container implements Publication {
+public class PublicationImpl extends ModelElementImpl implements Publication {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,16 +90,6 @@ public class PublicationImpl extends MinimalEObjectImpl.Container implements Pub
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.PUBLICATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

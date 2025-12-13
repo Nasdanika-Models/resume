@@ -6,9 +6,6 @@ import java.util.Collection;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Project;
 import org.nasdanika.models.resume.Resource;
 import org.nasdanika.models.resume.ResumePackage;
@@ -35,7 +32,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class ProjectImpl extends MinimalEObjectImpl.Container implements Project {
+public class ProjectImpl extends ModelElementImpl implements Project {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -118,16 +115,6 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.PROJECT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

@@ -4,10 +4,36 @@
     editorDirectory="" modelPluginID="org.nasdanika.models.resume" modelName="Resume"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     bundleManifest="false" featureDelegation="Dynamic" complianceLevel="17.0" suppressGenModelAnnotations="false"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightFields="false" usedGenPackages="../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>resume.ecore</foreignModel>
   <genPackages prefix="Resume" basePackage="org.nasdanika.models" disposableProviderFactory="true"
       ecorePackage="resume.ecore#/">
+    <genDataTypes ecoreDataType="resume.ecore#//Function">
+      <genTypeParameters ecoreTypeParameter="resume.ecore#//Function/T"/>
+      <genTypeParameters ecoreTypeParameter="resume.ecore#//Function/R"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="resume.ecore#//Consumer">
+      <genTypeParameters ecoreTypeParameter="resume.ecore#//Consumer/T"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="resume.ecore#//JSONObject"/>
+    <genDataTypes ecoreDataType="resume.ecore#//Section"/>
+    <genClasses ecoreClass="resume.ecore#//ModelElement">
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/load">
+        <genParameters ecoreParameter="resume.ecore#//ModelElement/load/jsonObject"/>
+      </genOperations>
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/loadYaml">
+        <genParameters ecoreParameter="resume.ecore#//ModelElement/loadYaml/yamlString"/>
+      </genOperations>
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/load.1">
+        <genParameters ecoreParameter="resume.ecore#//ModelElement/load.1/contentProvider"/>
+      </genOperations>
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/toJSON"/>
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/toYAML"/>
+      <genOperations ecoreOperation="resume.ecore#//ModelElement/save">
+        <genParameters ecoreParameter="resume.ecore#//ModelElement/save/contentConsumerProvider"/>
+      </genOperations>
+    </genClasses>
     <genClasses image="false" ecoreClass="resume.ecore#//Named">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resume.ecore#//Named/name"/>
     </genClasses>
@@ -28,6 +54,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/references"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/projects"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Resume/meta"/>
+      <genOperations ecoreOperation="resume.ecore#//Resume/toSection"/>
     </genClasses>
     <genClasses ecoreClass="resume.ecore#//Basics">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resume.ecore#//Basics/location"/>

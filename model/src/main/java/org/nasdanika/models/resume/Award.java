@@ -3,7 +3,6 @@
 package org.nasdanika.models.resume;
 
 import java.util.Date;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Award extends EObject {
+public interface Award extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' attribute.

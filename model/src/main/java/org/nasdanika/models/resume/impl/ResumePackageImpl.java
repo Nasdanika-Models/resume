@@ -2,13 +2,20 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.json.JSONObject;
+import org.nasdanika.common.Section;
 import org.nasdanika.models.resume.Award;
 import org.nasdanika.models.resume.Basics;
 import org.nasdanika.models.resume.Certificate;
@@ -18,6 +25,7 @@ import org.nasdanika.models.resume.Interest;
 import org.nasdanika.models.resume.Language;
 import org.nasdanika.models.resume.Location;
 import org.nasdanika.models.resume.Meta;
+import org.nasdanika.models.resume.ModelElement;
 import org.nasdanika.models.resume.Named;
 import org.nasdanika.models.resume.Profile;
 import org.nasdanika.models.resume.Project;
@@ -30,6 +38,7 @@ import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Skill;
 import org.nasdanika.models.resume.Volunteer;
 import org.nasdanika.models.resume.Work;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,6 +47,12 @@ import org.nasdanika.models.resume.Work;
  * @generated
  */
 public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelElementEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,6 +170,31 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	private EClass metaEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType functionEDataType = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType consumerEDataType = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType jsonObjectEDataType = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType sectionEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -200,6 +240,9 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		NcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theResumePackage.createPackageContents();
 
@@ -212,6 +255,76 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ResumePackage.eNS_URI, theResumePackage);
 		return theResumePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getModelElement() {
+		return modelElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__Load__JSONObject() {
+		return modelElementEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__LoadYaml__String() {
+		return modelElementEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__Load__Function() {
+		return modelElementEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__ToJSON() {
+		return modelElementEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__ToYAML() {
+		return modelElementEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getModelElement__Save__Function() {
+		return modelElementEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -392,6 +505,16 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	@Override
 	public EReference getResume_Meta() {
 		return (EReference)resumeEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getResume__ToSection() {
+		return resumeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1110,6 +1233,46 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getFunction() {
+		return functionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getConsumer() {
+		return consumerEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getJSONObject() {
+		return jsonObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getSection() {
+		return sectionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ResumeFactory getResumeFactory() {
 		return (ResumeFactory)getEFactoryInstance();
 	}
@@ -1133,6 +1296,14 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		isCreated = true;
 
 		// Create classes and their features
+		modelElementEClass = createEClass(MODEL_ELEMENT);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD__JSONOBJECT);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD_YAML__STRING);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD__FUNCTION);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_JSON);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_YAML);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___SAVE__FUNCTION);
+
 		namedEClass = createEClass(NAMED);
 		createEAttribute(namedEClass, NAMED__NAME);
 
@@ -1153,6 +1324,7 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEReference(resumeEClass, RESUME__REFERENCES);
 		createEReference(resumeEClass, RESUME__PROJECTS);
 		createEReference(resumeEClass, RESUME__META);
+		createEOperation(resumeEClass, RESUME___TO_SECTION);
 
 		basicsEClass = createEClass(BASICS);
 		createEReference(basicsEClass, BASICS__LOCATION);
@@ -1240,6 +1412,12 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEAttribute(metaEClass, META__CANONICAL);
 		createEAttribute(metaEClass, META__VERSION);
 		createEAttribute(metaEClass, META__LAST_MODIFIED);
+
+		// Create data types
+		functionEDataType = createEDataType(FUNCTION);
+		consumerEDataType = createEDataType(CONSUMER);
+		jsonObjectEDataType = createEDataType(JSON_OBJECT);
+		sectionEDataType = createEDataType(SECTION);
 	}
 
 	/**
@@ -1265,30 +1443,74 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		NcorePackage theNcorePackage = (NcorePackage)EPackage.Registry.INSTANCE.getEPackage(NcorePackage.eNS_URI);
+
 		// Create type parameters
+		addETypeParameter(functionEDataType, "T");
+		addETypeParameter(functionEDataType, "R");
+		addETypeParameter(consumerEDataType, "T");
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		modelElementEClass.getESuperTypes().add(theNcorePackage.getDocumented());
+		namedEClass.getESuperTypes().add(this.getModelElement());
+		resourceEClass.getESuperTypes().add(this.getModelElement());
+		resumeEClass.getESuperTypes().add(this.getModelElement());
+		resumeEClass.getESuperTypes().add(theNcorePackage.getModelElement());
 		basicsEClass.getESuperTypes().add(this.getNamed());
 		basicsEClass.getESuperTypes().add(this.getResource());
+		locationEClass.getESuperTypes().add(this.getModelElement());
 		profileEClass.getESuperTypes().add(this.getResource());
 		engagementEClass.getESuperTypes().add(this.getResource());
 		workEClass.getESuperTypes().add(this.getEngagement());
 		workEClass.getESuperTypes().add(this.getNamed());
 		volunteerEClass.getESuperTypes().add(this.getEngagement());
 		educationEClass.getESuperTypes().add(this.getResource());
+		awardEClass.getESuperTypes().add(this.getModelElement());
 		certificateEClass.getESuperTypes().add(this.getNamed());
 		certificateEClass.getESuperTypes().add(this.getResource());
 		publicationEClass.getESuperTypes().add(this.getNamed());
 		publicationEClass.getESuperTypes().add(this.getResource());
 		skillEClass.getESuperTypes().add(this.getNamed());
+		languageEClass.getESuperTypes().add(this.getModelElement());
 		interestEClass.getESuperTypes().add(this.getNamed());
 		referenceEClass.getESuperTypes().add(this.getNamed());
 		projectEClass.getESuperTypes().add(this.getNamed());
 		projectEClass.getESuperTypes().add(this.getResource());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(modelElementEClass, ModelElement.class, "ModelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getModelElement__Load__JSONObject(), null, "load", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getJSONObject(), "jsonObject", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getModelElement__LoadYaml__String(), null, "loadYaml", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "yamlString", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getModelElement__Load__Function(), null, "load", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(this.getFunction());
+		EGenericType g2 = createEGenericType(ecorePackage.getEStructuralFeature());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "contentProvider", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getModelElement__ToJSON(), this.getJSONObject(), "toJSON", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getModelElement__ToYAML(), ecorePackage.getEString(), "toYAML", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getModelElement__Save__Function(), null, "save", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getFunction());
+		g2 = createEGenericType(ecorePackage.getEStructuralFeature());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getConsumer());
+		g1.getETypeArguments().add(g2);
+		EGenericType g3 = createEGenericType();
+		g2.getETypeArguments().add(g3);
+		addEParameter(op, g1, "contentConsumerProvider", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(namedEClass, Named.class, "Named", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamed_Name(), ecorePackage.getEString(), "name", null, 0, 1, Named.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1309,6 +1531,8 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		initEReference(getResume_References(), this.getReference(), null, "references", null, 0, -1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResume_Projects(), this.getProject(), null, "projects", null, 0, -1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResume_Meta(), this.getMeta(), null, "meta", null, 0, 1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getResume__ToSection(), this.getSection(), "toSection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(basicsEClass, Basics.class, "Basics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBasics_Location(), this.getLocation(), null, "location", null, 0, 1, Basics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1397,6 +1621,12 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		initEAttribute(getMeta_Version(), ecorePackage.getEString(), "version", null, 0, 1, Meta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMeta_LastModified(), ecorePackage.getEString(), "lastModified", null, 0, 1, Meta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		// Initialize data types
+		initEDataType(functionEDataType, Function.class, "Function", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(consumerEDataType, Consumer.class, "Consumer", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(jsonObjectEDataType, JSONObject.class, "JSONObject", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(sectionEDataType, Section.class, "Section", !IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -1414,16 +1644,34 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
+		  (functionEDataType,
+		   source,
+		   new String[] {
+			   "documentation", "[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. \nIf instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.\nOtherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.\n\nExamples:\n\n* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``\n* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.\n\n"
+		   });
+		addAnnotation
+		  (consumerEDataType,
+		   source,
+		   new String[] {
+			   "documentation", "[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. \nIf instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.\nOtherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.\n\nExamples:\n\n* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``\n* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.\n\n"
+		   });
+		addAnnotation
+		  (jsonObjectEDataType,
+		   source,
+		   new String[] {
+			   "documentation", "[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. \nIf instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.\nOtherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.\n\nExamples:\n\n* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``\n* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.\n\n"
+		   });
+		addAnnotation
+		  (sectionEDataType,
+		   source,
+		   new String[] {
+			   "documentation", "[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. \nIf instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.\nOtherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.\n\nExamples:\n\n* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``\n* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.\n\n"
+		   });
+		addAnnotation
 		  (namedEClass,
 		   source,
 		   new String[] {
 			   "documentation", "Interface implemented by classes with a name"
-		   });
-		addAnnotation
-		  (getNamed_Name(),
-		   source,
-		   new String[] {
-			   "documentation", "Name"
 		   });
 		addAnnotation
 		  (resourceEClass,

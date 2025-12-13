@@ -3,6 +3,7 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -10,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.json.JSONObject;
 import org.nasdanika.models.resume.*;
 
 /**
@@ -56,6 +58,7 @@ public class ResumeFactoryImpl extends EFactoryImpl implements ResumeFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ResumePackage.MODEL_ELEMENT: return createModelElement();
 			case ResumePackage.RESUME: return createResume();
 			case ResumePackage.BASICS: return createBasics();
 			case ResumePackage.LOCATION: return createLocation();
@@ -75,6 +78,47 @@ public class ResumeFactoryImpl extends EFactoryImpl implements ResumeFactory {
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ResumePackage.JSON_OBJECT:
+				return createJSONObjectFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ResumePackage.JSON_OBJECT:
+				return convertJSONObjectToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ModelElement createModelElement() {
+		ModelElementImpl modelElement = new ModelElementImpl();
+		return modelElement;
 	}
 
 	/**
@@ -251,6 +295,24 @@ public class ResumeFactoryImpl extends EFactoryImpl implements ResumeFactory {
 	public Meta createMeta() {
 		MetaImpl meta = new MetaImpl();
 		return meta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JSONObject createJSONObjectFromString(EDataType eDataType, String initialValue) {
+		return (JSONObject)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertJSONObjectToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

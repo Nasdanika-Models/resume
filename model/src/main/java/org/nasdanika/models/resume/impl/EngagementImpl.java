@@ -8,9 +8,6 @@ import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Engagement;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -32,7 +29,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public abstract class EngagementImpl extends MinimalEObjectImpl.Container implements Engagement {
+public abstract class EngagementImpl extends ModelElementImpl implements Engagement {
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,16 +97,6 @@ public abstract class EngagementImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.ENGAGEMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

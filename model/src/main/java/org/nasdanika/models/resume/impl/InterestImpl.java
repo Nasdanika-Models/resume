@@ -5,9 +5,6 @@ package org.nasdanika.models.resume.impl;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Interest;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -25,7 +22,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class InterestImpl extends MinimalEObjectImpl.Container implements Interest {
+public class InterestImpl extends ModelElementImpl implements Interest {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,16 +50,6 @@ public class InterestImpl extends MinimalEObjectImpl.Container implements Intere
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.INTEREST;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

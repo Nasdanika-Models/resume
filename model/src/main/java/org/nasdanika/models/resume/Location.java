@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.resume;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Location</b></em>'.
@@ -24,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Location extends EObject {
+public interface Location extends ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -2,15 +2,19 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.nasdanika.common.Adaptable;
+import org.nasdanika.common.Section;
 import org.nasdanika.models.resume.Award;
 import org.nasdanika.models.resume.Basics;
 import org.nasdanika.models.resume.Certificate;
@@ -26,6 +30,11 @@ import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Skill;
 import org.nasdanika.models.resume.Volunteer;
 import org.nasdanika.models.resume.Work;
+import org.nasdanika.ncore.Marker;
+import org.nasdanika.ncore.ModelElement;
+import org.nasdanika.ncore.NcorePackage;
+import org.nasdanika.ncore.Property;
+import org.nasdanika.persistence.Marked;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +44,13 @@ import org.nasdanika.models.resume.Work;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getMarkers <em>Markers</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getUris <em>Uris</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getUuid <em>Uuid</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getLabelPrototype <em>Label Prototype</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getRepresentations <em>Representations</em>}</li>
+ *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getBasics <em>Basics</em>}</li>
  *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getWork <em>Work</em>}</li>
  *   <li>{@link org.nasdanika.models.resume.impl.ResumeImpl#getVolunteer <em>Volunteer</em>}</li>
@@ -52,7 +68,26 @@ import org.nasdanika.models.resume.Work;
  *
  * @generated
  */
-public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
+public class ResumeImpl extends ModelElementImpl implements Resume {
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUuid()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UUID_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,9 +112,113 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
+	public EList<Marker> getMarkers() {
+		return (EList<Marker>)eDynamicGet(ResumePackage.RESUME__MARKERS, NcorePackage.Literals.MARKED__MARKERS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<String> getUris() {
+		return (EList<String>)eDynamicGet(ResumePackage.RESUME__URIS, NcorePackage.Literals.MODEL_ELEMENT__URIS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDescription() {
+		return (String)eDynamicGet(ResumePackage.RESUME__DESCRIPTION, NcorePackage.Literals.MODEL_ELEMENT__DESCRIPTION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDescription(String newDescription) {
+		eDynamicSet(ResumePackage.RESUME__DESCRIPTION, NcorePackage.Literals.MODEL_ELEMENT__DESCRIPTION, newDescription);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getUuid() {
+		return (String)eDynamicGet(ResumePackage.RESUME__UUID, NcorePackage.Literals.MODEL_ELEMENT__UUID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUuid(String newUuid) {
+		eDynamicSet(ResumePackage.RESUME__UUID, NcorePackage.Literals.MODEL_ELEMENT__UUID, newUuid);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EObject getLabelPrototype() {
+		return (EObject)eDynamicGet(ResumePackage.RESUME__LABEL_PROTOTYPE, NcorePackage.Literals.MODEL_ELEMENT__LABEL_PROTOTYPE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLabelPrototype(EObject newLabelPrototype, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newLabelPrototype, ResumePackage.RESUME__LABEL_PROTOTYPE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLabelPrototype(EObject newLabelPrototype) {
+		eDynamicSet(ResumePackage.RESUME__LABEL_PROTOTYPE, NcorePackage.Literals.MODEL_ELEMENT__LABEL_PROTOTYPE, newLabelPrototype);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EMap<String, String> getRepresentations() {
+		return (EMap<String, String>)eDynamicGet(ResumePackage.RESUME__REPRESENTATIONS, NcorePackage.Literals.MODEL_ELEMENT__REPRESENTATIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Property> getAnnotations() {
+		return (EList<Property>)eDynamicGet(ResumePackage.RESUME__ANNOTATIONS, NcorePackage.Literals.MODEL_ELEMENT__ANNOTATIONS, true, true);
 	}
 
 	/**
@@ -269,8 +408,28 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	 * @generated
 	 */
 	@Override
+	public Section toSection() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ResumePackage.RESUME__MARKERS:
+				return ((InternalEList<?>)getMarkers()).basicRemove(otherEnd, msgs);
+			case ResumePackage.RESUME__LABEL_PROTOTYPE:
+				return basicSetLabelPrototype(null, msgs);
+			case ResumePackage.RESUME__REPRESENTATIONS:
+				return ((InternalEList<?>)getRepresentations()).basicRemove(otherEnd, msgs);
+			case ResumePackage.RESUME__ANNOTATIONS:
+				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
 			case ResumePackage.RESUME__BASICS:
 				return basicSetBasics(null, msgs);
 			case ResumePackage.RESUME__WORK:
@@ -309,6 +468,21 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ResumePackage.RESUME__MARKERS:
+				return getMarkers();
+			case ResumePackage.RESUME__URIS:
+				return getUris();
+			case ResumePackage.RESUME__DESCRIPTION:
+				return getDescription();
+			case ResumePackage.RESUME__UUID:
+				return getUuid();
+			case ResumePackage.RESUME__LABEL_PROTOTYPE:
+				return getLabelPrototype();
+			case ResumePackage.RESUME__REPRESENTATIONS:
+				if (coreType) return getRepresentations();
+				else return getRepresentations().map();
+			case ResumePackage.RESUME__ANNOTATIONS:
+				return getAnnotations();
 			case ResumePackage.RESUME__BASICS:
 				return getBasics();
 			case ResumePackage.RESUME__WORK:
@@ -348,6 +522,30 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ResumePackage.RESUME__MARKERS:
+				getMarkers().clear();
+				getMarkers().addAll((Collection<? extends Marker>)newValue);
+				return;
+			case ResumePackage.RESUME__URIS:
+				getUris().clear();
+				getUris().addAll((Collection<? extends String>)newValue);
+				return;
+			case ResumePackage.RESUME__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case ResumePackage.RESUME__UUID:
+				setUuid((String)newValue);
+				return;
+			case ResumePackage.RESUME__LABEL_PROTOTYPE:
+				setLabelPrototype((EObject)newValue);
+				return;
+			case ResumePackage.RESUME__REPRESENTATIONS:
+				((EStructuralFeature.Setting)getRepresentations()).set(newValue);
+				return;
+			case ResumePackage.RESUME__ANNOTATIONS:
+				getAnnotations().clear();
+				getAnnotations().addAll((Collection<? extends Property>)newValue);
+				return;
 			case ResumePackage.RESUME__BASICS:
 				setBasics((Basics)newValue);
 				return;
@@ -410,6 +608,27 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ResumePackage.RESUME__MARKERS:
+				getMarkers().clear();
+				return;
+			case ResumePackage.RESUME__URIS:
+				getUris().clear();
+				return;
+			case ResumePackage.RESUME__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case ResumePackage.RESUME__UUID:
+				setUuid(UUID_EDEFAULT);
+				return;
+			case ResumePackage.RESUME__LABEL_PROTOTYPE:
+				setLabelPrototype((EObject)null);
+				return;
+			case ResumePackage.RESUME__REPRESENTATIONS:
+				getRepresentations().clear();
+				return;
+			case ResumePackage.RESUME__ANNOTATIONS:
+				getAnnotations().clear();
+				return;
 			case ResumePackage.RESUME__BASICS:
 				setBasics((Basics)null);
 				return;
@@ -461,6 +680,20 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ResumePackage.RESUME__MARKERS:
+				return !getMarkers().isEmpty();
+			case ResumePackage.RESUME__URIS:
+				return !getUris().isEmpty();
+			case ResumePackage.RESUME__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case ResumePackage.RESUME__UUID:
+				return UUID_EDEFAULT == null ? getUuid() != null : !UUID_EDEFAULT.equals(getUuid());
+			case ResumePackage.RESUME__LABEL_PROTOTYPE:
+				return getLabelPrototype() != null;
+			case ResumePackage.RESUME__REPRESENTATIONS:
+				return !getRepresentations().isEmpty();
+			case ResumePackage.RESUME__ANNOTATIONS:
+				return !getAnnotations().isEmpty();
 			case ResumePackage.RESUME__BASICS:
 				return getBasics() != null;
 			case ResumePackage.RESUME__WORK:
@@ -489,6 +722,94 @@ public class ResumeImpl extends MinimalEObjectImpl.Container implements Resume {
 				return getMeta() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Marked.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == org.nasdanika.ncore.Marked.class) {
+			switch (derivedFeatureID) {
+				case ResumePackage.RESUME__MARKERS: return NcorePackage.MARKED__MARKERS;
+				default: return -1;
+			}
+		}
+		if (baseClass == Adaptable.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ModelElement.class) {
+			switch (derivedFeatureID) {
+				case ResumePackage.RESUME__URIS: return NcorePackage.MODEL_ELEMENT__URIS;
+				case ResumePackage.RESUME__DESCRIPTION: return NcorePackage.MODEL_ELEMENT__DESCRIPTION;
+				case ResumePackage.RESUME__UUID: return NcorePackage.MODEL_ELEMENT__UUID;
+				case ResumePackage.RESUME__LABEL_PROTOTYPE: return NcorePackage.MODEL_ELEMENT__LABEL_PROTOTYPE;
+				case ResumePackage.RESUME__REPRESENTATIONS: return NcorePackage.MODEL_ELEMENT__REPRESENTATIONS;
+				case ResumePackage.RESUME__ANNOTATIONS: return NcorePackage.MODEL_ELEMENT__ANNOTATIONS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Marked.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == org.nasdanika.ncore.Marked.class) {
+			switch (baseFeatureID) {
+				case NcorePackage.MARKED__MARKERS: return ResumePackage.RESUME__MARKERS;
+				default: return -1;
+			}
+		}
+		if (baseClass == Adaptable.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		if (baseClass == ModelElement.class) {
+			switch (baseFeatureID) {
+				case NcorePackage.MODEL_ELEMENT__URIS: return ResumePackage.RESUME__URIS;
+				case NcorePackage.MODEL_ELEMENT__DESCRIPTION: return ResumePackage.RESUME__DESCRIPTION;
+				case NcorePackage.MODEL_ELEMENT__UUID: return ResumePackage.RESUME__UUID;
+				case NcorePackage.MODEL_ELEMENT__LABEL_PROTOTYPE: return ResumePackage.RESUME__LABEL_PROTOTYPE;
+				case NcorePackage.MODEL_ELEMENT__REPRESENTATIONS: return ResumePackage.RESUME__REPRESENTATIONS;
+				case NcorePackage.MODEL_ELEMENT__ANNOTATIONS: return ResumePackage.RESUME__ANNOTATIONS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ResumePackage.RESUME___TO_SECTION:
+				return toSection();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ResumeImpl

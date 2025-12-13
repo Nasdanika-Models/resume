@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Profile;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -24,7 +21,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile {
+public class ProfileImpl extends ModelElementImpl implements Profile {
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,16 +69,6 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.PROFILE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

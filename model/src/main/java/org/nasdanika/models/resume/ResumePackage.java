@@ -4,8 +4,11 @@ package org.nasdanika.models.resume;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,6 +60,106 @@ public interface ResumePackage extends EPackage {
 	ResumePackage eINSTANCE = org.nasdanika.models.resume.impl.ResumePackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.ModelElementImpl <em>Model Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.resume.impl.ModelElementImpl
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getModelElement()
+	 * @generated
+	 */
+	int MODEL_ELEMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT__DOCUMENTATION = NcorePackage.DOCUMENTED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT__CONTEXT_HELP = NcorePackage.DOCUMENTED__CONTEXT_HELP;
+
+	/**
+	 * The number of structural features of the '<em>Model Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_FEATURE_COUNT = NcorePackage.DOCUMENTED_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___LOAD__JSONOBJECT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___LOAD_YAML__STRING = NcorePackage.DOCUMENTED_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___LOAD__FUNCTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___TO_JSON = NcorePackage.DOCUMENTED_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___TO_YAML = NcorePackage.DOCUMENTED_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___SAVE__FUNCTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Model Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 6;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.Named <em>Named</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,7 +167,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getNamed()
 	 * @generated
 	 */
-	int NAMED = 0;
+	int NAMED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -73,7 +194,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED__NAME = 0;
+	int NAMED__NAME = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Named</em>' class.
@@ -82,7 +203,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_FEATURE_COUNT = 1;
+	int NAMED_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Named</em>' class.
@@ -91,7 +266,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_OPERATION_COUNT = 0;
+	int NAMED_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.Resource <em>Resource</em>}' class.
@@ -101,7 +276,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getResource()
 	 * @generated
 	 */
-	int RESOURCE = 1;
+	int RESOURCE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -110,7 +303,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__URL = 0;
+	int RESOURCE__URL = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -119,7 +312,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = 1;
+	int RESOURCE_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -128,7 +375,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_OPERATION_COUNT = 0;
+	int RESOURCE_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.ResumeImpl <em>Resume</em>}' class.
@@ -138,7 +385,88 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getResume()
 	 * @generated
 	 */
-	int RESUME = 2;
+	int RESUME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__MARKERS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__URIS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__DESCRIPTION = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__UUID = MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__LABEL_PROTOTYPE = MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__REPRESENTATIONS = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME__ANNOTATIONS = MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Basics</b></em>' containment reference.
@@ -147,7 +475,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__BASICS = 0;
+	int RESUME__BASICS = MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Work</b></em>' containment reference list.
@@ -156,7 +484,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__WORK = 1;
+	int RESUME__WORK = MODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Volunteer</b></em>' containment reference list.
@@ -165,7 +493,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__VOLUNTEER = 2;
+	int RESUME__VOLUNTEER = MODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Education</b></em>' containment reference list.
@@ -174,7 +502,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__EDUCATION = 3;
+	int RESUME__EDUCATION = MODEL_ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Awards</b></em>' containment reference list.
@@ -183,7 +511,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__AWARDS = 4;
+	int RESUME__AWARDS = MODEL_ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Certificates</b></em>' containment reference list.
@@ -192,7 +520,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__CERTIFICATES = 5;
+	int RESUME__CERTIFICATES = MODEL_ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Publications</b></em>' containment reference list.
@@ -201,7 +529,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__PUBLICATIONS = 6;
+	int RESUME__PUBLICATIONS = MODEL_ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Skills</b></em>' containment reference list.
@@ -210,7 +538,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__SKILLS = 7;
+	int RESUME__SKILLS = MODEL_ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Languages</b></em>' containment reference list.
@@ -219,7 +547,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__LANGUAGES = 8;
+	int RESUME__LANGUAGES = MODEL_ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Interests</b></em>' containment reference list.
@@ -228,7 +556,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__INTERESTS = 9;
+	int RESUME__INTERESTS = MODEL_ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>References</b></em>' containment reference list.
@@ -237,7 +565,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__REFERENCES = 10;
+	int RESUME__REFERENCES = MODEL_ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Projects</b></em>' containment reference list.
@@ -246,7 +574,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__PROJECTS = 11;
+	int RESUME__PROJECTS = MODEL_ELEMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Meta</b></em>' containment reference.
@@ -255,7 +583,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME__META = 12;
+	int RESUME__META = MODEL_ELEMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Resume</em>' class.
@@ -264,7 +592,70 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME_FEATURE_COUNT = 13;
+	int RESUME_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 20;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___TO_SECTION = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Resume</em>' class.
@@ -273,7 +664,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME_OPERATION_COUNT = 0;
+	int RESUME_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 1;
 
 
 	/**
@@ -284,7 +675,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getBasics()
 	 * @generated
 	 */
-	int BASICS = 3;
+	int BASICS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -377,6 +786,60 @@ public interface ResumePackage extends EPackage {
 	int BASICS_FEATURE_COUNT = NAMED_FEATURE_COUNT + 8;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Basics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,7 +856,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 4;
+	int LOCATION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -402,7 +883,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__ADDRESS = 0;
+	int LOCATION__ADDRESS = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Postal Code</b></em>' attribute.
@@ -411,7 +892,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__POSTAL_CODE = 1;
+	int LOCATION__POSTAL_CODE = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>City</b></em>' attribute.
@@ -420,7 +901,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__CITY = 2;
+	int LOCATION__CITY = MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Country Code</b></em>' attribute.
@@ -429,7 +910,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__COUNTRY_CODE = 3;
+	int LOCATION__COUNTRY_CODE = MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Region</b></em>' attribute.
@@ -438,7 +919,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__REGION = 4;
+	int LOCATION__REGION = MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Location</em>' class.
@@ -447,7 +928,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 5;
+	int LOCATION_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -456,7 +991,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_OPERATION_COUNT = 0;
+	int LOCATION_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.ProfileImpl <em>Profile</em>}' class.
@@ -466,7 +1001,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getProfile()
 	 * @generated
 	 */
-	int PROFILE = 5;
+	int PROFILE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE__DOCUMENTATION = RESOURCE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE__CONTEXT_HELP = RESOURCE__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -505,6 +1058,60 @@ public interface ResumePackage extends EPackage {
 	int PROFILE_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___LOAD__JSONOBJECT = RESOURCE___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___LOAD_YAML__STRING = RESOURCE___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___LOAD__FUNCTION = RESOURCE___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___TO_JSON = RESOURCE___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___TO_YAML = RESOURCE___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Profile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -521,7 +1128,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getEngagement()
 	 * @generated
 	 */
-	int ENGAGEMENT = 6;
+	int ENGAGEMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__DOCUMENTATION = RESOURCE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT__CONTEXT_HELP = RESOURCE__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -587,6 +1212,60 @@ public interface ResumePackage extends EPackage {
 	int ENGAGEMENT_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 5;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___LOAD__JSONOBJECT = RESOURCE___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___LOAD_YAML__STRING = RESOURCE___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___LOAD__FUNCTION = RESOURCE___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___TO_JSON = RESOURCE___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___TO_YAML = RESOURCE___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Engagement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -603,7 +1282,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getWork()
 	 * @generated
 	 */
-	int WORK = 7;
+	int WORK = 8;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__DOCUMENTATION = ENGAGEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK__CONTEXT_HELP = ENGAGEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -696,6 +1393,60 @@ public interface ResumePackage extends EPackage {
 	int WORK_FEATURE_COUNT = ENGAGEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___LOAD__JSONOBJECT = ENGAGEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___LOAD_YAML__STRING = ENGAGEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___LOAD__FUNCTION = ENGAGEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___TO_JSON = ENGAGEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___TO_YAML = ENGAGEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___SAVE__FUNCTION = ENGAGEMENT___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Work</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -712,7 +1463,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getVolunteer()
 	 * @generated
 	 */
-	int VOLUNTEER = 8;
+	int VOLUNTEER = 9;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__DOCUMENTATION = ENGAGEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER__CONTEXT_HELP = ENGAGEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -787,6 +1556,60 @@ public interface ResumePackage extends EPackage {
 	int VOLUNTEER_FEATURE_COUNT = ENGAGEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___LOAD__JSONOBJECT = ENGAGEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___LOAD_YAML__STRING = ENGAGEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___LOAD__FUNCTION = ENGAGEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___TO_JSON = ENGAGEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___TO_YAML = ENGAGEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___SAVE__FUNCTION = ENGAGEMENT___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Volunteer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -803,7 +1626,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getEducation()
 	 * @generated
 	 */
-	int EDUCATION = 9;
+	int EDUCATION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__DOCUMENTATION = RESOURCE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION__CONTEXT_HELP = RESOURCE__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -887,6 +1728,60 @@ public interface ResumePackage extends EPackage {
 	int EDUCATION_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 7;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___LOAD__JSONOBJECT = RESOURCE___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___LOAD_YAML__STRING = RESOURCE___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___LOAD__FUNCTION = RESOURCE___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___TO_JSON = RESOURCE___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___TO_YAML = RESOURCE___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Education</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -903,7 +1798,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getAward()
 	 * @generated
 	 */
-	int AWARD = 10;
+	int AWARD = 11;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -912,7 +1825,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD__TITLE = 0;
+	int AWARD__TITLE = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -921,7 +1834,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD__DATE = 1;
+	int AWARD__DATE = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Awarder</b></em>' attribute.
@@ -930,7 +1843,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD__AWARDER = 2;
+	int AWARD__AWARDER = MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Summary</b></em>' attribute.
@@ -939,7 +1852,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD__SUMMARY = 3;
+	int AWARD__SUMMARY = MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Award</em>' class.
@@ -948,7 +1861,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD_FEATURE_COUNT = 4;
+	int AWARD_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Award</em>' class.
@@ -957,7 +1924,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AWARD_OPERATION_COUNT = 0;
+	int AWARD_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.CertificateImpl <em>Certificate</em>}' class.
@@ -967,7 +1934,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getCertificate()
 	 * @generated
 	 */
-	int CERTIFICATE = 11;
+	int CERTIFICATE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1015,6 +2000,60 @@ public interface ResumePackage extends EPackage {
 	int CERTIFICATE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 3;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Certificate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,7 +2070,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getPublication()
 	 * @generated
 	 */
-	int PUBLICATION = 12;
+	int PUBLICATION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1088,6 +2145,60 @@ public interface ResumePackage extends EPackage {
 	int PUBLICATION_FEATURE_COUNT = NAMED_FEATURE_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Publication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1104,7 +2215,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getSkill()
 	 * @generated
 	 */
-	int SKILL = 13;
+	int SKILL = 14;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1143,6 +2272,60 @@ public interface ResumePackage extends EPackage {
 	int SKILL_FEATURE_COUNT = NAMED_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Skill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1159,7 +2342,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getLanguage()
 	 * @generated
 	 */
-	int LANGUAGE = 14;
+	int LANGUAGE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' attribute.
@@ -1168,7 +2369,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__LANGUAGE = 0;
+	int LANGUAGE__LANGUAGE = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fluency</b></em>' attribute.
@@ -1177,7 +2378,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE__FLUENCY = 1;
+	int LANGUAGE__FLUENCY = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Language</em>' class.
@@ -1186,7 +2387,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_FEATURE_COUNT = 2;
+	int LANGUAGE_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Language</em>' class.
@@ -1195,7 +2450,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LANGUAGE_OPERATION_COUNT = 0;
+	int LANGUAGE_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.impl.InterestImpl <em>Interest</em>}' class.
@@ -1205,7 +2460,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getInterest()
 	 * @generated
 	 */
-	int INTEREST = 15;
+	int INTEREST = 16;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1235,6 +2508,60 @@ public interface ResumePackage extends EPackage {
 	int INTEREST_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Interest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1251,7 +2578,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getReference()
 	 * @generated
 	 */
-	int REFERENCE = 16;
+	int REFERENCE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1281,6 +2626,60 @@ public interface ResumePackage extends EPackage {
 	int REFERENCE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1297,7 +2696,25 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getProject()
 	 * @generated
 	 */
-	int PROJECT = 17;
+	int PROJECT = 18;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__DOCUMENTATION = NAMED__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__CONTEXT_HELP = NAMED__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1399,6 +2816,60 @@ public interface ResumePackage extends EPackage {
 	int PROJECT_FEATURE_COUNT = NAMED_FEATURE_COUNT + 9;
 
 	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___LOAD__JSONOBJECT = NAMED___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___LOAD_YAML__STRING = NAMED___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___LOAD__FUNCTION = NAMED___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___TO_JSON = NAMED___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___TO_YAML = NAMED___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
 	 * The number of operations of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1415,7 +2886,7 @@ public interface ResumePackage extends EPackage {
 	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getMeta()
 	 * @generated
 	 */
-	int META = 18;
+	int META = 19;
 
 	/**
 	 * The feature id for the '<em><b>Canonical</b></em>' attribute.
@@ -1462,6 +2933,117 @@ public interface ResumePackage extends EPackage {
 	 */
 	int META_OPERATION_COUNT = 0;
 
+
+	/**
+	 * The meta object id for the '<em>Function</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.function.Function
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getFunction()
+	 * @generated
+	 */
+	int FUNCTION = 20;
+
+	/**
+	 * The meta object id for the '<em>Consumer</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.function.Consumer
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getConsumer()
+	 * @generated
+	 */
+	int CONSUMER = 21;
+
+	/**
+	 * The meta object id for the '<em>JSON Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.json.JSONObject
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getJSONObject()
+	 * @generated
+	 */
+	int JSON_OBJECT = 22;
+
+	/**
+	 * The meta object id for the '<em>Section</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.common.Section
+	 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getSection()
+	 * @generated
+	 */
+	int SECTION = 23;
+
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.resume.ModelElement <em>Model Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model Element</em>'.
+	 * @see org.nasdanika.models.resume.ModelElement
+	 * @generated
+	 */
+	EClass getModelElement();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#load(org.json.JSONObject) <em>Load</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Load</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#load(org.json.JSONObject)
+	 * @generated
+	 */
+	EOperation getModelElement__Load__JSONObject();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#loadYaml(java.lang.String) <em>Load Yaml</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Load Yaml</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#loadYaml(java.lang.String)
+	 * @generated
+	 */
+	EOperation getModelElement__LoadYaml__String();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#load(java.util.function.Function) <em>Load</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Load</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#load(java.util.function.Function)
+	 * @generated
+	 */
+	EOperation getModelElement__Load__Function();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#toJSON() <em>To JSON</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To JSON</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#toJSON()
+	 * @generated
+	 */
+	EOperation getModelElement__ToJSON();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#toYAML() <em>To YAML</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To YAML</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#toYAML()
+	 * @generated
+	 */
+	EOperation getModelElement__ToYAML();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#save(java.util.function.Function) <em>Save</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Save</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#save(java.util.function.Function)
+	 * @generated
+	 */
+	EOperation getModelElement__Save__Function();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Named <em>Named</em>}'.
@@ -1657,6 +3239,16 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResume_Meta();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.Resume#toSection() <em>To Section</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To Section</em>' operation.
+	 * @see org.nasdanika.models.resume.Resume#toSection()
+	 * @generated
+	 */
+	EOperation getResume__ToSection();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Basics <em>Basics</em>}'.
@@ -2424,6 +4016,98 @@ public interface ResumePackage extends EPackage {
 	EAttribute getMeta_LastModified();
 
 	/**
+	 * Returns the meta object for data type '{@link java.util.function.Function <em>Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. 
+     * If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.
+     * Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.
+     * 
+     * Examples:
+     * 
+     * * ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``
+     * * ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.
+     * 
+     * 
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>Function</em>'.
+	 * @see java.util.function.Function
+	 * @model instanceClass="java.util.function.Function" serializeable="false" typeParameters="T R"
+	 * @generated
+	 */
+	EDataType getFunction();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.function.Consumer <em>Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. 
+     * If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.
+     * Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.
+     * 
+     * Examples:
+     * 
+     * * ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``
+     * * ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.
+     * 
+     * 
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>Consumer</em>'.
+	 * @see java.util.function.Consumer
+	 * @model instanceClass="java.util.function.Consumer" serializeable="false" typeParameters="T"
+	 * @generated
+	 */
+	EDataType getConsumer();
+
+	/**
+	 * Returns the meta object for data type '{@link org.json.JSONObject <em>JSON Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. 
+     * If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.
+     * Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.
+     * 
+     * Examples:
+     * 
+     * * ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``
+     * * ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.
+     * 
+     * 
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>JSON Object</em>'.
+	 * @see org.json.JSONObject
+	 * @model instanceClass="org.json.JSONObject"
+	 * @generated
+	 */
+	EDataType getJSONObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.nasdanika.common.Section <em>Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. 
+     * If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.
+     * Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.
+     * 
+     * Examples:
+     * 
+     * * ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``
+     * * ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.
+     * 
+     * 
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>Section</em>'.
+	 * @see org.nasdanika.common.Section
+	 * @model instanceClass="org.nasdanika.common.Section" serializeable="false"
+	 * @generated
+	 */
+	EDataType getSection();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2446,6 +4130,57 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.ModelElementImpl <em>Model Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.resume.impl.ModelElementImpl
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getModelElement()
+		 * @generated
+		 */
+		EClass MODEL_ELEMENT = eINSTANCE.getModelElement();
+		/**
+		 * The meta object literal for the '<em><b>Load</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___LOAD__JSONOBJECT = eINSTANCE.getModelElement__Load__JSONObject();
+		/**
+		 * The meta object literal for the '<em><b>Load Yaml</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___LOAD_YAML__STRING = eINSTANCE.getModelElement__LoadYaml__String();
+		/**
+		 * The meta object literal for the '<em><b>Load</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___LOAD__FUNCTION = eINSTANCE.getModelElement__Load__Function();
+		/**
+		 * The meta object literal for the '<em><b>To JSON</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___TO_JSON = eINSTANCE.getModelElement__ToJSON();
+		/**
+		 * The meta object literal for the '<em><b>To YAML</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___TO_YAML = eINSTANCE.getModelElement__ToYAML();
+		/**
+		 * The meta object literal for the '<em><b>Save</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___SAVE__FUNCTION = eINSTANCE.getModelElement__Save__Function();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.Named <em>Named</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -2578,6 +4313,13 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESUME__META = eINSTANCE.getResume_Meta();
+		/**
+		 * The meta object literal for the '<em><b>To Section</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RESUME___TO_SECTION = eINSTANCE.getResume__ToSection();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.BasicsImpl <em>Basics</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -3107,6 +4849,42 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute META__LAST_MODIFIED = eINSTANCE.getMeta_LastModified();
+		/**
+		 * The meta object literal for the '<em>Function</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.function.Function
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getFunction()
+		 * @generated
+		 */
+		EDataType FUNCTION = eINSTANCE.getFunction();
+		/**
+		 * The meta object literal for the '<em>Consumer</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.function.Consumer
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getConsumer()
+		 * @generated
+		 */
+		EDataType CONSUMER = eINSTANCE.getConsumer();
+		/**
+		 * The meta object literal for the '<em>JSON Object</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.json.JSONObject
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getJSONObject()
+		 * @generated
+		 */
+		EDataType JSON_OBJECT = eINSTANCE.getJSONObject();
+		/**
+		 * The meta object literal for the '<em>Section</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.common.Section
+		 * @see org.nasdanika.models.resume.impl.ResumePackageImpl#getSection()
+		 * @generated
+		 */
+		EDataType SECTION = eINSTANCE.getSection();
 
 	}
 

@@ -4,9 +4,6 @@ package org.nasdanika.models.resume.impl;
 
 import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Certificate;
 import org.nasdanika.models.resume.Resource;
 import org.nasdanika.models.resume.ResumePackage;
@@ -27,7 +24,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class CertificateImpl extends MinimalEObjectImpl.Container implements Certificate {
+public class CertificateImpl extends ModelElementImpl implements Certificate {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,16 +80,6 @@ public class CertificateImpl extends MinimalEObjectImpl.Container implements Cer
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.CERTIFICATE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

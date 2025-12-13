@@ -8,8 +8,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.resume.Basics;
 import org.nasdanika.models.resume.Location;
@@ -38,7 +36,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class BasicsImpl extends MinimalEObjectImpl.Container implements Basics {
+public class BasicsImpl extends ModelElementImpl implements Basics {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -120,16 +118,6 @@ public class BasicsImpl extends MinimalEObjectImpl.Container implements Basics {
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.BASICS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

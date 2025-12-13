@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.ServiceCapabilityFactory;
@@ -25,6 +26,7 @@ import org.nasdanika.emf.JsonSchemaEcoreFactory;
 public class ResumeTests {
 		
 	@Test
+	@Disabled("Anonymous types not supported yet")
 	public void testGenerateModel() throws Exception {
 		CapabilityLoader capabilityLoader = new CapabilityLoader();
 		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();

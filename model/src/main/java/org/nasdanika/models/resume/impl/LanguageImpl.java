@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Language;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -23,7 +20,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class LanguageImpl extends MinimalEObjectImpl.Container implements Language {
+public class LanguageImpl extends ModelElementImpl implements Language {
 	/**
 	 * The default value of the '{@link #getLanguage() <em>Language</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -60,16 +57,6 @@ public class LanguageImpl extends MinimalEObjectImpl.Container implements Langua
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.LANGUAGE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

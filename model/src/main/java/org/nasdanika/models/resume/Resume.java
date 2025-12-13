@@ -2,8 +2,12 @@
  */
 package org.nasdanika.models.resume;
 
+import java.util.function.Function;
+
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.json.JSONObject;
+import org.nasdanika.common.Section;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Resume extends EObject {
+public interface Resume extends ModelElement, org.nasdanika.ncore.ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Basics</b></em>' containment reference.
@@ -231,4 +235,31 @@ public interface Resume extends EObject {
 	 * @generated
 	 */
 	void setMeta(Meta value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.resume.Section"
+	 * @generated
+	 */
+	Section toSection();
+		
+	static Resume create(JSONObject jsonObject) {
+		Resume ret = ResumeFactory.eINSTANCE.createResume();
+		ret.load(jsonObject);
+		return ret;
+	}
+
+	static Resume createFromYaml(String yamlString) {
+		Resume ret = ResumeFactory.eINSTANCE.createResume();
+		ret.loadYaml(yamlString);
+		return ret;		
+	}
+
+	static Resume create(Function<EStructuralFeature, ?> contentProvider) {
+		Resume ret = ResumeFactory.eINSTANCE.createResume();
+		ret.load(contentProvider);
+		return ret;		
+	}		
+	
 } // Resume

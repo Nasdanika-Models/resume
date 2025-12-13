@@ -6,9 +6,6 @@ import java.util.Collection;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Education;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -32,7 +29,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class EducationImpl extends MinimalEObjectImpl.Container implements Education {
+public class EducationImpl extends ModelElementImpl implements Education {
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,16 +112,6 @@ public class EducationImpl extends MinimalEObjectImpl.Container implements Educa
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.EDUCATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

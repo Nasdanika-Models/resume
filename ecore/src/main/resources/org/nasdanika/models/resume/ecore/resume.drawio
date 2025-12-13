@@ -119,7 +119,9 @@
         </object>
         <object label="location" link="references/eClassifiers/Basics/references/eStructuralFeatures/location/index.html" id="39d4e0f1-1fb2-4d26-95fe-a9b8e47ddcb0">
           <mxCell style="rounded=0;orthogonalLoop=1;jettySize=1;html=1" parent="1" source="58253f6e-b659-448e-9e96-404e0068b526" target="ef14dd1a-6c74-413c-bfcb-980fa9c383bc" edge="1">
-            <mxGeometry relative="1" as="geometry" />
+            <mxGeometry x="0.1127" y="-29" relative="1" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
           </mxCell>
         </object>
         <object label="basics" link="references/eClassifiers/Resume/references/eStructuralFeatures/basics/index.html" id="985b9295-dbff-4d04-8090-5544f8042c48">
@@ -134,7 +136,9 @@
         </object>
         <object label="profiles" link="references/eClassifiers/Basics/references/eStructuralFeatures/profiles/index.html" id="c35bc507-73a5-4f46-bee7-494c0432ac0e">
           <mxCell style="rounded=0;orthogonalLoop=1;jettySize=1;html=1;startArrow=diamondThin;startFill=1" parent="1" source="58253f6e-b659-448e-9e96-404e0068b526" target="fb38da62-9246-4d2c-959c-4a7f0ccbcb36" edge="1">
-            <mxGeometry relative="1" as="geometry" />
+            <mxGeometry x="0.0892" y="21" relative="1" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
           </mxCell>
         </object>
         <object label="Volunteer" link="references/eClassifiers/Volunteer/index.html" id="aa5de070-4979-4f58-b222-261718aafe5d">

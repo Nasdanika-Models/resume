@@ -4,9 +4,6 @@ package org.nasdanika.models.resume.impl;
 
 import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Award;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -26,7 +23,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class AwardImpl extends MinimalEObjectImpl.Container implements Award {
+public class AwardImpl extends ModelElementImpl implements Award {
 	/**
 	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,16 +78,6 @@ public class AwardImpl extends MinimalEObjectImpl.Container implements Award {
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.AWARD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

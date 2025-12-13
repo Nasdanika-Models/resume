@@ -5,9 +5,6 @@ package org.nasdanika.models.resume.impl;
 import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Skill;
 
@@ -26,7 +23,7 @@ import org.nasdanika.models.resume.Skill;
  *
  * @generated
  */
-public class SkillImpl extends MinimalEObjectImpl.Container implements Skill {
+public class SkillImpl extends ModelElementImpl implements Skill {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,16 +61,6 @@ public class SkillImpl extends MinimalEObjectImpl.Container implements Skill {
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.SKILL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

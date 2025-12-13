@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="resume" nsURI="ecore://nasdanika.org/models/resume" nsPrefix="org.nasdanika.models.resume">
-  <eClassifiers xsi:type="ecore:EClass" name="Named" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EDataType" name="Function" instanceClassName="java.util.function.Function"
+      serializable="false">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. &#xA;If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.&#xA;Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.&#xA;&#xA;Examples:&#xA;&#xA;* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``&#xA;* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.&#xA;&#xA;"/>
+    </eAnnotations>
+    <eTypeParameters name="T"/>
+    <eTypeParameters name="R"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Consumer" instanceClassName="java.util.function.Consumer"
+      serializable="false">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. &#xA;If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.&#xA;Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.&#xA;&#xA;Examples:&#xA;&#xA;* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``&#xA;* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.&#xA;&#xA;"/>
+    </eAnnotations>
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="JSONObject" instanceClassName="org.json.JSONObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. &#xA;If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.&#xA;Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.&#xA;&#xA;Examples:&#xA;&#xA;* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``&#xA;* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.&#xA;&#xA;"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Section" instanceClassName="org.nasdanika.common.Section"
+      serializable="false">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="[Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) is a single instantaneous point on the time-line. &#xA;If instant specification contains ``Z``, then it is parsed using [Instant.parse()](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-) method.&#xA;Otherwise the specification is used to construct ``java.util.Date`` which is then converted to instant.&#xA;&#xA;Examples:&#xA;&#xA;* ``2021-12-03T10:15:30.00Z`` - loaded using ``Instant.parse()``&#xA;* ``10/1/2021`` - loaded using ``new Date()`` and then converted to instant.&#xA;&#xA;"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElement" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Documented">
+    <eOperations name="load">
+      <eParameters name="jsonObject" eType="#//JSONObject"/>
+    </eOperations>
+    <eOperations name="loadYaml">
+      <eParameters name="yamlString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="load">
+      <eParameters name="contentProvider">
+        <eGenericType eClassifier="#//Function">
+          <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+          <eTypeArguments/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="toJSON" eType="#//JSONObject"/>
+    <eOperations name="toYAML" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="save">
+      <eParameters name="contentConsumerProvider">
+        <eGenericType eClassifier="#//Function">
+          <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+          <eTypeArguments eClassifier="#//Consumer">
+            <eTypeArguments/>
+          </eTypeArguments>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Named" abstract="true" interface="true"
+      eSuperTypes="#//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Interface implemented by classes with a name"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Name"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true" interface="true"
+      eSuperTypes="#//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Interface implemented by classes with a URL"/>
     </eAnnotations>
@@ -21,7 +73,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Resume">
+  <eClassifiers xsi:type="ecore:EClass" name="Resume" eSuperTypes="#//ModelElement ../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement">
+    <eOperations name="toSection" eType="#//Section"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="basics" eType="#//Basics"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="work" upperBound="-1" eType="#//Work"
@@ -111,7 +164,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Location">
+  <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="To add multiple address lines, use \n. For example, 1234 Gl�cklichkeit Stra�e\nHinterhaus 5. Etage li."/>
@@ -214,7 +267,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Award">
+  <eClassifiers xsi:type="ecore:EClass" name="Award" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="e.g. One of the 100 greatest minds of the century"/>
@@ -266,7 +319,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Language">
+  <eClassifiers xsi:type="ecore:EClass" name="Language" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="e.g. English, Spanish"/>

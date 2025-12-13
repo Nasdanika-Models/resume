@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Location;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -26,7 +23,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class LocationImpl extends MinimalEObjectImpl.Container implements Location {
+public class LocationImpl extends ModelElementImpl implements Location {
 	/**
 	 * The default value of the '{@link #getAddress() <em>Address</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,16 +91,6 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.LOCATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
