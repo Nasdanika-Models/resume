@@ -72,5 +72,18 @@ public class ResumeTests {
 		xmiResource.getContents().add(resume);
 		xmiResource.save(null);		
 	}	
+		
+	@Test
+	public void testSaveToJSON() throws Exception {
+		InputStream sampeResumeStream = getClass().getResourceAsStream("sample.resume.json");
+		JSONObject jResume = DefaultConverter.INSTANCE.toJSONObject(sampeResumeStream);
+		Resume resume = Resume.create(jResume);	
+		
+		System.out.println(resume.getBasics().getSummary());
+		
+		JSONObject saved = resume.toJSON();		
+		System.out.println(saved.toString(2));		
+	}	
+	
 	
 }

@@ -43,13 +43,12 @@
       </eParameters>
     </eOperations>
     <eOperations name="toJSON" eType="#//JSONObject"/>
-    <eOperations name="toYAML" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eOperations name="save">
       <eParameters name="contentConsumerProvider">
         <eGenericType eClassifier="#//Function">
           <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
           <eTypeArguments eClassifier="#//Consumer">
-            <eTypeArguments/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
           </eTypeArguments>
         </eGenericType>
       </eParameters>

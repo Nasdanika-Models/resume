@@ -313,18 +313,8 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getModelElement__ToYAML() {
-		return modelElementEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EOperation getModelElement__Save__Function() {
-		return modelElementEClass.getEOperations().get(5);
+		return modelElementEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1301,7 +1291,6 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD_YAML__STRING);
 		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD__FUNCTION);
 		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_JSON);
-		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_YAML);
 		createEOperation(modelElementEClass, MODEL_ELEMENT___SAVE__FUNCTION);
 
 		namedEClass = createEClass(NAMED);
@@ -1500,15 +1489,13 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 
 		initEOperation(getModelElement__ToJSON(), this.getJSONObject(), "toJSON", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getModelElement__ToYAML(), ecorePackage.getEString(), "toYAML", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		op = initEOperation(getModelElement__Save__Function(), null, "save", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getFunction());
 		g2 = createEGenericType(ecorePackage.getEStructuralFeature());
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getConsumer());
 		g1.getETypeArguments().add(g2);
-		EGenericType g3 = createEGenericType();
+		EGenericType g3 = createEGenericType(ecorePackage.getEJavaObject());
 		g2.getETypeArguments().add(g3);
 		addEParameter(op, g1, "contentConsumerProvider", 0, 1, IS_UNIQUE, IS_ORDERED);
 

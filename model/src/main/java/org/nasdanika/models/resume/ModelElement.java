@@ -4,7 +4,6 @@ package org.nasdanika.models.resume;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.json.JSONObject;
@@ -57,17 +56,9 @@ public interface ModelElement extends Documented {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model contentConsumerProviderDataType="org.nasdanika.models.resume.Function&lt;org.eclipse.emf.ecore.EStructuralFeature, org.nasdanika.models.resume.Consumer&lt;org.eclipse.emf.ecore.EJavaObject&gt;&gt;"
 	 * @generated
 	 */
-	String toYAML();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model contentConsumerProviderDataType="org.nasdanika.models.resume.Function&lt;org.eclipse.emf.ecore.EStructuralFeature, org.nasdanika.models.resume.Consumer&lt;?&gt;&gt;"
-	 * @generated
-	 */
-	void save(Function<EStructuralFeature, Consumer<?>> contentConsumerProvider);
+	void save(Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider);
 
 } // ModelElement

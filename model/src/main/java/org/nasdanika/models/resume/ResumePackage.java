@@ -133,22 +133,13 @@ public interface ResumePackage extends EPackage {
 	int MODEL_ELEMENT___TO_JSON = NcorePackage.DOCUMENTED_OPERATION_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL_ELEMENT___TO_YAML = NcorePackage.DOCUMENTED_OPERATION_COUNT + 4;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_ELEMENT___SAVE__FUNCTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 5;
+	int MODEL_ELEMENT___SAVE__FUNCTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Model Element</em>' class.
@@ -157,7 +148,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 6;
+	int MODEL_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.Named <em>Named</em>}' class.
@@ -240,15 +231,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int NAMED___TO_JSON = MODEL_ELEMENT___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAMED___TO_YAML = MODEL_ELEMENT___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -349,15 +331,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE___TO_JSON = MODEL_ELEMENT___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE___TO_YAML = MODEL_ELEMENT___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -631,15 +604,6 @@ public interface ResumePackage extends EPackage {
 	int RESUME___TO_JSON = MODEL_ELEMENT___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESUME___TO_YAML = MODEL_ELEMENT___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -822,15 +786,6 @@ public interface ResumePackage extends EPackage {
 	int BASICS___TO_JSON = NAMED___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASICS___TO_YAML = NAMED___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -967,15 +922,6 @@ public interface ResumePackage extends EPackage {
 	int LOCATION___TO_JSON = MODEL_ELEMENT___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION___TO_YAML = MODEL_ELEMENT___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1092,15 +1038,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int PROFILE___TO_JSON = RESOURCE___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROFILE___TO_YAML = RESOURCE___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -1246,15 +1183,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENGAGEMENT___TO_JSON = RESOURCE___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENGAGEMENT___TO_YAML = RESOURCE___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -1429,15 +1357,6 @@ public interface ResumePackage extends EPackage {
 	int WORK___TO_JSON = ENGAGEMENT___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK___TO_YAML = ENGAGEMENT___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1590,15 +1509,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int VOLUNTEER___TO_JSON = ENGAGEMENT___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VOLUNTEER___TO_YAML = ENGAGEMENT___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -1764,15 +1674,6 @@ public interface ResumePackage extends EPackage {
 	int EDUCATION___TO_JSON = RESOURCE___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDUCATION___TO_YAML = RESOURCE___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1900,15 +1801,6 @@ public interface ResumePackage extends EPackage {
 	int AWARD___TO_JSON = MODEL_ELEMENT___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AWARD___TO_YAML = MODEL_ELEMENT___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2034,15 +1926,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int CERTIFICATE___TO_JSON = NAMED___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CERTIFICATE___TO_YAML = NAMED___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -2181,15 +2064,6 @@ public interface ResumePackage extends EPackage {
 	int PUBLICATION___TO_JSON = NAMED___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PUBLICATION___TO_YAML = NAMED___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2308,15 +2182,6 @@ public interface ResumePackage extends EPackage {
 	int SKILL___TO_JSON = NAMED___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SKILL___TO_YAML = NAMED___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2424,15 +2289,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int LANGUAGE___TO_JSON = MODEL_ELEMENT___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LANGUAGE___TO_YAML = MODEL_ELEMENT___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -2544,15 +2400,6 @@ public interface ResumePackage extends EPackage {
 	int INTEREST___TO_JSON = NAMED___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEREST___TO_YAML = NAMED___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2660,15 +2507,6 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int REFERENCE___TO_JSON = NAMED___TO_JSON;
-
-	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERENCE___TO_YAML = NAMED___TO_YAML;
 
 	/**
 	 * The operation id for the '<em>Save</em>' operation.
@@ -2852,15 +2690,6 @@ public interface ResumePackage extends EPackage {
 	int PROJECT___TO_JSON = NAMED___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROJECT___TO_YAML = NAMED___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2979,15 +2808,6 @@ public interface ResumePackage extends EPackage {
 	int META___TO_JSON = MODEL_ELEMENT___TO_JSON;
 
 	/**
-	 * The operation id for the '<em>To YAML</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int META___TO_YAML = MODEL_ELEMENT___TO_YAML;
-
-	/**
 	 * The operation id for the '<em>Save</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3096,16 +2916,6 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getModelElement__ToJSON();
-
-	/**
-	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#toYAML() <em>To YAML</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>To YAML</em>' operation.
-	 * @see org.nasdanika.models.resume.ModelElement#toYAML()
-	 * @generated
-	 */
-	EOperation getModelElement__ToYAML();
 
 	/**
 	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#save(java.util.function.Function) <em>Save</em>}' operation.
@@ -4239,13 +4049,6 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation MODEL_ELEMENT___TO_JSON = eINSTANCE.getModelElement__ToJSON();
-		/**
-		 * The meta object literal for the '<em><b>To YAML</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MODEL_ELEMENT___TO_YAML = eINSTANCE.getModelElement__ToYAML();
 		/**
 		 * The meta object literal for the '<em><b>Save</b></em>' operation.
 		 * <!-- begin-user-doc -->

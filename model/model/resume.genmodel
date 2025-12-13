@@ -29,7 +29,6 @@
         <genParameters ecoreParameter="resume.ecore#//ModelElement/load.1/contentProvider"/>
       </genOperations>
       <genOperations ecoreOperation="resume.ecore#//ModelElement/toJSON"/>
-      <genOperations ecoreOperation="resume.ecore#//ModelElement/toYAML"/>
       <genOperations ecoreOperation="resume.ecore#//ModelElement/save">
         <genParameters ecoreParameter="resume.ecore#//ModelElement/save/contentConsumerProvider"/>
       </genOperations>

@@ -181,37 +181,42 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public JSONObject toJSON() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		JSONObject ret = new JSONObject();
+		
+		Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider = sf -> value -> {
+			// TODO
+			
+			System.out.println(sf.getName() + " -> " + value);
+			
+			
+		};		
+		
+		save(contentConsumerProvider);		
+		return ret;
 	}
-
+	
+	
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
-	public String toYAML() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void save(Function<EStructuralFeature, Consumer<?>> contentConsumerProvider) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void save(Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider) {
+		for (EStructuralFeature sf: eClass().getEAllStructuralFeatures()) {
+			if (eIsSet(sf)) {
+				Consumer<Object> contentConsumer = contentConsumerProvider.apply(sf);
+				if (contentConsumer != null) {
+					contentConsumer.accept(eGet(sf));
+				}
+			}
+		}
 	}
 
 	/**
@@ -321,10 +326,8 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 				return null;
 			case ResumePackage.MODEL_ELEMENT___TO_JSON:
 				return toJSON();
-			case ResumePackage.MODEL_ELEMENT___TO_YAML:
-				return toYAML();
 			case ResumePackage.MODEL_ELEMENT___SAVE__FUNCTION:
-				save((Function<EStructuralFeature, Consumer<?>>)arguments.get(0));
+				save((Function<EStructuralFeature, Consumer<Object>>)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
