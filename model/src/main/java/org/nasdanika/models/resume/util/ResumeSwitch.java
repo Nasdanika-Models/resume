@@ -246,6 +246,8 @@ public class ResumeSwitch<T> extends Switch<T> {
 			case ResumePackage.META: {
 				Meta meta = (Meta)theEObject;
 				T result = caseMeta(meta);
+				if (result == null) result = caseModelElement(meta);
+				if (result == null) result = caseDocumented(meta);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

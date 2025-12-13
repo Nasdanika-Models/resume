@@ -2889,13 +2889,31 @@ public interface ResumePackage extends EPackage {
 	int META = 19;
 
 	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META__CONTEXT_HELP = MODEL_ELEMENT__CONTEXT_HELP;
+
+	/**
 	 * The feature id for the '<em><b>Canonical</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int META__CANONICAL = 0;
+	int META__CANONICAL = MODEL_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2904,7 +2922,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int META__VERSION = 1;
+	int META__VERSION = MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Last Modified</b></em>' attribute.
@@ -2913,7 +2931,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int META__LAST_MODIFIED = 2;
+	int META__LAST_MODIFIED = MODEL_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Meta</em>' class.
@@ -2922,7 +2940,61 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int META_FEATURE_COUNT = 3;
+	int META_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___LOAD__JSONOBJECT = MODEL_ELEMENT___LOAD__JSONOBJECT;
+
+	/**
+	 * The operation id for the '<em>Load Yaml</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___LOAD_YAML__STRING = MODEL_ELEMENT___LOAD_YAML__STRING;
+
+	/**
+	 * The operation id for the '<em>Load</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___LOAD__FUNCTION = MODEL_ELEMENT___LOAD__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To JSON</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___TO_JSON = MODEL_ELEMENT___TO_JSON;
+
+	/**
+	 * The operation id for the '<em>To YAML</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___TO_YAML = MODEL_ELEMENT___TO_YAML;
+
+	/**
+	 * The operation id for the '<em>Save</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
 	 * The number of operations of the '<em>Meta</em>' class.
@@ -2931,7 +3003,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int META_OPERATION_COUNT = 0;
+	int META_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**

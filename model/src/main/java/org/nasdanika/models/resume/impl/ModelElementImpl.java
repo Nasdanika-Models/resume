@@ -3,30 +3,31 @@
 package org.nasdanika.models.resume.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.json.JSONObject;
-
+import org.nasdanika.common.DefaultConverter;
+import org.nasdanika.common.NasdanikaException;
 import org.nasdanika.models.resume.ModelElement;
 import org.nasdanika.models.resume.ResumePackage;
-
 import org.nasdanika.ncore.NcorePackage;
 import org.yaml.snakeyaml.Yaml;
 
@@ -119,17 +120,62 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 		Map<String, Object> yMap = ((Map<String,Object>) yaml.load(yamlString));
 		load(sf -> yMap.get(sf.getName()));
 	}
+	
+	private static final String JSON_DATE_FORMAT = "yyyy-MM-dd";
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void load(Function<EStructuralFeature, ?> contentProvider) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		for (EStructuralFeature sf: eClass().getEAllStructuralFeatures()) {
+			Object value = contentProvider.apply(sf);
+			if (value != null) {
+				if (sf.isMany()) {
+					if (sf instanceof EAttribute) {
+						Collection<Object> avc = (Collection<Object>) eGet(sf);
+						for (Object e: (Iterable<?>) value) {
+							Object av = convert(e, sf.getEType());
+							avc.add(av);							
+						}
+					} else {
+						Collection<Object> avc = (Collection<Object>) eGet(sf);
+						for (Object e: (Iterable<?>) value) {
+							EClass refType = ((EReference) sf).getEReferenceType();
+							ModelElement re = (ModelElement) refType.getEPackage().getEFactoryInstance().create(refType);							
+							re.load(ef -> ((Map<String,?>) e).get(ef.getName()));
+							avc.add(re);							
+						}						
+					}
+				} else {
+					if (sf instanceof EAttribute) {
+						Object av = convert(value, sf.getEType());
+						eSet(sf, av);
+					} else {
+						EClass refType = ((EReference) sf).getEReferenceType();
+						ModelElement re = (ModelElement) refType.getEPackage().getEFactoryInstance().create(refType);							
+						re.load(ef -> ((Map<String,?>) value).get(ef.getName()));
+						eSet(sf, re);
+					}					
+				}
+			}
+		}
+	}
+
+	private Object convert(Object value, EClassifier eType) {
+		if (eType == EcorePackage.Literals.EDATE &&  value instanceof String) {
+            try {
+				return new SimpleDateFormat(JSON_DATE_FORMAT).parse((String) value);
+			} catch (ParseException e) {
+				throw new NasdanikaException("Cannot parse date " + value + ": " + e, e);
+			}
+		}
+		
+		Object converted = DefaultConverter.INSTANCE.convert(value, eType.getInstanceClass());
+		return Objects.requireNonNull(converted, "Cannot convert '" + value + "' to  " + eType);
 	}
 
 	/**

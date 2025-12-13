@@ -18,10 +18,12 @@ import org.nasdanika.capability.CapabilityLoader;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.capability.ServiceCapabilityFactory.Requirement;
 import org.nasdanika.capability.emf.ResourceSetRequirement;
+import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Transformer;
 import org.nasdanika.emf.JsonSchemaEcoreFactory;
+import org.nasdanika.models.resume.Resume;
 
 public class ResumeTests {
 		
@@ -49,6 +51,26 @@ public class ResumeTests {
 		}
 		
 		ecoreResource.save(null);
+	}	
+		
+	@Test
+	public void testLoadModelFromJSON() throws Exception {
+		InputStream sampeResumeStream = getClass().getResourceAsStream("sample.resume.json");
+		JSONObject jResume = DefaultConverter.INSTANCE.toJSONObject(sampeResumeStream);
+		Resume resume = Resume.create(jResume);	
+		
+		System.out.println(resume.getBasics().getSummary());
+		
+		CapabilityLoader capabilityLoader = new CapabilityLoader();
+		ProgressMonitor progressMonitor = new PrintStreamProgressMonitor();
+		Requirement<ResourceSetRequirement, ResourceSet> requirement = ServiceCapabilityFactory.createRequirement(ResourceSet.class);		
+		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
+		
+		// Saving for manual inspection
+		URI xmiURI = URI.createFileURI(new File("target/sample.resume.xml").getAbsolutePath());
+		Resource xmiResource = resourceSet.createResource(xmiURI);
+		xmiResource.getContents().add(resume);
+		xmiResource.save(null);		
 	}	
 	
 }

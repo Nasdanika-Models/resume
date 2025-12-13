@@ -2,8 +2,6 @@
  */
 package org.nasdanika.models.resume;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Meta</b></em>'.
@@ -22,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Meta extends EObject {
+public interface Meta extends ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>Canonical</b></em>' attribute.

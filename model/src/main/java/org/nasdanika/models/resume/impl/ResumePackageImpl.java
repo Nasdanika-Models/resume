@@ -1479,6 +1479,7 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		referenceEClass.getESuperTypes().add(this.getNamed());
 		projectEClass.getESuperTypes().add(this.getNamed());
 		projectEClass.getESuperTypes().add(this.getResource());
+		metaEClass.getESuperTypes().add(this.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

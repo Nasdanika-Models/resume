@@ -3,9 +3,6 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.nasdanika.models.resume.Meta;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -24,7 +21,7 @@ import org.nasdanika.models.resume.ResumePackage;
  *
  * @generated
  */
-public class MetaImpl extends MinimalEObjectImpl.Container implements Meta {
+public class MetaImpl extends ModelElementImpl implements Meta {
 	/**
 	 * The default value of the '{@link #getCanonical() <em>Canonical</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,16 +67,6 @@ public class MetaImpl extends MinimalEObjectImpl.Container implements Meta {
 	@Override
 	protected EClass eStaticClass() {
 		return ResumePackage.Literals.META;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
