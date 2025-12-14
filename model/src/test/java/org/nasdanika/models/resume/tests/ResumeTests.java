@@ -1,5 +1,7 @@
 package org.nasdanika.models.resume.tests;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -10,8 +12,10 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.capability.CapabilityLoader;
@@ -82,8 +86,49 @@ public class ResumeTests {
 		System.out.println(resume.getBasics().getSummary());
 		
 		JSONObject saved = resume.toJSON();		
-		System.out.println(saved.toString(2));		
-	}	
+		System.out.println(saved.toString(2));
+		
+		assertEquals(jResume, saved);
+	}
 	
+    private void assertEquals(JSONObject obj1, JSONObject obj2) {
+        if (obj1 == obj2) {
+        	return;
+        }
+        if (obj1 == null || obj2 == null) {
+        	fail("One of the objects is null while the other is not");
+        }
+        
+        Assertions.assertEquals(obj1.keySet(), obj2.keySet());
+
+        for (String key : obj1.keySet()) {
+            Object val1 = obj1.get(key);
+            Object val2 = obj2.get(key);
+
+            if (val1 instanceof JSONObject && val2 instanceof JSONObject) {
+                assertEquals((JSONObject) val1, (JSONObject) val2);
+            } else if (val1 instanceof JSONArray && val2 instanceof JSONArray) {
+                assertEquals((JSONArray) val1, (JSONArray) val2);
+            } else {
+            	Assertions.assertEquals(val1, val2);
+            }
+        }
+    }
+
+    private void assertEquals(JSONArray arr1, JSONArray arr2) {
+        Assertions.assertEquals(arr1.length(), arr2.length());
+        for (int i = 0; i < arr1.length(); i++) {
+            Object val1 = arr1.get(i);
+            Object val2 = arr2.get(i);
+
+            if (val1 instanceof JSONObject && val2 instanceof JSONObject) {
+                assertEquals((JSONObject) val1, (JSONObject) val2);
+            } else if (val1 instanceof JSONArray && val2 instanceof JSONArray) {
+                assertEquals((JSONArray) val1, (JSONArray) val2);
+            } else {
+            	Assertions.assertEquals(val1, val2);
+            }
+        }
+    }
 	
 }

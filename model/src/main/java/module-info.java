@@ -9,7 +9,8 @@ module org.nasdanika.models.resume {
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;
 	requires transitive org.nasdanika.capability;
-	requires org.nasdanika.emf; // For generation
+	requires org.nasdanika.emf;
+	requires org.json; // For generation
 	
 	opens org.nasdanika.models.resume.util;
 	

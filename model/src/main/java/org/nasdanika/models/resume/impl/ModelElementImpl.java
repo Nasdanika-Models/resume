@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.NasdanikaException;
@@ -135,21 +137,18 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 			Object value = contentProvider.apply(sf);
 			if (value != null) {
 				if (sf.isMany()) {
-					if (sf instanceof EAttribute) {
-						Collection<Object> avc = (Collection<Object>) eGet(sf);
-						for (Object e: (Iterable<?>) value) {
+					Collection<Object> avc = (Collection<Object>) eGet(sf);
+					for (Object e: (Iterable<?>) value) {
+						if (sf instanceof EAttribute) {
 							Object av = convert(e, sf.getEType());
 							avc.add(av);							
-						}
-					} else {
-						Collection<Object> avc = (Collection<Object>) eGet(sf);
-						for (Object e: (Iterable<?>) value) {
+						} else {
 							EClass refType = ((EReference) sf).getEReferenceType();
 							ModelElement re = (ModelElement) refType.getEPackage().getEFactoryInstance().create(refType);							
 							re.load(ef -> ((Map<String,?>) e).get(ef.getName()));
 							avc.add(re);							
 						}						
-					}
+					}					
 				} else {
 					if (sf instanceof EAttribute) {
 						Object av = convert(value, sf.getEType());
@@ -187,21 +186,46 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 	public JSONObject toJSON() {
 		JSONObject ret = new JSONObject();
 		
-		Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider = sf -> value -> {
-			// TODO
-			
-			System.out.println(sf.getName() + " -> " + value);
-			
-			
+		@SuppressWarnings("unchecked")
+		Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider = sf -> value -> {			
+			if (sf.isMany()) {
+				Collection<Object> valueCollection = (Collection<Object>) value;
+				if (!valueCollection.isEmpty()) {
+					JSONArray jValueArray = new JSONArray();
+					ret.put(sf.getName(), jValueArray);
+					for (Object valueElement: valueCollection) {
+						if (sf instanceof EAttribute) {
+							EClassifier aType = sf.getEType();
+							if (aType == EcorePackage.Literals.EDATE &&  valueElement instanceof Date) {
+								jValueArray.put(new SimpleDateFormat(JSON_DATE_FORMAT).format((Date) valueElement));
+							} else {
+								jValueArray.put(valueElement);
+							}
+						} else if (valueElement instanceof ModelElement) {
+							JSONObject jValue = ((ModelElement) valueElement).toJSON();
+							jValueArray.put(jValue);
+						}						
+					}
+				}
+			} else {
+				if (sf instanceof EAttribute) {
+					EClassifier aType = sf.getEType();
+					if (aType == EcorePackage.Literals.EDATE &&  value instanceof Date) {
+						ret.put(sf.getName(), new SimpleDateFormat(JSON_DATE_FORMAT).format((Date) value));
+					} else {
+						ret.put(sf.getName(), value);
+					}
+				} else if (value instanceof ModelElement) {
+					JSONObject jValue = ((ModelElement) value).toJSON();
+					ret.put(sf.getName(), jValue);
+				}						
+			}
 		};		
 		
 		save(contentConsumerProvider);		
 		return ret;
 	}
-	
-	
-	
-	
+				
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

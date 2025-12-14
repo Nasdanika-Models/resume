@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.json.JSONObject;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.common.Section;
 import org.nasdanika.models.resume.Award;
@@ -810,6 +811,13 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 				return toSection();
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+	
+	@Override
+	public JSONObject toJSON() {
+		JSONObject jResume = super.toJSON();
+		jResume.put("$schema", "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json");
+		return jResume;
 	}
 
 } //ResumeImpl
