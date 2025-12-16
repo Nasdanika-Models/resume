@@ -94,7 +94,7 @@ public class TestResumeModelDocGen {
 		AppSiteGenerator actionSiteGenerator = new AppSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
-				return !"CNAME".equals(path);				
+				return !"CNAME".equals(path) && !path.startsWith("images/") && !path.startsWith("libraries/") && !path.startsWith("demos/");			
 			};
 			
 		};		

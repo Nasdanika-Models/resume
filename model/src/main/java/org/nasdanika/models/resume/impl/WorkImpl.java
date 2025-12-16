@@ -3,6 +3,9 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Named;
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Work;
@@ -237,6 +240,31 @@ public class WorkImpl extends EngagementImpl implements Work {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
+	@Override
+	public Section toSection() {
+		Section ret = new Section(getName(), null);
+		String location = getLocation();
+		if (!Util.isBlank(location)) {
+			ret.getContents().add(new Content(
+					"""
+					* **Location**: %s
+					%s
+					
+					""".formatted(location, getContent()), 
+					Content.MARKDOWN));			
+		}
+				
+		//summary
+		
+		// highlights
+		
+		String description = getDescription();
+		if (!Util.isBlank(description)) {
+			ret.getContents().add(new Content(description, Content.MARKDOWN));
+		}
+		return ret;
 	}
 
 } //WorkImpl

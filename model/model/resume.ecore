@@ -53,6 +53,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eOperations name="toSection" eType="#//Section"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Named" abstract="true" interface="true"
       eSuperTypes="#//ModelElement">
@@ -73,7 +74,6 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Resume" eSuperTypes="#//ModelElement ../../org.nasdanika.ncore/model/ncore.ecore#//ModelElement">
-    <eOperations name="toSection" eType="#//Section"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="basics" eType="#//Basics"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="work" upperBound="-1" eType="#//Work"

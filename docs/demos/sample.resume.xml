@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.nasdanika.models.resume:Resume xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.models.resume="ecore://nasdanika.org/models/resume">
+  <basics name="Richard Hendriks" url="http://richardhendricks.example.com" label="Programmer" image="https://resume.models.nasdanika.org/images/man.png" email="richard.hendriks@mail.com" phone="(912) 555-4321" summary="Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a 'length-limited' conversation!">
+    <location address="2712 Broadway St" postalCode="CA 94115" city="San Francisco" countryCode="US" region="California"/>
+    <profiles url="https://www.twitter.com" network="Twitter" username="neutralthoughts"/>
+    <profiles url="https://soundcloud.example.com/dandymusicnl" network="SoundCloud" username="dandymusicnl"/>
+  </basics>
+  <work url="http://piedpiper.example.com" summary="Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores&#xfffd; that are not merely competitive, but approach the theoretical limit of lossless compression." startDate="2013-12-01T00:00:00.000-0500" endDate="2014-12-01T00:00:00.000-0500" position="CEO/President" name="Pied Piper" location="Palo Alto, CA" description="Awesome compression company">
+    <highlights>Build an algorithm for artist to detect if their music was violating copy right infringement laws</highlights>
+    <highlights>Successfully won Techcrunch Disrupt</highlights>
+    <highlights>Optimized an algorithm that holds the current world record for Weisman Scores</highlights>
+  </work>
+  <volunteer url="http://coderdojo.example.com/" summary="Global movement of free coding clubs for young people." startDate="2012-01-01T00:00:00.000-0500" endDate="2013-01-01T00:00:00.000-0500" position="Teacher" organization="CoderDojo">
+    <highlights>Awarded 'Teacher of the Month'</highlights>
+  </volunteer>
+  <education url="https://www.ou.edu/" institution="University of Oklahoma" area="Information Technology" studyType="Bachelor" startDate="2011-06-01T00:00:00.000-0400" endDate="2014-01-01T00:00:00.000-0500" score="4.0">
+    <courses>DB1101 - Basic SQL</courses>
+    <courses>CS2011 - Java Introduction</courses>
+  </education>
+  <awards title="Digital Compression Pioneer Award" date="2014-11-01T00:00:00.000-0400" awarder="Techcrunch" summary="There is no spoon."/>
+  <publications name="Video compression for 3d media" url="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)" publisher="Hooli" releaseDate="2014-10-01T00:00:00.000-0400" summary="Innovative middle-out compression algorithm that changes the way we store data."/>
+  <skills name="Web Development" level="Master">
+    <keywords>HTML</keywords>
+    <keywords>CSS</keywords>
+    <keywords>Javascript</keywords>
+  </skills>
+  <skills name="Compression" level="Master">
+    <keywords>Mpeg</keywords>
+    <keywords>MP4</keywords>
+    <keywords>GIF</keywords>
+  </skills>
+  <languages language="English" fluency="Native speaker"/>
+  <interests name="Wildlife">
+    <keywords>Ferrets</keywords>
+    <keywords>Unicorns</keywords>
+  </interests>
+  <references name="Erlich Bachman" reference="It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."/>
+  <projects name="Miss Direction" url="http://missdirection.example.com" description="A mapping engine that misguides you" startDate="2016-08-24T00:00:00.000-0400" endDate="2016-08-24T00:00:00.000-0400" entity="Smoogle" type="application">
+    <highlights>Won award at AIHacks 2016</highlights>
+    <highlights>Built by all women team of newbie programmers</highlights>
+    <highlights>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</highlights>
+    <keywords>GoogleMaps</keywords>
+    <keywords>Chrome Extension</keywords>
+    <keywords>Javascript</keywords>
+    <roles>Team lead</roles>
+    <roles>Designer</roles>
+  </projects>
+  <meta canonical="https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/sample.resume.json" version="v1.0.0" lastModified="2017-12-24T15:53:00"/>
+</org.nasdanika.models.resume:Resume>

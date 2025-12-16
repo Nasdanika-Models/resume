@@ -3,6 +3,9 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.models.resume.Volunteer;
 
@@ -124,6 +127,32 @@ public class VolunteerImpl extends EngagementImpl implements Volunteer {
 				return ORGANIZATION_EDEFAULT == null ? getOrganization() != null : !ORGANIZATION_EDEFAULT.equals(getOrganization());
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public Section toSection() {
+		Section ret = new Section(getOrganization(), null);
+		String organization = getOrganization();
+		if (!Util.isBlank(organization)) {
+			ret.getContents().add(new Content(
+					"""
+					**Organization**: %s
+					
+					
+					""".formatted(organization), 
+					Content.MARKDOWN));			
+		}
+		
+//		Content content = getContent();
+//		if (content != null) {
+//			ret.getContents().add(content);
+//		}
+		
+		// summary
+		
+		// highlights
+		
+		return ret;
 	}
 
 } //VolunteerImpl

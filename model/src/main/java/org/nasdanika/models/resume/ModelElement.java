@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.json.JSONObject;
 
+import org.nasdanika.common.Section;
 import org.nasdanika.ncore.Documented;
 
 /**
@@ -60,5 +61,13 @@ public interface ModelElement extends Documented {
 	 * @generated
 	 */
 	void save(Function<EStructuralFeature, Consumer<Object>> contentConsumerProvider);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.nasdanika.models.resume.Section"
+	 * @generated
+	 */
+	Section toSection();
 
 } // ModelElement

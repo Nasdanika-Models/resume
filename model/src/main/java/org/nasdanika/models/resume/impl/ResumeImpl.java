@@ -2,7 +2,6 @@
  */
 package org.nasdanika.models.resume.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,7 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.json.JSONObject;
 import org.nasdanika.common.Adaptable;
+import org.nasdanika.common.Content;
 import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Award;
 import org.nasdanika.models.resume.Basics;
 import org.nasdanika.models.resume.Certificate;
@@ -406,13 +407,100 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Section toSection() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Basics basics = getBasics();		
+		Section ret = new Section(basics == null ? "(Unknown)" : basics.getName(), null);
+		if (basics != null) {
+			StringBuilder basicsContentBuilder = new StringBuilder();
+			
+			String image = basics.getImage();
+			if (!Util.isBlank(image)) {
+				basicsContentBuilder.append(
+					"""
+					![Image](%s)		
+					
+					
+					""".formatted(image));
+			}		
+			
+			String label = basics.getLabel();
+			if (!Util.isBlank(label)) {
+				basicsContentBuilder
+					.append("*" + label + "*")
+					.append(System.lineSeparator())
+					.append(System.lineSeparator());				
+			}
+			
+			String eMail = basics.getEmail();
+			if (!Util.isBlank(eMail)) {
+				basicsContentBuilder
+					.append("* **E-mail:** " + eMail)
+					.append(System.lineSeparator());
+			}
+			
+			String phone = basics.getPhone();
+			if (!Util.isBlank(phone)) {
+				basicsContentBuilder
+					.append("* **Phone:** " + phone)
+					.append(System.lineSeparator())
+					.append(System.lineSeparator());				
+			}
+			
+			String summary = basics.getSummary();
+			if (!Util.isBlank(phone)) {
+				basicsContentBuilder
+					.append(summary)
+					.append(System.lineSeparator())
+					.append(System.lineSeparator());				
+			}						
+	
+			if (!basicsContentBuilder.isEmpty()) {
+				ret.getContents().add(new Content(basicsContentBuilder.toString(), Content.MARKDOWN));
+			}
+		}
+		
+		EList<Work> work = getWork();
+		if (!work.isEmpty()) {
+			Section workSection = new Section("Work", null);
+			ret.getChildren().add(workSection);
+			for (Work we: work) {
+				workSection.getChildren().add(we.toSection());
+			}
+		}
+		
+		EList<Volunteer> volunteer = getVolunteer();
+		if (!volunteer.isEmpty()) {
+			Section volunteerSection = new Section("Volunteer", null);
+			ret.getChildren().add(volunteerSection);
+			for (Volunteer ve: volunteer) {
+				volunteerSection.getChildren().add(ve.toSection());
+			}
+		}
+
+//		getEducation()		
+		
+//		getCertificates()
+		
+//		getAwards()
+		
+//		getProjects()				
+		
+//		getSkills() - table
+
+//		getReferences()
+		
+//		getPublications()
+
+//		getLanguages()		
+		
+//		getInterests()
+		
+//		getMeta()
+		
+		return ret;
 	}
 
 	/**
@@ -799,20 +887,6 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ResumePackage.RESUME___TO_SECTION:
-				return toSection();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-	
 	@Override
 	public JSONObject toJSON() {
 		JSONObject jResume = super.toJSON();

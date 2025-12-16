@@ -28,6 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.NasdanikaException;
+import org.nasdanika.common.Section;
 import org.nasdanika.models.resume.ModelElement;
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.ncore.NcorePackage;
@@ -249,6 +250,18 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 	 * @generated
 	 */
 	@Override
+	public Section toSection() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ResumePackage.MODEL_ELEMENT__DOCUMENTATION:
@@ -353,6 +366,8 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 			case ResumePackage.MODEL_ELEMENT___SAVE__FUNCTION:
 				save((Function<EStructuralFeature, Consumer<Object>>)arguments.get(0));
 				return null;
+			case ResumePackage.MODEL_ELEMENT___TO_SECTION:
+				return toSection();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -7,7 +7,6 @@ import java.util.function.Function;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.json.JSONObject;
-import org.nasdanika.common.Section;
 
 /**
  * <!-- begin-user-doc -->
@@ -236,14 +235,6 @@ public interface Resume extends ModelElement, org.nasdanika.ncore.ModelElement {
 	 */
 	void setMeta(Meta value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.nasdanika.models.resume.Section"
-	 * @generated
-	 */
-	Section toSection();
-		
 	static Resume create(JSONObject jsonObject) {
 		Resume ret = ResumeFactory.eINSTANCE.createResume();
 		ret.load(jsonObject);

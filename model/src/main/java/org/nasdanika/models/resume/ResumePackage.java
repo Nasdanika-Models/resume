@@ -142,13 +142,22 @@ public interface ResumePackage extends EPackage {
 	int MODEL_ELEMENT___SAVE__FUNCTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 4;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT___TO_SECTION = NcorePackage.DOCUMENTED_OPERATION_COUNT + 5;
+
+	/**
 	 * The number of operations of the '<em>Model Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 5;
+	int MODEL_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_OPERATION_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.resume.Named <em>Named</em>}' class.
@@ -240,6 +249,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int NAMED___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Named</em>' class.
@@ -340,6 +358,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -619,7 +646,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME___TO_SECTION = MODEL_ELEMENT_OPERATION_COUNT + 0;
+	int RESUME___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Resume</em>' class.
@@ -628,7 +655,7 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 1;
+	int RESUME_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -795,6 +822,15 @@ public interface ResumePackage extends EPackage {
 	int BASICS___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASICS___TO_SECTION = NAMED___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Basics</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -931,6 +967,15 @@ public interface ResumePackage extends EPackage {
 	int LOCATION___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1047,6 +1092,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int PROFILE___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFILE___TO_SECTION = RESOURCE___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Profile</em>' class.
@@ -1192,6 +1246,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int ENGAGEMENT___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENGAGEMENT___TO_SECTION = RESOURCE___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Engagement</em>' class.
@@ -1366,6 +1429,15 @@ public interface ResumePackage extends EPackage {
 	int WORK___SAVE__FUNCTION = ENGAGEMENT___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK___TO_SECTION = ENGAGEMENT___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Work</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1518,6 +1590,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int VOLUNTEER___SAVE__FUNCTION = ENGAGEMENT___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VOLUNTEER___TO_SECTION = ENGAGEMENT___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Volunteer</em>' class.
@@ -1683,6 +1764,15 @@ public interface ResumePackage extends EPackage {
 	int EDUCATION___SAVE__FUNCTION = RESOURCE___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDUCATION___TO_SECTION = RESOURCE___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Education</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1810,6 +1900,15 @@ public interface ResumePackage extends EPackage {
 	int AWARD___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AWARD___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Award</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1935,6 +2034,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int CERTIFICATE___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CERTIFICATE___TO_SECTION = NAMED___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Certificate</em>' class.
@@ -2073,6 +2181,15 @@ public interface ResumePackage extends EPackage {
 	int PUBLICATION___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUBLICATION___TO_SECTION = NAMED___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Publication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2191,6 +2308,15 @@ public interface ResumePackage extends EPackage {
 	int SKILL___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKILL___TO_SECTION = NAMED___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Skill</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2298,6 +2424,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int LANGUAGE___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LANGUAGE___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Language</em>' class.
@@ -2409,6 +2544,15 @@ public interface ResumePackage extends EPackage {
 	int INTEREST___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEREST___TO_SECTION = NAMED___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Interest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2516,6 +2660,15 @@ public interface ResumePackage extends EPackage {
 	 * @ordered
 	 */
 	int REFERENCE___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
+
+	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE___TO_SECTION = NAMED___TO_SECTION;
 
 	/**
 	 * The number of operations of the '<em>Reference</em>' class.
@@ -2699,6 +2852,15 @@ public interface ResumePackage extends EPackage {
 	int PROJECT___SAVE__FUNCTION = NAMED___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT___TO_SECTION = NAMED___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Project</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2817,6 +2979,15 @@ public interface ResumePackage extends EPackage {
 	int META___SAVE__FUNCTION = MODEL_ELEMENT___SAVE__FUNCTION;
 
 	/**
+	 * The operation id for the '<em>To Section</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META___TO_SECTION = MODEL_ELEMENT___TO_SECTION;
+
+	/**
 	 * The number of operations of the '<em>Meta</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2926,6 +3097,16 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getModelElement__Save__Function();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.resume.ModelElement#toSection() <em>To Section</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>To Section</em>' operation.
+	 * @see org.nasdanika.models.resume.ModelElement#toSection()
+	 * @generated
+	 */
+	EOperation getModelElement__ToSection();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Named <em>Named</em>}'.
@@ -3121,16 +3302,6 @@ public interface ResumePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResume_Meta();
-
-	/**
-	 * Returns the meta object for the '{@link org.nasdanika.models.resume.Resume#toSection() <em>To Section</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>To Section</em>' operation.
-	 * @see org.nasdanika.models.resume.Resume#toSection()
-	 * @generated
-	 */
-	EOperation getResume__ToSection();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.resume.Basics <em>Basics</em>}'.
@@ -4057,6 +4228,13 @@ public interface ResumePackage extends EPackage {
 		 */
 		EOperation MODEL_ELEMENT___SAVE__FUNCTION = eINSTANCE.getModelElement__Save__Function();
 		/**
+		 * The meta object literal for the '<em><b>To Section</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MODEL_ELEMENT___TO_SECTION = eINSTANCE.getModelElement__ToSection();
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.Named <em>Named</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4188,13 +4366,6 @@ public interface ResumePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESUME__META = eINSTANCE.getResume_Meta();
-		/**
-		 * The meta object literal for the '<em><b>To Section</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RESUME___TO_SECTION = eINSTANCE.getResume__ToSection();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.resume.impl.BasicsImpl <em>Basics</em>}' class.
 		 * <!-- begin-user-doc -->

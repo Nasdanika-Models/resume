@@ -323,6 +323,16 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getModelElement__ToSection() {
+		return modelElementEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNamed() {
 		return namedEClass;
 	}
@@ -495,16 +505,6 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 	@Override
 	public EReference getResume_Meta() {
 		return (EReference)resumeEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getResume__ToSection() {
-		return resumeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1292,6 +1292,7 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEOperation(modelElementEClass, MODEL_ELEMENT___LOAD__FUNCTION);
 		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_JSON);
 		createEOperation(modelElementEClass, MODEL_ELEMENT___SAVE__FUNCTION);
+		createEOperation(modelElementEClass, MODEL_ELEMENT___TO_SECTION);
 
 		namedEClass = createEClass(NAMED);
 		createEAttribute(namedEClass, NAMED__NAME);
@@ -1313,7 +1314,6 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		createEReference(resumeEClass, RESUME__REFERENCES);
 		createEReference(resumeEClass, RESUME__PROJECTS);
 		createEReference(resumeEClass, RESUME__META);
-		createEOperation(resumeEClass, RESUME___TO_SECTION);
 
 		basicsEClass = createEClass(BASICS);
 		createEReference(basicsEClass, BASICS__LOCATION);
@@ -1499,6 +1499,8 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		g2.getETypeArguments().add(g3);
 		addEParameter(op, g1, "contentConsumerProvider", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getModelElement__ToSection(), this.getSection(), "toSection", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(namedEClass, Named.class, "Named", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamed_Name(), ecorePackage.getEString(), "name", null, 0, 1, Named.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1519,8 +1521,6 @@ public class ResumePackageImpl extends EPackageImpl implements ResumePackage {
 		initEReference(getResume_References(), this.getReference(), null, "references", null, 0, -1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResume_Projects(), this.getProject(), null, "projects", null, 0, -1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResume_Meta(), this.getMeta(), null, "meta", null, 0, 1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getResume__ToSection(), this.getSection(), "toSection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(basicsEClass, Basics.class, "Basics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBasics_Location(), this.getLocation(), null, "location", null, 0, 1, Basics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -6,8 +6,8 @@ import java.util.Collection;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Engagement;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -318,6 +318,26 @@ public abstract class EngagementImpl extends ModelElementImpl implements Engagem
 				return POSITION_EDEFAULT == null ? getPosition() != null : !POSITION_EDEFAULT.equals(getPosition());
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	protected String getContent() {
+		StringBuilder contentBuilder = new StringBuilder();
+
+		addBullet(contentBuilder, "Position", getPosition());
+		// TODO - dates. Present if end date is null
+		
+		
+				
+		return contentBuilder.toString();
+	}
+
+	protected void addBullet(StringBuilder contentBuilder, String label, String value) {
+		if (!Util.isBlank(value)) {
+			contentBuilder
+				.append("* **" + label +"**: ")
+				.append(value)
+				.append(System.lineSeparator());
+		}
 	}
 
 } //EngagementImpl

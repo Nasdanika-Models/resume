@@ -2,9 +2,12 @@ package org.nasdanika.models.resume.tests;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.nio.file.Files;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -25,9 +28,16 @@ import org.nasdanika.capability.emf.ResourceSetRequirement;
 import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.PrintStreamProgressMonitor;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.common.Section;
 import org.nasdanika.common.Transformer;
 import org.nasdanika.emf.JsonSchemaEcoreFactory;
+import org.nasdanika.html.HTMLFactory;
+import org.nasdanika.html.HTMLPage;
+import org.nasdanika.html.Tag;
 import org.nasdanika.models.resume.Resume;
+
+import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
+import com.vladsch.flexmark.pdf.converter.PdfConverterExtension;
 
 public class ResumeTests {
 		
@@ -71,7 +81,7 @@ public class ResumeTests {
 		ResourceSet resourceSet = capabilityLoader.loadOne(requirement, progressMonitor);
 		
 		// Saving for manual inspection
-		URI xmiURI = URI.createFileURI(new File("target/sample.resume.xml").getAbsolutePath());
+		URI xmiURI = URI.createFileURI(new File("../docs/demos/sample.resume.xml").getAbsolutePath());
 		Resource xmiResource = resourceSet.createResource(xmiURI);
 		xmiResource.getContents().add(resume);
 		xmiResource.save(null);		
@@ -130,5 +140,37 @@ public class ResumeTests {
             }
         }
     }
+    
+	@Test
+	public void testSection() throws Exception {
+		InputStream sampeResumeStream = getClass().getResourceAsStream("sample.resume.json");
+		JSONObject jResume = DefaultConverter.INSTANCE.toJSONObject(sampeResumeStream);
+		Resume resume = Resume.create(jResume);	
+		
+		Section section = resume.toSection();
+		String html = section.toHtml(1);
+		
+		HTMLPage htmlPage = HTMLFactory.INSTANCE.page();
+		htmlPage.stylesheet("https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css");
+		Tag contentDiv = HTMLFactory.INSTANCE.div(html).addClass("markdown-body");
+		htmlPage.body(contentDiv);		
+		File htmlFile = new File("../docs/demos/sample.resume.html").getCanonicalFile();
+		Files.writeString(htmlFile.toPath(), htmlPage.toString());
+		
+//		PdfRendererBuilder pdfBuilder = new PdfRendererBuilder();
+//        try (OutputStream os = new FileOutputStream("target/sample.resume.pdf")) {
+//			pdfBuilder
+//				.useFastMode()
+//				.withHtmlContent(html, null)
+//				.toStream(null)
+//				.run();
+//        }
+        
+        try (FileOutputStream fos = new FileOutputStream("../docs/demos/sample.resume.pdf")) {
+            PdfConverterExtension.exportToPdf(fos, html, "", PdfRendererBuilder.TextDirection.LTR);
+        }
+		
+		Desktop.getDesktop().browse(htmlFile.toURI());
+	}			       
 	
 }
