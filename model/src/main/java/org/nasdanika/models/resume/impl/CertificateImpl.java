@@ -281,5 +281,6 @@ public class CertificateImpl extends ModelElementImpl implements Certificate {
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
+		
 
 } //CertificateImpl

@@ -7,7 +7,6 @@ import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Engagement;
 import org.nasdanika.models.resume.ResumePackage;
 

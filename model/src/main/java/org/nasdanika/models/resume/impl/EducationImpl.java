@@ -438,8 +438,7 @@ public class EducationImpl extends ModelElementImpl implements Education {
 		if (!contentBuilder.isEmpty()) {		
 			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
 		}
-		
-		
+				
 		EList<String> courses = getCourses();
 		if (!courses.isEmpty()) {
 			Section coursesSection = new Section("Courses", null);

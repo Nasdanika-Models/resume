@@ -2,7 +2,10 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -488,9 +491,38 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 				educationSection.getChildren().add(ed.toSection());
 			}
 		}
+				
+		EList<Certificate> certificates = getCertificates();
+		if (!certificates.isEmpty()) {
+			Section certificatesSection = new Section("Certificates", null);
+			ret.getChildren().add(certificatesSection);
+			StringBuilder csb = new StringBuilder("| Name | Date | Issuer |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- | ------ |")
+					.append(System.lineSeparator());
+			for (Certificate cert: certificates) {
+				String name = cert.getName();
+				if (name == null) {
+					name = "";
+				}
+				String url = cert.getUrl();
+				if (!Util.isBlank(url) && !Util.isBlank(name)) {
+					name = "[" + name + "](" + url + ")";
+				}
+				
+				Date date = cert.getDate();
+				String fDate = date == null ? "" : new SimpleDateFormat(JSON_DATE_FORMAT).format(date);
+				
+				String issuer = cert.getIssuer();
+				csb
+					.append("| %s | %s | %s |".formatted(name, fDate, issuer))
+					.append(System.lineSeparator());
+			}			
+			
+			certificatesSection.getContents().add(new Content(csb.toString(), Content.MARKDOWN));
+		}
 		
 		
-//		getCertificates()
 		
 //		getAwards()
 		

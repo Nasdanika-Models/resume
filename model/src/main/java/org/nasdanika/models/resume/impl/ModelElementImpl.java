@@ -5,7 +5,6 @@ package org.nasdanika.models.resume.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
@@ -50,7 +49,8 @@ import org.yaml.snakeyaml.Yaml;
  * @generated
  */
 public class ModelElementImpl extends MinimalEObjectImpl.Container implements ModelElement {
-	private static final String MONTH_YEAR_DATE_PATTERN = "MMM YYYY";
+	
+	public static final String MONTH_YEAR_DATE_PATTERN = "MMM YYYY";
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,7 +127,7 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 		load(sf -> yMap.get(sf.getName()));
 	}
 	
-	private static final String JSON_DATE_FORMAT = "yyyy-MM-dd";
+	public static final String JSON_DATE_FORMAT = "yyyy-MM-dd";
 
 	/**
 	 * <!-- begin-user-doc -->
