@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.common.Content;
 import org.nasdanika.common.Section;
@@ -131,27 +132,53 @@ public class VolunteerImpl extends EngagementImpl implements Volunteer {
 	
 	@Override
 	public Section toSection() {
-		Section ret = new Section(getOrganization(), null);
-		String organization = getOrganization();
-		if (!Util.isBlank(organization)) {
-			ret.getContents().add(new Content(
-					"""
-					**Organization**: %s
-					
-					
-					""".formatted(organization), 
-					Content.MARKDOWN));			
+		Section ret = new Section(getPosition(), null);
+		StringBuilder contentBuilder = new StringBuilder();
+		String name = getOrganization();
+		String url = getUrl();
+		if (!Util.isBlank(url) && !Util.isBlank(name)) {
+			name = "[" + name + "](" + url + ")";
+		}
+				
+		if (!Util.isBlank(name)) {
+			contentBuilder.append(name);
 		}
 		
-//		Content content = getContent();
-//		if (content != null) {
-//			ret.getContents().add(content);
-//		}
+		String period = renderPeriod(getStartDate(), getEndDate());
+		if (!Util.isBlank(period)) {
+			if (!contentBuilder.isEmpty()) {
+				contentBuilder.append(", ");
+			}
+			contentBuilder.append(period);
+		}
 		
-		// summary
+		if (!contentBuilder.isEmpty()) {
+			contentBuilder
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+				
+		String summary = getSummary();
+		if (!Util.isBlank(summary)) {
+			contentBuilder
+				.append(summary)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+	
+		EList<String> highlights = getHighlights();
+		if (!highlights.isEmpty()) {
+			highlights.forEach(h -> contentBuilder
+				.append("* ")
+				.append(h)
+				.append(System.lineSeparator()));
+			
+			contentBuilder.append(System.lineSeparator());
+		}		
 		
-		// highlights
-		
+		if (!contentBuilder.isEmpty()) {		
+			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
+		}		
 		return ret;
 	}
 

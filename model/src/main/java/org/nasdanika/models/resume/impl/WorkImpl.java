@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.common.Content;
 import org.nasdanika.common.Section;
@@ -244,26 +245,70 @@ public class WorkImpl extends EngagementImpl implements Work {
 	
 	@Override
 	public Section toSection() {
-		Section ret = new Section(getName(), null);
-		String location = getLocation();
-		if (!Util.isBlank(location)) {
-			ret.getContents().add(new Content(
-					"""
-					* **Location**: %s
-					%s
-					
-					""".formatted(location, getContent()), 
-					Content.MARKDOWN));			
+		Section ret = new Section(getPosition(), null);
+		StringBuilder contentBuilder = new StringBuilder();
+		String name = getName();
+		String url = getUrl();
+		if (!Util.isBlank(url) && !Util.isBlank(name)) {
+			name = "[" + name + "](" + url + ")";
 		}
 				
-		//summary
+		if (!Util.isBlank(name)) {
+			contentBuilder.append(name);
+		}
 		
-		// highlights
+		String period = renderPeriod(getStartDate(), getEndDate());
+		if (!Util.isBlank(period)) {
+			if (!contentBuilder.isEmpty()) {
+				contentBuilder.append(", ");
+			}
+			contentBuilder.append(period);
+		}
+		
+		if (!contentBuilder.isEmpty()) {
+			contentBuilder
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+		
+		String location = getLocation();
+		if (!Util.isBlank(location)) {
+			contentBuilder
+				.append("**Location:** ")
+				.append(location)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+				
+		String summary = getSummary();
+		if (!Util.isBlank(summary)) {
+			contentBuilder
+				.append(summary)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
 		
 		String description = getDescription();
 		if (!Util.isBlank(description)) {
-			ret.getContents().add(new Content(description, Content.MARKDOWN));
+			contentBuilder
+				.append(description)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
 		}
+	
+		EList<String> highlights = getHighlights();
+		if (!highlights.isEmpty()) {
+			highlights.forEach(h -> contentBuilder
+				.append("* ")
+				.append(h)
+				.append(System.lineSeparator()));
+			
+			contentBuilder.append(System.lineSeparator());
+		}		
+		
+		if (!contentBuilder.isEmpty()) {		
+			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
+		}		
 		return ret;
 	}
 

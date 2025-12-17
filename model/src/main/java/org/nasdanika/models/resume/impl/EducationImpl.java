@@ -6,6 +6,9 @@ import java.util.Collection;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Education;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -393,6 +396,67 @@ public class EducationImpl extends ModelElementImpl implements Education {
 				return !getCourses().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public Section toSection() {
+		Section ret = new Section(getStudyType() + " in " + getArea(), null);
+		StringBuilder contentBuilder = new StringBuilder();
+		String name = getInstitution();
+		String url = getUrl();
+		if (!Util.isBlank(url) && !Util.isBlank(name)) {
+			name = "[" + name + "](" + url + ")";
+		}
+				
+		if (!Util.isBlank(name)) {
+			contentBuilder.append(name);
+		}
+		
+		String period = renderPeriod(getStartDate(), getEndDate());
+		if (!Util.isBlank(period)) {
+			if (!contentBuilder.isEmpty()) {
+				contentBuilder.append(", ");
+			}
+			contentBuilder.append(period);
+		}
+		
+		if (!contentBuilder.isEmpty()) {
+			contentBuilder
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+								
+		String score = getScore();
+		if (!Util.isBlank(score)) {
+			contentBuilder
+				.append("**Score:** ")
+				.append(score)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+		
+		if (!contentBuilder.isEmpty()) {		
+			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
+		}
+		
+		
+		EList<String> courses = getCourses();
+		if (!courses.isEmpty()) {
+			Section coursesSection = new Section("Courses", null);
+			ret.getChildren().add(coursesSection);
+			
+			StringBuilder coursesContentBuilder = new StringBuilder();
+			
+			courses.forEach(h -> coursesContentBuilder
+				.append("* ")
+				.append(h)
+				.append(System.lineSeparator()));
+			
+			coursesContentBuilder.append(System.lineSeparator());			
+			coursesSection.getContents().add(new Content(coursesContentBuilder.toString(), Content.MARKDOWN));						
+		}		
+		
+		return ret;
 	}
 
 } //EducationImpl

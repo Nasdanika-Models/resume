@@ -319,25 +319,5 @@ public abstract class EngagementImpl extends ModelElementImpl implements Engagem
 		}
 		return super.eIsSet(featureID);
 	}
-	
-	protected String getContent() {
-		StringBuilder contentBuilder = new StringBuilder();
-
-		addBullet(contentBuilder, "Position", getPosition());
-		// TODO - dates. Present if end date is null
-		
-		
-				
-		return contentBuilder.toString();
-	}
-
-	protected void addBullet(StringBuilder contentBuilder, String label, String value) {
-		if (!Util.isBlank(value)) {
-			contentBuilder
-				.append("* **" + label +"**: ")
-				.append(value)
-				.append(System.lineSeparator());
-		}
-	}
 
 } //EngagementImpl

@@ -5,6 +5,7 @@ package org.nasdanika.models.resume.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
@@ -49,6 +50,8 @@ import org.yaml.snakeyaml.Yaml;
  * @generated
  */
 public class ModelElementImpl extends MinimalEObjectImpl.Container implements ModelElement {
+	private static final String MONTH_YEAR_DATE_PATTERN = "MMM YYYY";
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,5 +374,30 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+	
+	public static String renderDate(Date date) {
+		if (date == null) {
+			return "";		
+		}
+		
+		return new SimpleDateFormat(MONTH_YEAR_DATE_PATTERN).format(date);
+	}
+		
+	public static String renderPeriod(Date start, Date end) {
+		if (start == null && end == null) {
+			return "";		
+		}
+		
+		if (end == null) {
+			return renderDate(start) + " - Present"; 
+		}
+		
+		if (start == null) {
+			return "Until " + renderDate(end); 
+		}
+		
+		return renderDate(start) + " - " + renderDate(end); 
+	}
+	
 
 } //ModelElementImpl

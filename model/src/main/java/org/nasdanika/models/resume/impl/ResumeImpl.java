@@ -480,7 +480,15 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 			}
 		}
 
-//		getEducation()		
+		EList<Education> education = getEducation();
+		if (!education.isEmpty()) {
+			Section educationSection = new Section("Education", null);
+			ret.getChildren().add(educationSection);
+			for (Education ed: education) {
+				educationSection.getChildren().add(ed.toSection());
+			}
+		}
+		
 		
 //		getCertificates()
 		
