@@ -26,9 +26,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.nasdanika.common.Content;
 import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.NasdanikaException;
 import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.ModelElement;
 import org.nasdanika.models.resume.ResumePackage;
 import org.nasdanika.ncore.NcorePackage;
@@ -250,13 +252,34 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Section toSection() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Section ret = new Section(eClass().getName(), null);
+		StringBuilder contentBuilder = new StringBuilder();
+		
+		for (EAttribute attr: eClass().getEAllAttributes()) {
+			if (eIsSet(attr)) {
+				Object aVal = eGet(attr);
+				if (aVal != null) {
+					if (aVal instanceof Date) {
+						aVal = new SimpleDateFormat(JSON_DATE_FORMAT).format((Date) aVal);
+					}
+					contentBuilder
+						.append("* **")
+						.append(Util.nameToLabel(attr.getName()))
+						.append(":** ")
+						.append(aVal)
+						.append(System.lineSeparator());
+				}
+			}
+		}
+		
+		if (!contentBuilder.isEmpty()) {		
+			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
+		}		
+		return ret;
 	}
 
 	/**
@@ -388,15 +411,17 @@ public class ModelElementImpl extends MinimalEObjectImpl.Container implements Mo
 			return "";		
 		}
 		
+		String rStart = renderDate(start);
 		if (end == null) {
-			return renderDate(start) + " - Present"; 
+			return rStart + " - Present"; 
 		}
 		
+		String rEnd = renderDate(end);
 		if (start == null) {
-			return "Until " + renderDate(end); 
+			return "Until " + rEnd; 
 		}
 		
-		return renderDate(start) + " - " + renderDate(end); 
+		return Objects.equals(rStart, rEnd) ? rStart : rStart + " - " + rEnd; 
 	}
 	
 

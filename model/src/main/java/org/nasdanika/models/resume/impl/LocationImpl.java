@@ -2,7 +2,11 @@
  */
 package org.nasdanika.models.resume.impl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Location;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -290,5 +294,5 @@ public class LocationImpl extends ModelElementImpl implements Location {
 		}
 		return super.eIsSet(featureID);
 	}
-
+	
 } //LocationImpl

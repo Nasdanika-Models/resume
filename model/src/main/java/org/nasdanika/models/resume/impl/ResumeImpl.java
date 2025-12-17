@@ -26,7 +26,9 @@ import org.nasdanika.models.resume.Certificate;
 import org.nasdanika.models.resume.Education;
 import org.nasdanika.models.resume.Interest;
 import org.nasdanika.models.resume.Language;
+import org.nasdanika.models.resume.Location;
 import org.nasdanika.models.resume.Meta;
+import org.nasdanika.models.resume.Profile;
 import org.nasdanika.models.resume.Project;
 import org.nasdanika.models.resume.Publication;
 import org.nasdanika.models.resume.Reference;
@@ -463,6 +465,11 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 			if (!basicsContentBuilder.isEmpty()) {
 				ret.getContents().add(new Content(basicsContentBuilder.toString(), Content.MARKDOWN));
 			}
+			
+			Location location = basics.getLocation();
+			if (location != null) {
+				ret.getChildren().add(location.toSection());
+			}
 		}
 		
 		EList<Work> work = getWork();
@@ -501,10 +508,7 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 					.append("| ---- | ---- | ------ |")
 					.append(System.lineSeparator());
 			for (Certificate cert: certificates) {
-				String name = cert.getName();
-				if (name == null) {
-					name = "";
-				}
+				String name = blankIfNull(cert.getName());
 				String url = cert.getUrl();
 				if (!Util.isBlank(url) && !Util.isBlank(name)) {
 					name = "[" + name + "](" + url + ")";
@@ -520,27 +524,172 @@ public class ResumeImpl extends ModelElementImpl implements Resume {
 			}			
 			
 			certificatesSection.getContents().add(new Content(csb.toString(), Content.MARKDOWN));
+		}				
+				
+		EList<Award> awards = getAwards();
+		if (!awards.isEmpty()) {
+			Section awardsSection = new Section("Awards", null);
+			ret.getChildren().add(awardsSection);
+			StringBuilder asb = new StringBuilder("| Title | Date | Awarder | Summary |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- | ------ | ------ |")
+					.append(System.lineSeparator());
+			for (Award award: awards) {
+				Date date = award.getDate();
+				String fDate = date == null ? "" : new SimpleDateFormat(JSON_DATE_FORMAT).format(date);
+				
+				asb
+					.append("| %s | %s | %s | %s |".formatted(
+							blankIfNull(award.getTitle()), 
+							fDate,
+							blankIfNull(award.getAwarder()), 
+							blankIfNull(award.getSummary())))
+					.append(System.lineSeparator());
+			}			
+			
+			awardsSection.getContents().add(new Content(asb.toString(), Content.MARKDOWN));
+		}				
+		
+		EList<Project> projects = getProjects();
+		if (!projects.isEmpty()) {
+			Section projectsSection = new Section("Projects", null);
+			ret.getChildren().add(projectsSection);
+			for (Project project: projects) {
+				projectsSection.getChildren().add(project.toSection());
+			}
+		}
+				
+		EList<Skill> skills = getSkills();
+		if (!skills.isEmpty()) {
+			Section skillsSection = new Section("Skills", null);
+			ret.getChildren().add(skillsSection);
+			StringBuilder ssb = new StringBuilder("| Skill | Level | Keywords |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- | ------ |")
+					.append(System.lineSeparator());
+			for (Skill skill: skills) {				
+				ssb
+					.append("| %s | %s | %s | ".formatted(
+							blankIfNull(skill.getName()), 
+							blankIfNull(skill.getLevel()), 
+							String.join(", ", skill.getKeywords())))
+					.append(System.lineSeparator());
+			}			
+			
+			skillsSection.getContents().add(new Content(ssb.toString(), Content.MARKDOWN));
+		}				
+		
+		EList<Reference> references = getReferences();
+		if (!references.isEmpty()) {
+			Section referencesSection = new Section("References", null);
+			ret.getChildren().add(referencesSection);
+			for (Reference ref: references) {
+				referencesSection.getChildren().add(ref.toSection());
+			}
+		}
+				
+		EList<Publication> publications = getPublications();
+		if (!publications.isEmpty()) {
+			Section publicationsSection = new Section("Publications", null);
+			ret.getChildren().add(publicationsSection);
+			StringBuilder psb = new StringBuilder("| Name | Release Date | Publisher | Summary |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- | ------ | ------ |")
+					.append(System.lineSeparator());
+			for (Publication pub: publications) {
+				String name = blankIfNull(pub.getName());
+				String url = pub.getUrl();
+				if (!Util.isBlank(url) && !Util.isBlank(name)) {
+					name = "[" + name + "](" + url + ")";
+				}
+				
+				Date date = pub.getReleaseDate();
+				String fDate = date == null ? "" : new SimpleDateFormat(JSON_DATE_FORMAT).format(date);
+				
+				psb
+					.append("| %s | %s | %s | %s |".formatted(
+							name, 
+							fDate, 
+							blankIfNull(pub.getPublisher()),
+							blankIfNull(pub.getSummary())))
+					.append(System.lineSeparator());
+			}			
+			
+			publicationsSection.getContents().add(new Content(psb.toString(), Content.MARKDOWN));
+		}				
+		
+		EList<Language> languages = getLanguages();
+		if (!languages.isEmpty()) {
+			Section languagesSection = new Section("Languages", null);
+			ret.getChildren().add(languagesSection);
+			StringBuilder lsb = new StringBuilder("| Language | Fluency |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- |")
+					.append(System.lineSeparator());
+			for (Language lang: languages) {				
+				lsb
+					.append("| %s | %s | ".formatted(
+							blankIfNull(lang.getLanguage()), 
+							blankIfNull(lang.getFluency())))
+					.append(System.lineSeparator());
+			}			
+			
+			languagesSection.getContents().add(new Content(lsb.toString(), Content.MARKDOWN));
+		}				
+		
+		EList<Interest> interests = getInterests();
+		if (!interests.isEmpty()) {
+			Section interestsSection = new Section("Interests", null);
+			ret.getChildren().add(interestsSection);
+			StringBuilder isb = new StringBuilder("| Name | Keywords |")
+					.append(System.lineSeparator())
+					.append("| ---- | ---- |")
+					.append(System.lineSeparator());
+			for (Interest interest: interests) {				
+				isb
+					.append("| %s | %s | ".formatted(
+							blankIfNull(interest.getName()), 
+							String.join(", ", interest.getKeywords())))
+					.append(System.lineSeparator());
+			}			
+			
+			interestsSection.getContents().add(new Content(isb.toString(), Content.MARKDOWN));
+		}				
+		
+		EList<Profile> profiles = basics.getProfiles();
+		if (!profiles.isEmpty()) {
+			Section profilesSection = new Section("Profiles", null);
+			ret.getChildren().add(profilesSection);
+			StringBuilder psb = new StringBuilder("| Network | User |")
+					.append(System.lineSeparator())
+					.append("| ------- | ---- |")
+					.append(System.lineSeparator());
+			for (Profile p: profiles) {
+				String network = p.getNetwork();				
+				String user = blankIfNull(p.getUsername());
+				String url = p.getUrl();
+				if (!Util.isBlank(url) && !Util.isBlank(user)) {
+					user = "[" + user + "](" + url + ")";
+				}
+				
+				psb
+					.append("| %s | %s |".formatted(network, user))
+					.append(System.lineSeparator());
+			}			
+			
+			profilesSection.getContents().add(new Content(psb.toString(), Content.MARKDOWN));
+		}				
+				
+		Meta meta = getMeta();
+		if (meta != null) {
+			ret.getChildren().add(meta.toSection());
 		}
 		
-		
-		
-//		getAwards()
-		
-//		getProjects()				
-		
-//		getSkills() - table
-
-//		getReferences()
-		
-//		getPublications()
-
-//		getLanguages()		
-		
-//		getInterests()
-		
-//		getMeta()
-		
 		return ret;
+	}
+	
+	private static String blankIfNull(String str) {
+		return str == null ? "" : str;
 	}
 
 	/**

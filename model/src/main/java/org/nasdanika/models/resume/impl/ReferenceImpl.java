@@ -3,6 +3,8 @@
 package org.nasdanika.models.resume.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
 import org.nasdanika.models.resume.Reference;
 import org.nasdanika.models.resume.ResumePackage;
 
@@ -166,6 +168,13 @@ public class ReferenceImpl extends ModelElementImpl implements Reference {
 				return REFERENCE_EDEFAULT == null ? getReference() != null : !REFERENCE_EDEFAULT.equals(getReference());
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public Section toSection() {
+		Section ret = new Section(getName(), null);
+		ret.getContents().add(new Content(getReference(), Content.MARKDOWN));			
+		return ret;
 	}
 
 } //ReferenceImpl

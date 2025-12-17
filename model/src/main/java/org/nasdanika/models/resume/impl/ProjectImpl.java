@@ -6,6 +6,9 @@ import java.util.Collection;
 import java.util.Date;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.nasdanika.common.Content;
+import org.nasdanika.common.Section;
+import org.nasdanika.common.Util;
 import org.nasdanika.models.resume.Project;
 import org.nasdanika.models.resume.Resource;
 import org.nasdanika.models.resume.ResumePackage;
@@ -472,6 +475,99 @@ public class ProjectImpl extends ModelElementImpl implements Project {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
+	@Override
+	public Section toSection() {
+		Section ret = new Section(getName(), null);
+		StringBuilder contentBuilder = new StringBuilder();
+		String entity = getEntity();
+		String url = getUrl();
+		if (!Util.isBlank(url) && !Util.isBlank(entity)) {
+			entity = "[" + entity + "](" + url + ")";
+		}
+				
+		if (!Util.isBlank(entity)) {
+			contentBuilder.append(entity);
+		}
+		
+		String period = renderPeriod(getStartDate(), getEndDate());
+		if (!Util.isBlank(period)) {
+			if (!contentBuilder.isEmpty()) {
+				contentBuilder.append(", ");
+			}
+			contentBuilder.append(period);
+		}
+		
+		if (!contentBuilder.isEmpty()) {
+			contentBuilder
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+		
+		String type = getType();
+		if (!Util.isBlank(type)) {
+			contentBuilder
+				.append("* **Type:** ")
+				.append(type)
+				.append(System.lineSeparator());
+		}
+		
+		EList<String> keywords = getKeywords();
+		if (!keywords.isEmpty()) {
+			contentBuilder.append("* **Keywords:** ");
+
+			boolean isFirst = true;
+			for (String keyword: keywords) {
+				if (isFirst) {
+					isFirst = false;
+				} else {
+					contentBuilder.append(", ");
+				}
+				contentBuilder.append(keyword);
+			}			
+			contentBuilder.append(System.lineSeparator());
+		}		
+		
+		EList<String> roles = getRoles();
+		if (!roles.isEmpty()) {
+			contentBuilder.append("* **Roles:** ");
+
+			boolean isFirst = true;
+			for (String role: roles) {
+				if (isFirst) {
+					isFirst = false;
+				} else {
+					contentBuilder.append(", ");
+				}
+				contentBuilder.append(role);
+			}			
+			contentBuilder.append(System.lineSeparator());
+		}		
+				
+		String description = getDescription();
+		if (!Util.isBlank(description)) {
+			contentBuilder
+				.append(System.lineSeparator())
+				.append(description)
+				.append(System.lineSeparator())
+				.append(System.lineSeparator());
+		}
+	
+		EList<String> highlights = getHighlights();
+		if (!highlights.isEmpty()) {			
+			highlights.forEach(h -> contentBuilder
+				.append("* ")
+				.append(h)
+				.append(System.lineSeparator()));
+			
+			contentBuilder.append(System.lineSeparator());
+		}		
+		
+		if (!contentBuilder.isEmpty()) {		
+			ret.getContents().add(new Content(contentBuilder.toString(), Content.MARKDOWN));			
+		}		
+		return ret;
 	}
 
 } //ProjectImpl
