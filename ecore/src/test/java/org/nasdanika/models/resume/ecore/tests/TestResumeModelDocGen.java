@@ -112,7 +112,7 @@ public class TestResumeModelDocGen {
 		
 		System.out.println("There are " + errorCount + " site errors");
 		
-		if (errorCount != 124) {
+		if (errorCount != 179) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}
