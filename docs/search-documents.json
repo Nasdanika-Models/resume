@@ -1,824 +1,824 @@
 {
   "references/eClassifiers/Project/references/eStructuralFeatures/type/index.html": {
     "path": "Project/Attributes/type",
-    "link-uuid": "6148f847-775e-4bee-9d4e-b5b8836cf063",
+    "link-uuid": "7c96e8bb-bb37-45b6-ab29-2256201d40d0",
     "title": "type",
     "content": "Type EString Multiplicity 0..1 e.g. &lsquo;volunteering&rsquo;, &lsquo;presentation&rsquo;, &lsquo;talk&rsquo;, &lsquo;application&rsquo;, &lsquo;conference&rsquo;",
-    "timestamp": 1772489103258
+    "timestamp": 1781360879996
   },
   "references/eClassifiers/Skill/references/eStructuralFeatures/keywords/index.html": {
     "path": "Skill/Attributes/keywords",
-    "link-uuid": "a823a82c-82c9-4d31-b7e4-33fdb4bc6822",
+    "link-uuid": "58df248f-42e0-40c0-ac65-9215afd44322",
     "title": "keywords",
     "content": "Type EString Multiplicity 0..* List some keywords pertaining to this skill, e.g. HTML",
-    "timestamp": 1772489103435
+    "timestamp": 1781360880200
   },
   "references/eClassifiers/Interest/inheritance.html": {
     "path": "Interest/Inheritance",
-    "link-uuid": "b0791f68-c58b-4cde-89b2-204fa2abbf3f",
+    "link-uuid": "d6d94f0f-52a8-49f2-b7d8-27c34928a008",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489102986
+    "timestamp": 1781360879659
   },
   "references/eClassifiers/Publication/references/eStructuralFeatures/summary/index.html": {
     "path": "Publication/Attributes/summary",
-    "link-uuid": "fa9ac335-1eb7-4173-9de6-3404d2233045",
+    "link-uuid": "ae60e07c-292d-4102-a25d-f1b630c5327b",
     "title": "summary",
     "content": "Type EString Multiplicity 0..1 Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML.",
-    "timestamp": 1772489103289
+    "timestamp": 1781360880032
   },
   "references/eClassifiers/Consumer/index.html": {
-    "link-uuid": "46642609-c623-415f-b942-6fe6bb5d3657",
+    "link-uuid": "1011ba81-54d6-4da3-9101-7092189f8bb9",
     "title": "Consumer",
     "content": "Instant is a single instantaneous point on the time-line. If instant specification contains Z, then it is parsed using Instant.parse() method. Otherwise the specification is used to construct java.util.Date which is then converted to instant. Examples: 2021-12-03T10:15:30.00Z - loaded using Instant.parse() 10/1/2021 - loaded using new Date() and then converted to instant.",
-    "timestamp": 1772489102866
+    "timestamp": 1781360879506
   },
   "references/eClassifiers/Profile/index.html": {
-    "link-uuid": "439643d2-7748-4b40-ad83-520e6e70b39e",
+    "link-uuid": "14fd18eb-ea9d-4dae-b219-4ad7cb56dd1c",
     "title": "Profile",
     "content": "Diagram ",
-    "timestamp": 1772489103204
+    "timestamp": 1781360879935
   },
   "references/eClassifiers/Work/inheritance.html": {
     "path": "Work/Inheritance",
-    "link-uuid": "6539c97b-5bd6-472d-bb50-1e6289be9c3f",
+    "link-uuid": "f1ecc752-b9a7-48d0-b98d-e6ad2bdb71f3",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103483
+    "timestamp": 1781360880253
   },
   "references/eClassifiers/Location/references/eStructuralFeatures/city/index.html": {
     "path": "Location/Attributes/city",
-    "link-uuid": "61e1ac91-7a28-4a27-ad1b-92dcd98939a5",
+    "link-uuid": "6cca18b6-6fc6-4e43-b06b-3a8e8bd5d9a4",
     "title": "city",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1772489103060
+    "timestamp": 1781360879765
   },
   "references/eClassifiers/Work/references/eStructuralFeatures/location/index.html": {
     "path": "Work/Attributes/location",
-    "link-uuid": "d2959ca8-dcc0-454f-a952-1fa4f3d689c6",
+    "link-uuid": "edfc1fc9-dd6a-4881-a8ea-5982fb98cab8",
     "title": "location",
     "content": "Type EString Multiplicity 0..1 To add multiple address lines, use \\n. For example, 1234 Gl�cklichkeit Stra�e\\nHinterhaus 5. Etage li.",
-    "timestamp": 1772489103492
+    "timestamp": 1781360880264
   },
   "references/eClassifiers/Meta/references/eStructuralFeatures/lastModified/index.html": {
     "path": "Meta/Attributes/lastModified",
-    "link-uuid": "91a1dfb3-e6f8-4537-bff2-67ca7052d3e2",
+    "link-uuid": "1d98c26d-d717-4208-a28f-4fd320712493",
     "title": "lastModified",
     "content": "Type EString Multiplicity 0..1 Using ISO 8601 with YYYY-MM-DDThh:mm:ss",
-    "timestamp": 1772489103099
+    "timestamp": 1781360879814
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/highlights/index.html": {
     "path": "Project/Attributes/highlights",
-    "link-uuid": "29926883-eed2-426b-8422-3468a7a4f55b",
+    "link-uuid": "a47b52f1-67c9-4226-846a-dd20680f7cec",
     "title": "highlights",
     "content": "Type EString Multiplicity 0..* Specify multiple features e.g. Directs you close but not quite there",
-    "timestamp": 1772489103249
+    "timestamp": 1781360879987
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/roles/index.html": {
     "path": "Project/Attributes/roles",
-    "link-uuid": "463d6ccb-a654-42a7-a5bf-63566d05953a",
+    "link-uuid": "00102319-9a8d-41ca-8143-1adebb4568dd",
     "title": "roles",
     "content": "Type EString Multiplicity 0..* Specify your role on this project or in company e.g. Team Lead, Speaker, Writer",
-    "timestamp": 1772489103254
+    "timestamp": 1781360879992
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/image/index.html": {
     "path": "Basics/Attributes/image",
-    "link-uuid": "10b3289f-1f0f-4d4c-b84d-02075d3acf11",
+    "link-uuid": "55c49cf2-7acd-4ba4-a4be-167945e968bb",
     "title": "image",
     "content": "Type EString Multiplicity 0..1 URL (as per RFC 3986) to a image in JPEG or PNG format",
-    "timestamp": 1772489102810
+    "timestamp": 1781360879436
   },
   "references/eClassifiers/ModelElement/references/eOperations/loadYaml-1/references/eParameters/yamlString/index.html": {
     "path": "ModelElement/Operations/loadYaml/Parameters/yamlString",
-    "link-uuid": "5eb575fe-d457-4f05-84ac-f671d8a395c3",
+    "link-uuid": "8020a480-6ca4-4a36-b839-f0e437d9bec1",
     "title": "yamlString",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1772489103149
+    "timestamp": 1781360879872
   },
   "references/eClassifiers/Location/inheritance.html": {
     "path": "Location/Inheritance",
-    "link-uuid": "e9f24582-4da3-4c90-80ea-3ed5aa47e9b6",
+    "link-uuid": "94a29c25-4ef9-45fc-a048-c6def0045dfc",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103050
+    "timestamp": 1781360879751
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/area/index.html": {
     "path": "Education/Attributes/area",
-    "link-uuid": "6d3954ff-6ced-447b-bcc2-d37117335347",
+    "link-uuid": "d3fa442b-5371-48e8-851d-2d5c449d639c",
     "title": "area",
     "content": "Type EString Multiplicity 0..1 e.g. Arts",
-    "timestamp": 1772489102901
+    "timestamp": 1781360879546
   },
   "references/eClassifiers/Engagement/references/eStructuralFeatures/position/index.html": {
     "path": "Engagement/Attributes/position",
-    "link-uuid": "1df5b635-4618-464b-8ee3-fd6e01a9b395",
+    "link-uuid": "dd481293-7ecc-45bd-ba1a-27320e530f71",
     "title": "position",
     "content": "Type EString Multiplicity 0..1 e.g. Software Engineer",
-    "timestamp": 1772489102952
+    "timestamp": 1781360879616
   },
   "references/eClassifiers/Certificate/index.html": {
-    "link-uuid": "35f9b7e9-36d2-4cdb-b23e-2ddb54c19275",
+    "link-uuid": "77c3fa74-9dbe-4798-bdd9-69531b86f03d",
     "title": "Certificate",
     "content": "Diagram ",
-    "timestamp": 1772489102845
+    "timestamp": 1781360879481
   },
   "references/eClassifiers/ModelElement/references/eOperations/toSection-5/index.html": {
     "path": "ModelElement/Operations/toSection",
-    "link-uuid": "c86c0d15-409d-487b-ba62-a265bc7fd979",
+    "link-uuid": "d9007592-e7a0-4be8-859c-7be013a5f4b4",
     "title": "toSection",
     "content": "Type Section Multiplicity 0..1",
-    "timestamp": 1772489103160
+    "timestamp": 1781360879886
   },
   "references/eClassifiers/Profile/references/eStructuralFeatures/username/index.html": {
     "path": "Profile/Attributes/username",
-    "link-uuid": "46e8a64d-c9db-4f89-9543-0e668b7d4d0e",
+    "link-uuid": "c0e55795-a99a-4aee-bd9c-6ef5dae1d2dc",
     "title": "username",
     "content": "Type EString Multiplicity 0..1 e.g. neutralthoughts",
-    "timestamp": 1772489103214
+    "timestamp": 1781360879949
   },
   "references/eClassifiers/Resource/references/eStructuralFeatures/url/index.html": {
     "path": "Resource/Attributes/url",
-    "link-uuid": "8f78acaa-2f45-4cf5-838c-8d4962092afd",
+    "link-uuid": "b4684ff2-4deb-441e-a7ba-2b54db21a568",
     "title": "url",
     "content": "Type EString Multiplicity 0..1 Resource location",
-    "timestamp": 1772489103345
+    "timestamp": 1781360880094
   },
   "references/eClassifiers/Resource/inheritance.html": {
     "path": "Resource/Inheritance",
-    "link-uuid": "fcc5998a-fe3d-4218-9a31-e33c069e41cd",
+    "link-uuid": "9d56962f-74ea-4e59-857a-25fe67a8ec56",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1772489103341
+    "timestamp": 1781360880090
   },
   "references/eClassifiers/Meta/index.html": {
-    "link-uuid": "2c530f80-7202-4388-be7f-57a47e94ea8b",
+    "link-uuid": "e117118e-3600-45a1-8ce4-5366d47900a9",
     "title": "Meta",
     "content": "Diagram ",
-    "timestamp": 1772489103087
+    "timestamp": 1781360879800
   },
   "references/eClassifiers/Named/references/eStructuralFeatures/name/index.html": {
     "path": "Named/Attributes/name",
-    "link-uuid": "4f1de5f3-c34d-40f4-83c5-c233049f22c3",
+    "link-uuid": "b83f6315-35d8-422b-9170-5b1fda161717",
     "title": "name",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1772489103186
+    "timestamp": 1781360879917
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/description/index.html": {
     "path": "Project/Attributes/description",
-    "link-uuid": "57ac73b9-11d9-4442-bf55-21829ce380b7",
+    "link-uuid": "f1aa1419-c970-4d62-9763-434c3d0d727f",
     "title": "description",
     "content": "Type EString Multiplicity 0..1 Short summary of project. e.g. Collated works of 2017.",
-    "timestamp": 1772489103242
+    "timestamp": 1781360879978
   },
   "references/eClassifiers/Basics/inheritance.html": {
     "path": "Basics/Inheritance",
-    "link-uuid": "7a7dca69-6fa3-4902-94cf-97f75a68ce17",
+    "link-uuid": "30101494-c411-47ea-94cb-dcd655a6fcb7",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489102798
+    "timestamp": 1781360879420
   },
   "references/eClassifiers/Engagement/references/eStructuralFeatures/startDate/index.html": {
     "path": "Engagement/Attributes/startDate",
-    "link-uuid": "0a0f3a9b-5a7d-4ce7-a01f-8b33fbfb8391",
+    "link-uuid": "a0ac66a9-1664-440e-8d5e-a1492256c99d",
     "title": "startDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102954
+    "timestamp": 1781360879619
   },
   "references/eClassifiers/Reference/inheritance.html": {
     "path": "Reference/Inheritance",
-    "link-uuid": "b5f2a807-e4a1-49af-bb69-cb51ff33b9b7",
+    "link-uuid": "de236797-5dc0-4c9f-849b-3f87dc6d9778",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103310
+    "timestamp": 1781360880056
   },
   "references/eClassifiers/ModelElement/index.html": {
-    "link-uuid": "ac8f5588-2eef-4361-9329-f8f1f2aa3343",
+    "link-uuid": "c5a60cda-cc4e-4e1f-9f21-622474ae33da",
     "title": "ModelElement",
     "content": "Diagram ",
-    "timestamp": 1772489103121
+    "timestamp": 1781360879838
   },
   "references/eClassifiers/Language/references/eStructuralFeatures/language/index.html": {
     "path": "Language/Attributes/language",
-    "link-uuid": "873ddaa9-b38d-4a35-99ad-b9a23806e1da",
+    "link-uuid": "8ec5a2d8-9bb3-4865-934a-c6d10bcc74f5",
     "title": "language",
     "content": "Type EString Multiplicity 0..1 e.g. English, Spanish",
-    "timestamp": 1772489103031
+    "timestamp": 1781360879717
   },
   "references/eClassifiers/Named/inheritance.html": {
     "path": "Named/Inheritance",
-    "link-uuid": "20ce4119-3554-4d14-9c5b-b205528be0ca",
+    "link-uuid": "2cb8c2e6-38d8-4ffa-800a-84a356a74fdc",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1772489103181
+    "timestamp": 1781360879912
   },
   "references/eClassifiers/Section/index.html": {
-    "link-uuid": "071ff08e-068b-4c33-8205-89934418bf90",
+    "link-uuid": "ac899571-97ee-4650-b86d-d71a562f5fd5",
     "title": "Section",
     "content": "Instant is a single instantaneous point on the time-line. If instant specification contains Z, then it is parsed using Instant.parse() method. Otherwise the specification is used to construct java.util.Date which is then converted to instant. Examples: 2021-12-03T10:15:30.00Z - loaded using Instant.parse() 10/1/2021 - loaded using new Date() and then converted to instant.",
-    "timestamp": 1772489103411
+    "timestamp": 1781360880166
   },
   "references/eClassifiers/Work/index.html": {
-    "link-uuid": "1ec677c8-2ebe-4199-8276-3b4cda4199f3",
+    "link-uuid": "d558f7d8-cf25-4016-91e6-5ff91652d6cf",
     "title": "Work",
     "content": "Diagram ",
-    "timestamp": 1772489103481
+    "timestamp": 1781360880252
   },
   "references/eClassifiers/Project/inheritance.html": {
     "path": "Project/Inheritance",
-    "link-uuid": "753afd28-f2a0-4d03-9726-9d66a9458b05",
+    "link-uuid": "e3f1ee56-d8ff-4437-b83a-79337a85362e",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103235
+    "timestamp": 1781360879972
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/endDate/index.html": {
     "path": "Education/Attributes/endDate",
-    "link-uuid": "f0fe8f46-e157-4393-ba21-efacb91f28d6",
+    "link-uuid": "812e3da7-3bf0-46a2-b845-9412045b5fdd",
     "title": "endDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102907
+    "timestamp": 1781360879554
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/location/index.html": {
     "path": "Basics/References/location",
-    "link-uuid": "b0f7c0f5-04b2-4608-9f02-3e4de9cae77e",
+    "link-uuid": "99e9ebed-ac8e-4c94-a2a6-0ff585153b9a",
     "title": "location",
     "content": "Type Location Multiplicity 0..1",
-    "timestamp": 1772489102816
+    "timestamp": 1781360879443
   },
   "references/eClassifiers/Location/references/eStructuralFeatures/postalCode/index.html": {
     "path": "Location/Attributes/postalCode",
-    "link-uuid": "7760d971-ba37-401d-a714-e92c54ede510",
+    "link-uuid": "e7706643-4615-4f44-9ac0-76646993e03a",
     "title": "postalCode",
     "content": "Type EString Multiplicity 0..1",
-    "timestamp": 1772489103066
+    "timestamp": 1781360879774
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/startDate/index.html": {
     "path": "Education/Attributes/startDate",
-    "link-uuid": "d1b85384-26a1-47c2-a3ea-90936820020a",
+    "link-uuid": "a06b6db8-e96f-4e98-8ed9-954b50672ea6",
     "title": "startDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102916
+    "timestamp": 1781360879566
   },
   "references/eClassifiers/Publication/references/eStructuralFeatures/publisher/index.html": {
     "path": "Publication/Attributes/publisher",
-    "link-uuid": "0c60d339-3a00-4c72-b5a6-62f60385d47f",
+    "link-uuid": "b37878cd-8dbe-453e-9e74-45bde0d62e03",
     "title": "publisher",
     "content": "Type EString Multiplicity 0..1 e.g. IEEE, Computer Magazine",
-    "timestamp": 1772489103285
+    "timestamp": 1781360880029
   },
   "references/eClassifiers/Work/references/eStructuralFeatures/description/index.html": {
     "path": "Work/Attributes/description",
-    "link-uuid": "ac0802cc-44c3-4c2d-a471-012192e45e7a",
+    "link-uuid": "cc985ffc-ee14-41db-9e7b-1fbd1b461fb7",
     "title": "description",
     "content": "Type EString Multiplicity 0..1 e.g. Menlo Park, CA",
-    "timestamp": 1772489103490
+    "timestamp": 1781360880262
   },
   "references/eClassifiers/Engagement/references/eStructuralFeatures/summary/index.html": {
     "path": "Engagement/Attributes/summary",
-    "link-uuid": "3fd6092f-e561-4e55-9837-8ef71f90be9f",
+    "link-uuid": "ecacbd50-f792-409c-819d-656c85d22f17",
     "title": "summary",
     "content": "Type EString Multiplicity 0..1 Give an overview of your responsibilities at the company",
-    "timestamp": 1772489102956
+    "timestamp": 1781360879622
   },
   "references/eClassifiers/Volunteer/references/eStructuralFeatures/organization/index.html": {
     "path": "Volunteer/Attributes/organization",
-    "link-uuid": "394901eb-5eca-4b70-8157-04b20c074978",
+    "link-uuid": "a4e64fda-b68d-4171-a85a-f187046a21d0",
     "title": "organization",
     "content": "Type EString Multiplicity 0..1 e.g. Facebook",
-    "timestamp": 1772489103463
+    "timestamp": 1781360880232
   },
   "references/eClassifiers/Interest/index.html": {
-    "link-uuid": "5c590aec-6c20-421d-825a-50f1f75fd015",
+    "link-uuid": "88cd4b2c-066b-4625-b28a-8fee18e5a1c2",
     "title": "Interest",
     "content": "Diagram ",
-    "timestamp": 1772489102984
+    "timestamp": 1781360879656
   },
   "references/eClassifiers/Language/references/eStructuralFeatures/fluency/index.html": {
     "path": "Language/Attributes/fluency",
-    "link-uuid": "caa6899a-7bfc-487e-83e3-2ee775f38938",
+    "link-uuid": "75639f6b-fc05-481b-8b68-1787b455169d",
     "title": "fluency",
     "content": "Type EString Multiplicity 0..1 e.g. Fluent, Beginner",
-    "timestamp": 1772489103028
+    "timestamp": 1781360879714
   },
   "references/eClassifiers/Project/index.html": {
-    "link-uuid": "03e546be-16db-4f7f-8cdd-748cfd435a81",
+    "link-uuid": "005523c6-b49e-469a-873f-33daa3068444",
     "title": "Project",
     "content": "Diagram ",
-    "timestamp": 1772489103233
+    "timestamp": 1781360879969
   },
   "references/eClassifiers/Resume/index.html": {
-    "link-uuid": "656e4ffa-95b3-406f-a13b-938aea115adb",
+    "link-uuid": "3767ce4c-824b-4b9e-ab00-b77994b4daf0",
     "title": "Resume",
     "content": "Diagram ",
-    "timestamp": 1772489103369
+    "timestamp": 1781360880121
   },
   "references/eClassifiers/Skill/inheritance.html": {
     "path": "Skill/Inheritance",
-    "link-uuid": "fae791fe-4739-4471-8979-0037d2175ceb",
+    "link-uuid": "032665e0-2259-4210-87f7-6dd1466f3b59",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103427
+    "timestamp": 1781360880187
   },
   "references/eClassifiers/Award/references/eStructuralFeatures/date/index.html": {
     "path": "Award/Attributes/date",
-    "link-uuid": "5c45360c-ad36-48c2-aba7-358943254df4",
+    "link-uuid": "9614c201-c34b-4352-a0d9-acddc8475803",
     "title": "date",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102762
+    "timestamp": 1781360879379
   },
   "references/eClassifiers/Profile/inheritance.html": {
     "path": "Profile/Inheritance",
-    "link-uuid": "c8945d36-97f1-4a42-8e3a-7a9f721ad2ed",
+    "link-uuid": "634dddfb-6373-4136-aa0f-1d95c5e6be65",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103206
+    "timestamp": 1781360879938
   },
   "references/eClassifiers/Location/references/eStructuralFeatures/countryCode/index.html": {
     "path": "Location/Attributes/countryCode",
-    "link-uuid": "60219c1f-4692-4a4d-818f-2560610eb6cb",
+    "link-uuid": "ff4e5cf3-96de-4eef-b1ca-bcc775a0d43b",
     "title": "countryCode",
     "content": "Type EString Multiplicity 0..1 code as per ISO-3166-1 ALPHA-2, e.g. US, AU, IN",
-    "timestamp": 1772489103063
+    "timestamp": 1781360879771
   },
   "references/eClassifiers/Volunteer/index.html": {
-    "link-uuid": "d860c9e8-ba06-4f4a-bea1-e6a6590b0234",
+    "link-uuid": "fa49d260-a321-4a5c-b84d-f341346afd11",
     "title": "Volunteer",
     "content": "Diagram ",
-    "timestamp": 1772489103454
+    "timestamp": 1781360880222
   },
   "references/eClassifiers/Award/index.html": {
-    "link-uuid": "4d67d9ad-66b3-450c-903f-87026eb9e48c",
+    "link-uuid": "b4211ded-e7a4-4c5b-85b6-1592ed285601",
     "title": "Award",
     "content": "Diagram ",
-    "timestamp": 1772489102743
+    "timestamp": 1781360879359
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/score/index.html": {
     "path": "Education/Attributes/score",
-    "link-uuid": "2727cfbf-4ba9-46c0-ad53-4dd60911d791",
+    "link-uuid": "c61ac111-1dd3-4fd9-85b2-741b2b13984c",
     "title": "score",
     "content": "Type EString Multiplicity 0..1 grade point average, e.g. 3.67/4.0",
-    "timestamp": 1772489102913
+    "timestamp": 1781360879562
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/label/index.html": {
     "path": "Basics/Attributes/label",
-    "link-uuid": "eeb906dc-c00a-4d74-9d75-e0485494e2ea",
+    "link-uuid": "15c26322-f003-4bae-abea-f2991b3d793a",
     "title": "label",
     "content": "Type EString Multiplicity 0..1 e.g. Web Developer",
-    "timestamp": 1772489102813
+    "timestamp": 1781360879440
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/certificates/index.html": {
     "path": "Resume/References/certificates",
-    "link-uuid": "16c74535-2690-4f27-9271-68ccfd5ad6e6",
+    "link-uuid": "7931f940-9f0b-45ed-bc21-09e3847910fa",
     "title": "certificates",
     "content": "Type Certificate Multiplicity 0..* Specify any certificates you have received throughout your professional career",
-    "timestamp": 1772489103382
+    "timestamp": 1781360880136
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/volunteer/index.html": {
     "path": "Resume/References/volunteer",
-    "link-uuid": "013edc95-2bb0-4453-b0bd-d8405795bb0c",
+    "link-uuid": "71287a13-de58-41c9-84fa-eda90711a630",
     "title": "volunteer",
     "content": "Type Volunteer Multiplicity 0..*",
-    "timestamp": 1772489103404
+    "timestamp": 1781360880158
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/studyType/index.html": {
     "path": "Education/Attributes/studyType",
-    "link-uuid": "a5198139-500d-4b27-a8c7-3b1cae8386c8",
+    "link-uuid": "b9fe2ad2-0bf0-42dd-82a8-5885e05f221a",
     "title": "studyType",
     "content": "Type EString Multiplicity 0..1 e.g. Bachelor",
-    "timestamp": 1772489102919
+    "timestamp": 1781360879569
   },
   "references/eClassifiers/Interest/references/eStructuralFeatures/keywords/index.html": {
     "path": "Interest/Attributes/keywords",
-    "link-uuid": "7464bae9-f707-4bd4-9c87-0048ea4d865f",
+    "link-uuid": "b97fc8e6-3d54-4656-8557-4c2a4d2f9389",
     "title": "keywords",
     "content": "Type EString Multiplicity 0..* e.g. Friedrich Nietzsche",
-    "timestamp": 1772489102998
+    "timestamp": 1781360879672
   },
   "references/eClassifiers/Skill/index.html": {
-    "link-uuid": "545851fd-522e-4dea-92c1-e0a286b15e16",
+    "link-uuid": "8036a8df-832f-4b42-8e8f-96b7ae00ed75",
     "title": "Skill",
     "content": "Diagram ",
-    "timestamp": 1772489103425
+    "timestamp": 1781360880185
   },
   "references/eClassifiers/Named/index.html": {
-    "link-uuid": "7fcddb43-fb85-463b-be4f-f42a7ba0f52b",
+    "link-uuid": "7fb3bc46-5fb0-41cc-87c2-775bd0a7ea23",
     "title": "Named",
     "content": "Interface implemented by classes with a name Diagram ",
-    "timestamp": 1772489103179
+    "timestamp": 1781360879909
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/courses/index.html": {
     "path": "Education/Attributes/courses",
-    "link-uuid": "08b0cbe8-883e-48b2-840c-0bcd3b448043",
+    "link-uuid": "4bdb9ef9-c4e7-4c60-8a66-e412be7926f0",
     "title": "courses",
     "content": "Type EString Multiplicity 0..* List notable courses/subjects e.g. H1302 - Introduction to American history",
-    "timestamp": 1772489102904
+    "timestamp": 1781360879551
   },
   "references/eClassifiers/Function/index.html": {
-    "link-uuid": "441efc2c-7460-4b60-8687-de15b8f89c56",
+    "link-uuid": "a3e71c53-b088-4439-a32f-3ee653dbce8d",
     "title": "Function",
     "content": "Instant is a single instantaneous point on the time-line. If instant specification contains Z, then it is parsed using Instant.parse() method. Otherwise the specification is used to construct java.util.Date which is then converted to instant. Examples: 2021-12-03T10:15:30.00Z - loaded using Instant.parse() 10/1/2021 - loaded using new Date() and then converted to instant.",
-    "timestamp": 1772489102963
+    "timestamp": 1781360879630
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/summary/index.html": {
     "path": "Basics/Attributes/summary",
-    "link-uuid": "aa56568f-845f-4704-b49f-310d94649ddb",
+    "link-uuid": "269e764d-65ec-4f2a-8671-c9c623fb9ebe",
     "title": "summary",
     "content": "Type EString Multiplicity 0..1 Write a short 2-3 sentence biography about yourself",
-    "timestamp": 1772489102824
+    "timestamp": 1781360879456
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/work/index.html": {
     "path": "Resume/References/work",
-    "link-uuid": "10061838-130d-499d-9c6c-c5079c49cfc9",
+    "link-uuid": "231ea831-ea45-4a56-8df0-b29a452a4822",
     "title": "work",
     "content": "Type Work Multiplicity 0..*",
-    "timestamp": 1772489103406
+    "timestamp": 1781360880161
   },
   "references/eClassifiers/Location/references/eStructuralFeatures/region/index.html": {
     "path": "Location/Attributes/region",
-    "link-uuid": "f7e857b7-54c5-4d55-8627-7cf5c93e094a",
+    "link-uuid": "0fae0365-9184-4fd3-be2d-b2349cd35f51",
     "title": "region",
     "content": "Type EString Multiplicity 0..1 The general region where you live. Can be a US state, or a province, for instance.",
-    "timestamp": 1772489103069
+    "timestamp": 1781360879778
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/awards/index.html": {
     "path": "Resume/References/awards",
-    "link-uuid": "72d974a2-4097-442c-9f41-1b5fad5a0c19",
+    "link-uuid": "602b7b8f-ecc4-41e4-911e-e53b425ed95a",
     "title": "awards",
     "content": "Type Award Multiplicity 0..* Specify any awards you have received throughout your professional career",
-    "timestamp": 1772489103378
+    "timestamp": 1781360880132
   },
   "references/eClassifiers/Engagement/references/eStructuralFeatures/highlights/index.html": {
     "path": "Engagement/Attributes/highlights",
-    "link-uuid": "19ebace1-bd4e-4504-a687-61cd08514fe9",
+    "link-uuid": "88c708ae-00b5-4fb5-b099-e7c1dd1f7a00",
     "title": "highlights",
     "content": "Type EString Multiplicity 0..* Specify multiple accomplishments. e.g. Increased profits by 20% from 2011-2012 through viral advertising",
-    "timestamp": 1772489102949
+    "timestamp": 1781360879611
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/email/index.html": {
     "path": "Basics/Attributes/email",
-    "link-uuid": "ede8d786-82a6-4a60-9539-53df028f4152",
+    "link-uuid": "ee187c6e-f880-4c3b-83aa-6bf6cc608899",
     "title": "email",
     "content": "Type EString Multiplicity 0..1 e.g. thomas@gmail.com",
-    "timestamp": 1772489102807
+    "timestamp": 1781360879432
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/phone/index.html": {
     "path": "Basics/Attributes/phone",
-    "link-uuid": "76851739-ea03-4763-8e50-0d831c418ede",
+    "link-uuid": "633f6728-21be-4b3c-b33b-267e3877d70b",
     "title": "phone",
     "content": "Type EString Multiplicity 0..1 Phone numbers are stored as strings so use any format you like, e.g. 712-117-2923",
-    "timestamp": 1772489102819
+    "timestamp": 1781360879446
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/endDate/index.html": {
     "path": "Project/Attributes/endDate",
-    "link-uuid": "2db07187-4583-43f2-a4b9-68367a43793a",
+    "link-uuid": "f23ec000-1a2a-4b06-ab79-55a4b9e4d50a",
     "title": "endDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489103244
+    "timestamp": 1781360879981
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/entity/index.html": {
     "path": "Project/Attributes/entity",
-    "link-uuid": "2fbdfe94-73a8-441d-8ddc-119d65d0ebb4",
+    "link-uuid": "c5166b95-0b2c-491f-bb6f-680226b76565",
     "title": "entity",
     "content": "Type EString Multiplicity 0..1 Specify the relevant company/entity affiliations e.g. &lsquo;greenpeace&rsquo;, &lsquo;corporationXYZ&rsquo;",
-    "timestamp": 1772489103247
+    "timestamp": 1781360879984
   },
   "references/eClassifiers/Language/inheritance.html": {
     "path": "Language/Inheritance",
-    "link-uuid": "6a43cfe8-962f-4e63-8ea6-856419134577",
+    "link-uuid": "947ab101-8f97-4b5e-8af4-0a94b6504158",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103021
+    "timestamp": 1781360879704
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/keywords/index.html": {
     "path": "Project/Attributes/keywords",
-    "link-uuid": "6a42b770-6a0c-4f18-b012-d10ee24bcad7",
+    "link-uuid": "e9170ee4-8fbb-4955-99b3-56a289763b41",
     "title": "keywords",
     "content": "Type EString Multiplicity 0..* Specify special elements involved, e.g. AngularJS",
-    "timestamp": 1772489103251
+    "timestamp": 1781360879989
   },
   "references/eClassifiers/Engagement/index.html": {
-    "link-uuid": "7a6f30fe-9123-4841-bfd8-e9e5ccfc8e82",
+    "link-uuid": "c7fafd74-4719-46aa-91b7-8f78fe17ea29",
     "title": "Engagement",
     "content": "Base class for Work and Volunteer Diagram ",
-    "timestamp": 1772489102938
+    "timestamp": 1781360879597
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/projects/index.html": {
     "path": "Resume/References/projects",
-    "link-uuid": "126bce4f-cab3-491b-84ee-df1cad37bb87",
+    "link-uuid": "a9f5e436-2133-4b8b-a22a-66d0050f7f70",
     "title": "projects",
     "content": "Type Project Multiplicity 0..* Specify career projects",
-    "timestamp": 1772489103395
+    "timestamp": 1781360880149
   },
   "index.html": {
-    "link-uuid": "87c65399-f093-4108-8217-08581ae42ed1",
+    "link-uuid": "392b0ede-9c8c-4dba-bf50-ec6738993c99",
     "title": "Resume",
     "content": "Job search as an enterprise This section puts the resume model into a context of job search &ldquo;enterprise&rdquo;. TODO&hellip; Enterprise model Resources HR as Code Medium story Location Skill Work Language Publication Certificate Award Reference Meta Resume awards work certificates meta publications languages references skills Education education Engagement Basics location basics Profile profiles Volunteer volunteer Interest interests Project projects Resume",
-    "timestamp": 1772489102719
+    "timestamp": 1781360879331
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/publications/index.html": {
     "path": "Resume/References/publications",
-    "link-uuid": "07a80fbc-f037-42bf-af41-65c9cef90419",
+    "link-uuid": "7de88386-2387-4e72-a12b-c83b59f1e1e2",
     "title": "publications",
     "content": "Type Publication Multiplicity 0..* Specify your publications through your career",
-    "timestamp": 1772489103397
+    "timestamp": 1781360880152
   },
   "references/eClassifiers/Publication/inheritance.html": {
     "path": "Publication/Inheritance",
-    "link-uuid": "a8d806e6-c3a5-431a-9d7d-ab2ed6a5898f",
+    "link-uuid": "d7ce334f-2f43-47fd-a22f-202094cba9ac",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103278
+    "timestamp": 1781360880020
   },
   "references/eClassifiers/Volunteer/inheritance.html": {
     "path": "Volunteer/Inheritance",
-    "link-uuid": "c4325c6d-4131-4a81-b7d8-ef0c595e537e",
+    "link-uuid": "bc4d906e-8d3e-49b5-bd43-1cf1819ac1c1",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103456
+    "timestamp": 1781360880225
   },
   "references/eClassifiers/Certificate/references/eStructuralFeatures/issuer/index.html": {
     "path": "Certificate/Attributes/issuer",
-    "link-uuid": "fb4b95da-cd16-45fb-b3d1-8df10bcb0111",
+    "link-uuid": "e0c1a28b-d077-496a-89c1-3a0147788482",
     "title": "issuer",
     "content": "Type EString Multiplicity 0..1 e.g. CNCF",
-    "timestamp": 1772489102860
+    "timestamp": 1781360879500
   },
   "references/eClassifiers/Education/references/eStructuralFeatures/institution/index.html": {
     "path": "Education/Attributes/institution",
-    "link-uuid": "ab18b5cd-6889-4af3-b7ab-22a1659fa7f5",
+    "link-uuid": "02fda2c6-cd49-4e9f-a734-2d58c8db85e9",
     "title": "institution",
     "content": "Type EString Multiplicity 0..1 e.g. Massachusetts Institute of Technology",
-    "timestamp": 1772489102910
+    "timestamp": 1781360879559
   },
   "references/eClassifiers/Location/references/eStructuralFeatures/address/index.html": {
     "path": "Location/Attributes/address",
-    "link-uuid": "8a9ee0ca-87f9-4ef3-846d-b34a15676a89",
+    "link-uuid": "ab421183-737a-4e70-a527-4703777dcd5d",
     "title": "address",
     "content": "Type EString Multiplicity 0..1 To add multiple address lines, use \\n. For example, 1234 Gl�cklichkeit Stra�e\\nHinterhaus 5. Etage li.",
-    "timestamp": 1772489103057
+    "timestamp": 1781360879764
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/languages/index.html": {
     "path": "Resume/References/languages",
-    "link-uuid": "1992776c-45dd-4e07-b6e9-6097995cb3f4",
+    "link-uuid": "1075eade-2974-4aa0-96a5-3e9704877892",
     "title": "languages",
     "content": "Type Language Multiplicity 0..* List any other languages you speak",
-    "timestamp": 1772489103389
+    "timestamp": 1781360880144
   },
   "references/eClassifiers/Engagement/inheritance.html": {
     "path": "Engagement/Inheritance",
-    "link-uuid": "d8255021-22c4-407c-bfdb-bd60626d6402",
+    "link-uuid": "cdc2db51-469f-4446-923e-f4f4b39bdc56",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1772489102941
+    "timestamp": 1781360879600
   },
   "references/eClassifiers/ModelElement/inheritance.html": {
     "path": "ModelElement/Inheritance",
-    "link-uuid": "ba671e21-2ec9-42ce-b495-69fded994f7c",
+    "link-uuid": "4a37bda1-46bf-4963-b13a-9564a6b942db",
     "title": "Inheritance",
     "content": "Supertypes Subtypes  ",
-    "timestamp": 1772489103123
+    "timestamp": 1781360879841
   },
   "references/eClassifiers/Engagement/references/eStructuralFeatures/endDate/index.html": {
     "path": "Engagement/Attributes/endDate",
-    "link-uuid": "4c73b75e-6197-492b-9533-c0048eb79198",
+    "link-uuid": "c4e1ee8d-dcbb-4cf6-b572-77235a0bf536",
     "title": "endDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102946
+    "timestamp": 1781360879608
   },
   "references/eClassifiers/ModelElement/references/eOperations/save-4/references/eParameters/contentConsumerProvider/index.html": {
     "path": "ModelElement/Operations/save/Parameters/contentConsumerProvider",
-    "link-uuid": "43c20bb6-efc3-4fef-90bb-c8355b37f8cd",
+    "link-uuid": "198414cd-a665-4d3c-870b-3b161fe965dd",
     "title": "contentConsumerProvider",
     "content": "Type Function&lt; EStructuralFeature, Consumer&lt; EJavaObject&gt;&gt; Multiplicity 0..1",
-    "timestamp": 1772489103156
+    "timestamp": 1781360879880
   },
   "references/eClassifiers/Publication/index.html": {
-    "link-uuid": "de1046aa-75dd-4fbc-9f9a-e0c33a3124d8",
+    "link-uuid": "56aa164a-52c7-4def-bb90-42c43a915e3c",
     "title": "Publication",
     "content": "Diagram ",
-    "timestamp": 1772489103276
+    "timestamp": 1781360880018
   },
   "references/eClassifiers/ModelElement/references/eOperations/load-2/references/eParameters/contentProvider/index.html": {
     "path": "ModelElement/Operations/load/Parameters/contentProvider",
-    "link-uuid": "2016b16c-0573-4e88-bdd6-5527335a9814",
+    "link-uuid": "47ecaaa2-3ebb-4363-b1b3-0849d1da1529",
     "title": "contentProvider",
     "content": "Type Function&lt; EStructuralFeature,?&gt; Multiplicity 0..1",
-    "timestamp": 1772489103142
+    "timestamp": 1781360879863
   },
   "references/eClassifiers/Language/index.html": {
-    "link-uuid": "f44e456a-f6e3-4c97-bdbc-7756e58fcaa2",
+    "link-uuid": "eeb2c0c0-2cdf-40fe-9aaf-87ed52a639c1",
     "title": "Language",
     "content": "Diagram ",
-    "timestamp": 1772489103019
+    "timestamp": 1781360879701
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/basics/index.html": {
     "path": "Resume/References/basics",
-    "link-uuid": "70dec6c4-2fd2-4c9e-bce3-d82b0b4521b7",
+    "link-uuid": "047299e9-ec57-4326-b0e6-4ebf470d7ed5",
     "title": "basics",
     "content": "Type Basics Multiplicity 0..1",
-    "timestamp": 1772489103380
+    "timestamp": 1781360880135
   },
   "references/eClassifiers/Project/references/eStructuralFeatures/startDate/index.html": {
     "path": "Project/Attributes/startDate",
-    "link-uuid": "5679231b-53cc-486c-9f8c-3bf19554fd4d",
+    "link-uuid": "8815005f-be62-4cbd-aca8-84b6eb379b7c",
     "title": "startDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489103256
+    "timestamp": 1781360879993
   },
   "references/eClassifiers/Resource/index.html": {
-    "link-uuid": "dc08e0ea-b947-456d-85aa-941bdf570af3",
+    "link-uuid": "f00dfe4d-c17c-41dd-af29-f87b625c061d",
     "title": "Resource",
     "content": "Interface implemented by classes with a URL Diagram ",
-    "timestamp": 1772489103337
+    "timestamp": 1781360880087
   },
   "references/eClassifiers/Education/index.html": {
-    "link-uuid": "4db7db19-b848-45ba-ac1d-700794b5dba5",
+    "link-uuid": "e20e9519-d40b-45d7-b6da-1b0822163b0e",
     "title": "Education",
     "content": "Diagram ",
-    "timestamp": 1772489102888
+    "timestamp": 1781360879532
   },
   "references/eClassifiers/Publication/references/eStructuralFeatures/releaseDate/index.html": {
     "path": "Publication/Attributes/releaseDate",
-    "link-uuid": "bcbde5ac-da8b-4c92-887c-3ad0b7e69aab",
+    "link-uuid": "c6b89e4a-edf7-4c0c-8999-045535cdb18e",
     "title": "releaseDate",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489103287
+    "timestamp": 1781360880031
   },
   "references/eClassifiers/ModelElement/references/eOperations/toJSON-3/index.html": {
     "path": "ModelElement/Operations/toJSON",
-    "link-uuid": "828844e2-3827-4ca8-a2f2-af6a7817cd4e",
+    "link-uuid": "d7094d42-3d5d-4eec-b50e-e85f874265e7",
     "title": "toJSON",
     "content": "Type JSONObject Multiplicity 0..1",
-    "timestamp": 1772489103158
+    "timestamp": 1781360879883
   },
   "references/eClassifiers/Profile/references/eStructuralFeatures/network/index.html": {
     "path": "Profile/Attributes/network",
-    "link-uuid": "71086f8f-0626-4d2e-b98b-9a03a7d2a23b",
+    "link-uuid": "e8af4a79-b0f7-4b2f-888f-2295ca58f91f",
     "title": "network",
     "content": "Type EString Multiplicity 0..1 e.g. Facebook or Twitter",
-    "timestamp": 1772489103212
+    "timestamp": 1781360879946
   },
   "references/eClassifiers/Basics/index.html": {
-    "link-uuid": "48765d75-d4dd-48c5-b46b-87a1f9eaf3fd",
+    "link-uuid": "d7602c2c-83ff-4948-8520-7b13449cdcc9",
     "title": "Basics",
     "content": "Diagram ",
-    "timestamp": 1772489102795
+    "timestamp": 1781360879416
   },
   "references/eClassifiers/Meta/references/eStructuralFeatures/version/index.html": {
     "path": "Meta/Attributes/version",
-    "link-uuid": "ddafbc1d-4c1d-4e05-8f8c-95fb211deabb",
+    "link-uuid": "0a7b245c-e598-495c-9d39-30d521309252",
     "title": "version",
     "content": "Type EString Multiplicity 0..1 A version field which follows semver - e.g. v1.0.0",
-    "timestamp": 1772489103101
+    "timestamp": 1781360879817
   },
   "references/eClassifiers/Basics/references/eStructuralFeatures/profiles/index.html": {
     "path": "Basics/References/profiles",
-    "link-uuid": "047df00e-322a-488e-98d0-beb724985c41",
+    "link-uuid": "b1a78a62-709b-496b-83bb-14e285e14b00",
     "title": "profiles",
     "content": "Type Profile Multiplicity 0..* Specify any number of social networks that you participate in",
-    "timestamp": 1772489102821
+    "timestamp": 1781360879451
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/references/index.html": {
     "path": "Resume/References/references",
-    "link-uuid": "056f82e3-0e05-4cc2-aebe-c6d76c1c7cfb",
+    "link-uuid": "411c4f8b-eba7-466b-939f-933914694a20",
     "title": "references",
     "content": "Type Reference Multiplicity 0..* List references you have received",
-    "timestamp": 1772489103399
+    "timestamp": 1781360880153
   },
   "references/eClassifiers/Award/references/eStructuralFeatures/title/index.html": {
     "path": "Award/Attributes/title",
-    "link-uuid": "90f14fd4-9ae1-4be8-a9d0-4c1c7a0e980f",
+    "link-uuid": "dfcef5d1-d5a5-4d03-bfa8-51a9a9e6c75e",
     "title": "title",
     "content": "Type EString Multiplicity 0..1 e.g. One of the 100 greatest minds of the century",
-    "timestamp": 1772489102769
+    "timestamp": 1781360879385
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/education/index.html": {
     "path": "Resume/References/education",
-    "link-uuid": "ccefe459-fe56-42ab-bfd9-beea28021c24",
+    "link-uuid": "88867b71-0033-4628-be9a-0af18d43a8be",
     "title": "education",
     "content": "Type Education Multiplicity 0..*",
-    "timestamp": 1772489103384
+    "timestamp": 1781360880138
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/meta/index.html": {
     "path": "Resume/References/meta",
-    "link-uuid": "ee3732d7-f20d-4b34-9220-44cd2137c1f2",
+    "link-uuid": "f4f31879-afc8-468b-a585-94a2d0d14932",
     "title": "meta",
     "content": "Type Meta Multiplicity 0..1",
-    "timestamp": 1772489103392
+    "timestamp": 1781360880147
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/interests/index.html": {
     "path": "Resume/References/interests",
-    "link-uuid": "1be5fc9c-eec9-4741-9a87-f6775b086687",
+    "link-uuid": "c4dc5ebb-fff6-4978-aeef-ba1f690a6f34",
     "title": "interests",
     "content": "Type Interest Multiplicity 0..*",
-    "timestamp": 1772489103386
+    "timestamp": 1781360880141
   },
   "references/eClassifiers/Certificate/references/eStructuralFeatures/date/index.html": {
     "path": "Certificate/Attributes/date",
-    "link-uuid": "b094d318-9fe3-4fa8-a0c9-141db9034734",
+    "link-uuid": "a7d142b7-7604-4c92-8d0c-3a1352400671",
     "title": "date",
     "content": "Type EDate Multiplicity 0..1",
-    "timestamp": 1772489102856
+    "timestamp": 1781360879497
   },
   "references/eClassifiers/Skill/references/eStructuralFeatures/level/index.html": {
     "path": "Skill/Attributes/level",
-    "link-uuid": "6f4f03b0-9343-42c1-ad49-95c42cb92116",
+    "link-uuid": "4a256507-27ce-4a7f-87d2-d86c2e93d480",
     "title": "level",
     "content": "Type EString Multiplicity 0..1 e.g. Master",
-    "timestamp": 1772489103437
+    "timestamp": 1781360880203
   },
   "references/eClassifiers/Education/inheritance.html": {
     "path": "Education/Inheritance",
-    "link-uuid": "9857a113-238e-4eb9-8757-ed5803b289d6",
+    "link-uuid": "a449a642-183f-4c0e-a39a-7b63e52dad0c",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489102891
+    "timestamp": 1781360879536
   },
   "references/eClassifiers/Location/index.html": {
-    "link-uuid": "4529c554-51b6-4f92-88c4-408a8f343eab",
+    "link-uuid": "81d25f99-ef5a-4153-b1f3-a4df943c2f77",
     "title": "Location",
     "content": "Diagram ",
-    "timestamp": 1772489103048
+    "timestamp": 1781360879747
   },
   "references/eClassifiers/JSONObject/index.html": {
-    "link-uuid": "1887aeef-b770-4ec8-b2d1-250f4ef8c733",
+    "link-uuid": "6194d95d-8931-4988-88a1-79e93bd99525",
     "title": "JSONObject",
     "content": "Instant is a single instantaneous point on the time-line. If instant specification contains Z, then it is parsed using Instant.parse() method. Otherwise the specification is used to construct java.util.Date which is then converted to instant. Examples: 2021-12-03T10:15:30.00Z - loaded using Instant.parse() 10/1/2021 - loaded using new Date() and then converted to instant.",
-    "timestamp": 1772489103003
+    "timestamp": 1781360879678
   },
   "references/eClassifiers/Meta/references/eStructuralFeatures/canonical/index.html": {
     "path": "Meta/Attributes/canonical",
-    "link-uuid": "5d9db28d-62f6-432b-95c6-250b184152f0",
+    "link-uuid": "9465040e-c6bb-4f11-b176-ef59a9d17fb5",
     "title": "canonical",
     "content": "Type EString Multiplicity 0..1 URL (as per RFC 3986) to latest version of this document",
-    "timestamp": 1772489103096
+    "timestamp": 1781360879811
   },
   "references/eClassifiers/Award/inheritance.html": {
     "path": "Award/Inheritance",
-    "link-uuid": "48891229-2b9c-4b46-99f0-280377bb73ab",
+    "link-uuid": "eeb96c6d-3ca6-48b2-a839-0b7fc2211a1a",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489102748
+    "timestamp": 1781360879363
   },
   "references/eClassifiers/Resume/inheritance.html": {
     "path": "Resume/Inheritance",
-    "link-uuid": "9c40e668-9dd2-49d3-b89d-7ffb28466dc0",
+    "link-uuid": "57bc157b-75d8-4cc0-9aff-30a5003518cd",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103371
+    "timestamp": 1781360880124
   },
   "references/eClassifiers/Meta/inheritance.html": {
     "path": "Meta/Inheritance",
-    "link-uuid": "9fcae8ff-f59b-4b24-af1e-937d659743c2",
+    "link-uuid": "b4c53c0e-dc13-4cc1-a112-64e52dc785df",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489103089
+    "timestamp": 1781360879803
   },
   "references/eClassifiers/Award/references/eStructuralFeatures/summary/index.html": {
     "path": "Award/Attributes/summary",
-    "link-uuid": "955496f0-9c4e-4906-a814-fddd3e401261",
+    "link-uuid": "52453721-71b8-4359-a7d7-e69666f49fd2",
     "title": "summary",
     "content": "Type EString Multiplicity 0..1 e.g. Received for my work with Quantum Physics",
-    "timestamp": 1772489102766
+    "timestamp": 1781360879382
   },
   "references/eClassifiers/Reference/index.html": {
-    "link-uuid": "241a9304-93ff-4796-84f5-74266f5828c0",
+    "link-uuid": "d5f61d3b-f68b-4b35-92fc-d01f9612b12a",
     "title": "Reference",
     "content": "Diagram ",
-    "timestamp": 1772489103306
+    "timestamp": 1781360880053
   },
   "references/eClassifiers/Certificate/inheritance.html": {
     "path": "Certificate/Inheritance",
-    "link-uuid": "511c7ad2-4c19-4466-8a97-d1f001fe8f45",
+    "link-uuid": "62c0e4c6-9093-45fd-ac50-c0abe9b107b5",
     "title": "Inheritance",
     "content": "Supertypes ",
-    "timestamp": 1772489102848
+    "timestamp": 1781360879486
   },
   "references/eClassifiers/Award/references/eStructuralFeatures/awarder/index.html": {
     "path": "Award/Attributes/awarder",
-    "link-uuid": "d1f06e6a-8961-4bc8-9bb9-6c82baafd9ce",
+    "link-uuid": "cdf9155c-e31d-4f96-8c74-7d70f7a94eee",
     "title": "awarder",
     "content": "Type EString Multiplicity 0..1 e.g. Time Magazine",
-    "timestamp": 1772489102759
+    "timestamp": 1781360879374
   },
   "references/eClassifiers/Resume/references/eStructuralFeatures/skills/index.html": {
     "path": "Resume/References/skills",
-    "link-uuid": "bea0c35e-c636-4da0-aca0-9076452b9c60",
+    "link-uuid": "0ceca4cd-64e5-4f97-91da-00d945c6eb56",
     "title": "skills",
     "content": "Type Skill Multiplicity 0..* List out your professional skill-set",
-    "timestamp": 1772489103402
+    "timestamp": 1781360880156
   },
   "references/eClassifiers/ModelElement/references/eOperations/load-0/references/eParameters/jsonObject/index.html": {
     "path": "ModelElement/Operations/load/Parameters/jsonObject",
-    "link-uuid": "f62790e3-7fb1-40ec-8608-4c3cc51f4104",
+    "link-uuid": "a4a62096-2ea6-4e8a-a2d9-c7bb2a90fc9a",
     "title": "jsonObject",
     "content": "Type JSONObject Multiplicity 0..1",
-    "timestamp": 1772489103134
+    "timestamp": 1781360879855
   },
   "references/eClassifiers/Reference/references/eStructuralFeatures/reference/index.html": {
     "path": "Reference/Attributes/reference",
-    "link-uuid": "afc6f938-8550-444e-b1f0-fed39f32d71f",
+    "link-uuid": "f909abbc-c95b-47a3-bd6d-05fced862ed4",
     "title": "reference",
     "content": "Type EString Multiplicity 0..1 e.g. Joe blogs was a great employee, who turned up to work at least once a week. He exceeded my expectations when it came to doing nothing.",
-    "timestamp": 1772489103317
+    "timestamp": 1781360880064
   }
 }
